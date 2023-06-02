@@ -1,0 +1,65 @@
+@import "./variables.module";
+
+@mixin flex($jc:null, $ai:null, $gap:null, $fd: null) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  gap: $gap;
+}
+
+%button {
+  @include flex(space-between, center, 4px);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: $fz-xxs;
+  line-height: $lh-xxs;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  outline: 3px solid transparent;
+
+}
+
+%primary-button-black {
+  color: $secondary-text-color;
+  background-color: $overlay-bg;
+  border: 3px solid $overlay-bg;
+
+  &:hover {
+    outline: 3px solid transparentize($overlay-bg, 0.8);
+  }
+}
+
+%secondary-button-black {
+  background-color: $secondary-text-color;
+  color: $overlay-bg;
+  border: 3px solid $overlay-bg;
+
+  &:hover {
+    outline: 3px solid transparentize($overlay-bg, 0.8);
+  }
+}
+
+%primary-button-red {
+  color: $secondary-text-color;
+  background-color: $color-accent-1;
+  border: 3px solid $color-accent-1;
+
+  &:hover {
+    outline: 3px solid transparentize($color-accent-1, 0.8);
+  }
+}
+
+%secondary-button-red {
+  background-color: $secondary-text-color;
+  color: $color-accent-1;
+  border: 3px solid $color-accent-1;
+
+  &:hover {
+    outline: 3px solid transparentize($color-accent-1, 0.8);
+  }
+}

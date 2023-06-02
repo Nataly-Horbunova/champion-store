@@ -1,0 +1,42 @@
+@import "styles/fonts.module";
+@import 'styles/variables.module';
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: $fz-m;
+  line-height: $lh-m;
+  color: $main-text-color;
+  background-color: $bg-accent-1;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 clamp(30px, calc(80 / 1400 * 100vw), 80px);
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $main-text-color;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+

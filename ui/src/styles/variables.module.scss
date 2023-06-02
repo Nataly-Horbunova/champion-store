@@ -1,0 +1,50 @@
+$color-accent-1: #D2003F;
+$color-accent-2: #fff;
+$color-accent-3: #83025C;
+
+$bg-accent-1: #f5f5f5;
+$bg-accent-2: linear-gradient(90deg, rgba(168, 3, 42, 1), rgba(130, 3, 95, 1) 100%);
+$bg-accent-3: #fff;
+$bg-accent-4: linear-gradient(90deg, rgba(23, 45, 53, 1), rgba(4, 20, 33, 1) 100%);
+
+$main-text-color: #041421;
+$secondary-text-color: #fff;
+
+$box-shadow-accent-1: rgba(0, 0, 0, 0) 0px 2px 5px, rgba(0, 0, 0, 0.2) 0px 5px 15px;
+$box-shadow-accent-2: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+$overlay-bg: rgb(4 20 33);
+$overlay-opacity: 91%;
+
+$product-color-blue: #1E48B6;
+$product-color-clementine: #EF5436;
+$product-color-dark-green: #515A49;
+$product-color-dark-grey: #515C70;
+$product-color-green: #008000FF;
+$product-color-grey: #737478;
+$product-color-light-brown: #AB895E;
+$product-color-orange: #FFA500FF;
+$product-color-pink: #D31370;
+$product-color-red: #CC2626;
+$product-color-sand: #989375;
+$product-color-soft-pink: #C59193;
+$product-color-teal: #75C9BC;
+$product-color-yellow: #EABF57;
+$product-color-white: #fff;
+$product-color-camo: url(https://cdn.shopify.com/s/files/1/0690/2566/1222/files/camo.png?v=1671568944&width=50);
+
+$fz-xxs: clamp(10px, calc(12 / 1400 * 100vw), 12px);
+$fz-xs: clamp(12px, calc(14 / 1400 * 100vw), 14px);
+$fz-s: clamp(14px, calc(16 / 1400 * 100vw), 16px);
+$fz-m: clamp(16px, calc(18 / 1400 * 100vw), 18px);
+$fz-l: clamp(20px, calc(24 / 1400 * 100vw), 24px);
+$fz-xl: clamp(26px, calc(54 / 1400 * 100vw), 54px);
+$fz-xxl: clamp(30px, calc(78 / 1400 * 100vw), 78px);
+
+$lh-xxs: clamp(14px, calc(16 / 1400 * 100vw), 16px);
+$lh-xs: clamp(16px, calc(20 / 1400 * 100vw), 20px);
+$lh-s: clamp(18px, calc(22 / 1400 * 100vw), 22px);
+$lh-m: clamp(20px, calc(24 / 1400 * 100vw), 24px);
+$lh-l: clamp(24px, calc(28 / 1400 * 100vw), 28px);
+$lh-xl: clamp(30px, calc(58 / 1400 * 100vw), 58px);
+$lh-xxl: clamp(32px, calc(80 / 1400 * 100vw), 80px);

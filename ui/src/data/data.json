@@ -1,0 +1,169 @@
+{
+  "header": {
+    "logo": {
+      "white": "logo_white.webp",
+      "black": "logo_black.webp"
+    },
+    "menu": [
+      {
+        "name": "Home",
+        "id": "1",
+        "path": "/"
+      },
+      {
+        "name": "Shop",
+        "path": "/collections/all",
+        "id": "2"
+      },
+      {
+        "name": "About us",
+        "id": "3",
+        "path": "/about-us"
+      },
+      {
+        "name": "Blog",
+        "id": "4",
+        "path": "/blog"
+      },
+      {
+        "name": "Contact",
+        "id": "5",
+        "path": "/contact"
+      }
+    ],
+    "dropDown": {
+      "collections": [
+        {
+          "name": "Shop all",
+          "id": "1",
+          "path": "collections/all"
+        },
+        {
+          "name": "Headphones",
+          "id": "2",
+          "path": "collections/headphones"
+        },
+        {
+          "name": "Earbuds",
+          "id": "3",
+          "path": "collections/earbuds"
+        },
+        {
+          "name": "Speakers",
+          "id": "4",
+          "path": "collections/speakers"
+        }
+      ],
+      "filters": [
+        {
+          "name": "Gift card",
+          "id": 1,
+          "path": "products/gift-card",
+          "img": "gift_card.webp"
+        },
+        {
+          "name": "Sales",
+          "id": 2,
+          "path": "collections/sales",
+          "img": "sales.webp"
+        },
+        {
+          "name": "Customer pick",
+          "id": 3,
+          "path": "products/customer-pick",
+          "img": "customer_pick.webp"
+        }
+      ]
+    }
+  },
+  "mainPage": {
+    "carousel": [
+      {
+        "id": 1,
+        "text": "Best in class headphones",
+        "img": "hero_headphones.webp"
+      },
+      {
+        "id": 2,
+        "text": "Wireless speakers",
+        "img": "hero_speakers.webp"
+      },
+      {
+        "id": 3,
+        "text": "Premium Earless Earbuds",
+        "img": "hero_earbuds.webp"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "speakers",
+        "img": "speakers.webp",
+        "path": "collections/speakers"
+      },
+      {
+        "id": 2,
+        "name": "earbuds",
+        "img": "earbuds.webp",
+        "path": "collections/earbuds"
+      },
+      {
+        "id": 3,
+        "name": "headphones",
+        "img": "headphones.webp",
+        "path": "collections/headphones"
+      }
+    ],
+    "earbuds": {
+      "tittle": "earbuds",
+      "heading": "How to choose earbuds that work for you?",
+      "description": "With so many shapes and features, it’s easy to get confused when shopping earbuds. Let us help you find the product that fit your needs.",
+      "buttons": {
+        "left": {
+          "text": "read article",
+          "path": "blog/choose-earbuds"
+        },
+        "right": {
+          "text": "shop earbuds",
+          "path": "collections/earbuds"
+        }
+      },
+      "images": [
+        {
+          "id": 1,
+          "name": "earbuds_1.webp"
+        },
+        {
+          "id": 2,
+          "name": "earbuds_2.webp"
+        },
+        {
+          "id": 3,
+          "name": "earbuds_3.webp"
+        },
+        {
+          "id": 4,
+          "name": "earbuds_4.webp"
+        }
+      ]
+    },
+    "brands": [
+      {
+        "id": 1,
+        "img": "sony-logo.webp"
+      },
+      {
+        "id": 1,
+        "img": "sennheiser-logo.webp"
+      },
+      {
+        "id": 1,
+        "img": "jbl-logo.webp"
+      },
+      {
+        "id": 1,
+        "img": "bose-logo.avif"
+      }
+    ]
+  }
+}
