@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SearchIcon from '@mui/icons-material/Search';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import {getHeaderData} from '../../data/dataFunctions';
 
@@ -39,6 +39,10 @@ export function Header() {
         setIsDropDownOpen(false);
     };
 
+    const handleScrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <header className={`${style.Header} ${scrollDown ? style.scroll : ""}`}>
             <div className={`${mainStyles.container} ${style.menu_container}`}>
@@ -48,7 +52,11 @@ export function Header() {
                             return (
                                 <li key={item.id}
                                     className={style.header_nav_list_item}
-                                    onMouseEnter={item.name === "Shop" ? handleShowDropDown : handleHideDropDown}>
+                                    onMouseEnter={item.name === "Shop" ? handleShowDropDown : handleHideDropDown}
+                                    onClick={()=> {
+                                        handleHideDropDown();
+                                        handleScrollToTop();
+                                    }}>
                                     <NavLink to={item.path}
                                              className={`${style.header_nav_link} ${scrollDown ? style.scroll : ""}`}>
                                         <span>{item.name}</span>
@@ -66,7 +74,9 @@ export function Header() {
                                                             <li key={collection.id}
                                                                 className={style.dropdown_list_item}>
                                                                 <NavLink to={collection.path}
-                                                                         className={style.dropdown_link}>{collection.name}
+                                                                         className={style.dropdown_link}
+                                                                         onClick={handleHideDropDown}>
+                                                                    {collection.name}
                                                                 </NavLink>
                                                             </li>
                                                         )
@@ -79,7 +89,8 @@ export function Header() {
                                                             <li key={filter.id}
                                                                 className={style.filter_list_item}>
                                                                 <NavLink to={filter.path}
-                                                                         className={style.filter_link}>
+                                                                         className={style.filter_link}
+                                                                         onClick={handleHideDropDown}>
                                                                     <div className={style.filter_img_wrapper}>
                                                                         <img
                                                                             src={require(`../../assets/dropdown/${filter.img}`)}
@@ -87,7 +98,7 @@ export function Header() {
                                                                     </div>
                                                                     <div className={style.filter_name_wrapper}>
                                                                         <span>{filter.name}</span>
-                                                                        <ArrowForwardIosIcon fontSize="small"/>
+                                                                        <KeyboardArrowRightIcon fontSize="small"/>
                                                                     </div>
                                                                 </NavLink>
                                                             </li>

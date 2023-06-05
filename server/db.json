@@ -1,0 +1,1615 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Earbuds",
+      "images": {
+        "main": "earbuds_1.webp"
+      },
+      "category": "earbuds",
+      "price": "85.00",
+      "oldPrice": "85.00",
+      "onStock": 1,
+      "colors": [
+        "grey"
+      ],
+      "sold": 30,
+      "rating": 3,
+      "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Long battery life",
+          "description": "Up to 8 hours of continuous playback time, with additional charging time available through the case. A long battery life is particularly important for those who are constantly on the go or need earbuds that can last throughout the day without requiring frequent charging. A long battery life can also provide peace of mind, knowing that the earbuds will be available when needed without worrying about running out of power."
+        },
+        {
+          "tittle": "Optimal design",
+          "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Noise cancelling earbuds",
+      "images": {
+        "main": "earbuds_2.webp"
+      },
+      "category": "earbuds",
+      "price": "150.00",
+      "oldPrice": "170.00",
+      "onStock": 10,
+      "colors": [
+        "white"
+      ],
+      "sold": 10,
+      "rating": 4,
+      "description": "These earbuds feature the most advanced true wireless technology. Use the app to adjust the noise-cancelling modes and get a mind-blowing listening experience. The  sound personalization tech uses real time adjustments to tailor to your hearing needs. The result is a listening experience that protects you hearing while delivering unparalleled sound quality. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Long battery life",
+          "description": "Up to 8 hours of continuous playback time, with additional charging time available through the case. A long battery life is particularly important for those who are constantly on the go or need earbuds that can last throughout the day without requiring frequent charging. A long battery life can also provide peace of mind, knowing that the earbuds will be available when needed without worrying about running out of power."
+        },
+        {
+          "tittle": "Optimal design",
+          "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sport earbuds",
+      "images": {
+        "main": "earbuds_3.webp"
+      },
+      "category": "earbuds",
+      "price": "160.00",
+      "oldPrice": "160.00",
+      "onStock": 10,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 3,
+      "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Long battery life",
+          "description": "Up to 8 hours of continuous playback time, with additional charging time available through the case. A long battery life is particularly important for those who are constantly on the go or need earbuds that can last throughout the day without requiring frequent charging. A long battery life can also provide peace of mind, knowing that the earbuds will be available when needed without worrying about running out of power."
+        },
+        {
+          "tittle": "Optimal design",
+          "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Wireless earbuds",
+      "images": {
+        "main": "earbuds_4.webp"
+      },
+      "category": "earbuds",
+      "price": "145.00",
+      "oldPrice": "145.00",
+      "onStock": 5,
+      "colors": [
+        "grey"
+      ],
+      "sold": 20,
+      "rating": 3,
+      "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Long battery life",
+          "description": "Up to 8 hours of continuous playback time, with additional charging time available through the case. A long battery life is particularly important for those who are constantly on the go or need earbuds that can last throughout the day without requiring frequent charging. A long battery life can also provide peace of mind, knowing that the earbuds will be available when needed without worrying about running out of power."
+        },
+        {
+          "tittle": "Optimal design",
+          "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Wireless earbuds",
+      "images": {
+        "main": "earbuds_5.webp"
+      },
+      "category": "earbuds",
+      "price": "120.00",
+      "oldPrice": "130.00",
+      "onStock": 15,
+      "colors": [
+        "grey"
+      ],
+      "sold": 5,
+      "rating": 4,
+      "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Long battery life",
+          "description": "Up to 8 hours of continuous playback time, with additional charging time available through the case. A long battery life is particularly important for those who are constantly on the go or need earbuds that can last throughout the day without requiring frequent charging. A long battery life can also provide peace of mind, knowing that the earbuds will be available when needed without worrying about running out of power."
+        },
+        {
+          "tittle": "Optimal design",
+          "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Wireless earbuds",
+      "images": {
+        "main": "earbuds_6.webp"
+      },
+      "category": "earbuds",
+      "price": "130.00",
+      "oldPrice": "130.00",
+      "onStock": 15,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 5,
+      "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Long battery life",
+          "description": "Up to 8 hours of continuous playback time, with additional charging time available through the case. A long battery life is particularly important for those who are constantly on the go or need earbuds that can last throughout the day without requiring frequent charging. A long battery life can also provide peace of mind, knowing that the earbuds will be available when needed without worrying about running out of power."
+        },
+        {
+          "tittle": "Optimal design",
+          "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Bluetooth speaker",
+      "images": {
+        "main": "speakers_1.webp"
+      },
+      "category": "speakers",
+      "price": "160.00",
+      "oldPrice": "160.00",
+      "onStock": 0,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Bluetooth speaker",
+      "images": {
+        "main": "speakers_8.webp"
+      },
+      "category": "speakers",
+      "price": "170.00",
+      "oldPrice": "170.00",
+      "onStock": 10,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 4.5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Bluetooth speaker",
+      "images": {
+        "main": "speakers_9.webp"
+      },
+      "category": "speakers",
+      "price": "120.00",
+      "oldPrice": "120.00",
+      "onStock": 10,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Bluetooth speaker",
+      "images": {
+        "main": "speakers_10.webp"
+      },
+      "category": "speakers",
+      "price": "260.00",
+      "oldPrice": "280.00",
+      "onStock": 20,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Bluetooth speaker",
+      "images": {
+        "main": "speakers_11.webp"
+      },
+      "category": "speakers",
+      "price": "50.00",
+      "oldPrice": "50.00",
+      "onStock": 20,
+      "colors": [
+        "blue"
+      ],
+      "sold": 20,
+      "rating": 4.5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Bluetooth speaker",
+      "images": {
+        "main": "speakers_12.webp",
+        "yellow": "speakers_12_yellow.webp",
+        "orange": "speakers_12_orange.webp",
+        "green": "speakers_12_green.webp"
+      },
+      "category": "speakers",
+      "price": "70.00",
+      "oldPrice": "70.00",
+      "onStock": 20,
+      "colors": [
+        "green",
+        "yellow",
+        "orange"
+      ],
+      "rating": 4.5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "sales": false,
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Party speaker",
+      "images": {
+        "main": "speakers_14.jpg"
+      },
+      "category": "speakers",
+      "price": "200.00",
+      "oldPrice": "200.00",
+      "onStock": 12,
+      "colors": [
+        "red"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Waterproof bluetooth speaker",
+      "images": {
+        "main": "speakers_14.jpg"
+      },
+      "category": "speakers",
+      "price": "200.00",
+      "oldPrice": "200.00",
+      "onStock": 20,
+      "colors": [
+        "grey"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Waterproof bluetooth speaker",
+      "images": {
+        "main": "speakers_15_grey.webp",
+        "soft_pink": "speakers_15_soft_pink.webp",
+        "sand": "speakers_15_sand.webp",
+        "dark_green": "speakers_15_dark_green.webp",
+        "yellow": "speakers_15_yellow.webp",
+        "teal": "speakers_15_teal.webp",
+        "red": "speakers_15_red.webp",
+        "white": "speakers_15_white.webp",
+        "dark_grey": "speakers_15_dark_grey.webp",
+        "grey": "speakers_15_grey.jpg"
+      },
+      "category": "speakers",
+      "price": "160.00",
+      "oldPrice": "175.00",
+      "onStock": 20,
+      "colors": [
+        "grey",
+        "soft_pink",
+        "sand",
+        "dark_green",
+        "yellow",
+        "teal",
+        "red",
+        "white",
+        "dark_grey",
+        "grey"
+      ],
+      "sold": 20,
+      "rating": 3,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Wireless boombox",
+      "images": {
+        "main": "speakers_14.jpg"
+      },
+      "category": "speakers",
+      "price": "140.00",
+      "oldPrice": "140.00",
+      "onStock": 2,
+      "colors": [
+        "red"
+      ],
+      "sold": 6,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Waterproof",
+          "description": "Designed to be resistant to water and moisture, making it suitable for use in outdoor or wet environments. This is achieved through the use of waterproof materials, seals, and gaskets that protect the internal components from water damage. It can be used in various outdoor environments without the risk of damage from rain, splashes, or immersion in water. It is also easy to clean and maintain, making it a long-lasting and durable audio solution."
+        },
+        {
+          "tittle": "Shock-resistant",
+          "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Bluetooth headphones",
+      "images": {
+        "main": "headphones_17_white.webp",
+        "white": "headphones_17_white.webp",
+        "yellow": "speakers_17_yellow.webp",
+        "red": "speakers_17_red.webp",
+        "pink": "speakers_17_pink.webp",
+        "blue": "speakers_17_blue.webp",
+        "green": "speakers_17_green.webp"
+      },
+      "category": "headphones",
+      "price": "220.00",
+      "oldPrice": "220.00",
+      "onStock": 2,
+      "colors": [
+        "white",
+        "green",
+        "yellow",
+        "red",
+        "blue",
+        "pink"
+      ],
+      "sold": 40,
+      "rating": 4.5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Bluetooth headphones",
+      "images": {
+        "main": "headphones_18.webp"
+      },
+      "category": "headphones",
+      "price": "250.00",
+      "oldPrice": "250.00",
+      "onStock": 12,
+      "colors": [
+        "white"
+      ],
+      "sold": 60,
+      "rating": 3,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_19.webp"
+      },
+      "category": "headphones",
+      "price": "310.00",
+      "oldPrice": "325.00",
+      "onStock": 12,
+      "colors": [
+        "black"
+      ],
+      "sold": 10,
+      "rating": 0,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": []
+    },
+    {
+      "id": 20,
+      "name": "Bluetooth headphones",
+      "images": {
+        "main": "headphones_20.webp"
+      },
+      "category": "headphones",
+      "price": "390.00",
+      "oldPrice": "390.00",
+      "onStock": 20,
+      "colors": [
+        "grey"
+      ],
+      "sold": 50,
+      "rating": 5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_21.webp"
+      },
+      "category": "headphones",
+      "price": "215.00",
+      "oldPrice": "215.00",
+      "onStock": 20,
+      "colors": [
+        "black"
+      ],
+      "sold": 30,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_21.webp"
+      },
+      "category": "headphones",
+      "price": "236.00",
+      "oldPrice": "236.00",
+      "onStock": 0,
+      "colors": [
+        "black"
+      ],
+      "sold": 30,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_23.webp"
+      },
+      "category": "headphones",
+      "price": "310.00",
+      "oldPrice": "310.00",
+      "onStock": 10,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_24_light_brown.webp",
+        "light_brown": "headphones_24_light_brown.webp",
+        "grey": "headphones_24_grey.webp",
+        "clementine": "headphones_24_clementine.webp",
+        "yellow": "headphones_24_yellow.webp"
+      },
+      "category": "headphones",
+      "price": "280.00",
+      "oldPrice": "280.00",
+      "onStock": 30,
+      "colors": [
+        "light_brown",
+        "grey",
+        "clementine",
+        "yellow"
+      ],
+      "sold": 20,
+      "rating": 5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_25.webp"
+      },
+      "category": "headphones",
+      "price": "255.00",
+      "oldPrice": "275.00",
+      "onStock": 30,
+      "colors": [
+        "light_brown"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": true,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_26.webp"
+      },
+      "category": "headphones",
+      "price": "210.00",
+      "oldPrice": "250.00",
+      "onStock": 30,
+      "colors": [
+        "white"
+      ],
+      "sold": 20,
+      "rating": 5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_27.webp"
+      },
+      "category": "headphones",
+      "price": "230.00",
+      "oldPrice": "230.00",
+      "onStock": 30,
+      "colors": [
+        "white"
+      ],
+      "sold": 10,
+      "rating": 5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_28.webp"
+      },
+      "category": "headphones",
+      "price": "250.00",
+      "oldPrice": "250.00",
+      "onStock": 30,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_29.webp"
+      },
+      "category": "headphones",
+      "price": "250.00",
+      "oldPrice": "250.00",
+      "onStock": 30,
+      "colors": [
+        "black"
+      ],
+      "sold": 2,
+      "rating": 0,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": []
+    },
+    {
+      "id": 30,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_30.webp"
+      },
+      "category": "headphones",
+      "price": "195.00",
+      "oldPrice": "195.00",
+      "onStock": 30,
+      "colors": [
+        "black"
+      ],
+      "sold": 10,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_31.webp"
+      },
+      "category": "headphones",
+      "price": "315.00",
+      "oldPrice": "315.00",
+      "onStock": 30,
+      "colors": [
+        "dark_green"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_32.webp"
+      },
+      "category": "headphones",
+      "price": "275.00",
+      "oldPrice": "275.00",
+      "onStock": 30,
+      "colors": [
+        "white"
+      ],
+      "sold": 40,
+      "rating": 5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_33.webp"
+      },
+      "category": "headphones",
+      "price": "360.00",
+      "oldPrice": "380.00",
+      "onStock": 30,
+      "colors": [
+        "black"
+      ],
+      "sold": 40,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_34.webp"
+      },
+      "category": "headphones",
+      "price": "310.00",
+      "oldPrice": "310.00",
+      "onStock": 0,
+      "colors": [
+        "black"
+      ],
+      "sold": 40,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_35.webp"
+      },
+      "category": "headphones",
+      "price": "420.00",
+      "oldPrice": "420.00",
+      "onStock": 1,
+      "colors": [
+        "black"
+      ],
+      "sold": 40,
+      "rating": 5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_36.webp"
+      },
+      "category": "headphones",
+      "price": "340.00",
+      "oldPrice": "340.00",
+      "onStock": 3,
+      "colors": [
+        "black"
+      ],
+      "sold": 60,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_37.webp"
+      },
+      "category": "headphones",
+      "price": "285.00",
+      "oldPrice": "285.00",
+      "onStock": 15,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 5,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Wireless headphones",
+      "images": {
+        "main": "headphones_38.webp"
+      },
+      "category": "headphones",
+      "price": "200.00",
+      "oldPrice": "200.00",
+      "onStock": 2,
+      "colors": [
+        "black"
+      ],
+      "sold": 20,
+      "rating": 4,
+      "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+      "additionalInfo": [
+        {
+          "tittle": "Superior comfort",
+          "description": "It has soft cushions that fit over the ear, an adjustable headband that distributes weight evenly, and lightweight construction. The cushions are made of breathable material to prevent overheating and sweat, and the headband is flexible enough to accommodate different head sizes. The headphone is also designed to provide a secure and snug fit, so it doesn't slip off or move around during use. All of these features together create a comfortable headphone experience for long listening sessions."
+        },
+        {
+          "tittle": "Topnotch sound quality",
+          "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
+        }
+      ],
+      "customerPick": false,
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Daniel Jonson",
+          "description": "Good product",
+          "rating": "5"
+        },
+        {
+          "id": 2,
+          "name": "Peter Black",
+          "description": "Customer's support could be better, the product itself is great",
+          "rating": "4"
+        }
+      ]
+    }
+  ]
+}

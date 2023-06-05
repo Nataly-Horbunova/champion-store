@@ -1,0 +1,33 @@
+@import "../../styles/mixins_and_placeholders.module";
+@import "../../styles/variables.module";
+
+.ProductsPage {
+  margin-top: 136px;
+
+  .productsPage_container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'filters sort'
+                          'filters products';
+    grid-gap: 40px;
+
+
+    .filters {
+      position: sticky;
+      align-self: start;
+      top:0;
+      grid-area: filters;
+    }
+
+    .sort{
+      grid-area: sort;
+    }
+
+    .products_list{
+      grid-area: products;
+    }
+
+  }
+
+}

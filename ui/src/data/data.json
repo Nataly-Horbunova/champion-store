@@ -12,7 +12,7 @@
       },
       {
         "name": "Shop",
-        "path": "/collections/all",
+        "path": "/collections",
         "id": "2"
       },
       {
@@ -36,7 +36,7 @@
         {
           "name": "Shop all",
           "id": "1",
-          "path": "collections/all"
+          "path": "collections"
         },
         {
           "name": "Headphones",
@@ -153,17 +153,339 @@
         "img": "sony-logo.webp"
       },
       {
-        "id": 1,
+        "id": 2,
         "img": "sennheiser-logo.webp"
       },
       {
-        "id": 1,
+        "id": 3,
         "img": "jbl-logo.webp"
       },
       {
-        "id": 1,
+        "id": 4,
         "img": "bose-logo.avif"
       }
     ]
+  },
+  "footer": {
+    "quickLinks": {
+      "tittle": "Quick links",
+      "list": [
+        {
+          "id": 1,
+          "name": "Contact",
+          "path": "contact"
+        },
+        {
+          "id": 2,
+          "name": "Terms of Service",
+          "path": "terms-of-service"
+        },
+        {
+          "id": 3,
+          "name": "Privacy Policy",
+          "path": "privacy-policy"
+        },
+        {
+          "id": 4,
+          "name": "Refund Policy",
+          "path": "refund-policy"
+        }
+      ]
+    },
+    "socials": {
+      "tittle": "Follow us",
+      "list": [
+        {
+          "id": 1,
+          "img": "twitter_logo.svg",
+          "name": "twitter",
+          "link": "https://twitter.com/"
+        },
+        {
+          "id": 2,
+          "img": "facebook_logo.svg",
+          "name": "facebook",
+          "link": "https://www.facebook.com/"
+        },
+        {
+          "id": 3,
+          "img": "pinterest_logo.svg",
+          "name": "pinterest",
+          "link": "https://www.pinterest.com/"
+        },
+        {
+          "id": 4,
+          "img": "instagram_logo.svg",
+          "name": "instagram",
+          "link": "https://www.instagram.com/"
+        },
+        {
+          "id": 5,
+          "img": "tiktok_logo.svg",
+          "name": "tiktok",
+          "link": "https://www.tiktok.com/"
+        }
+      ]
+    },
+    "reputation": {
+      "tittle": "A long-standing reputation",
+      "text": "With years of experience and expertise passed down from generation to generation, we are known for our commitment to excellence and our ability to consistently supply innovative and reliable sound systems.",
+      "linkName": "About us",
+      "path": "about-us"
+    },
+    "shipping": {
+      "tittle": "Free shipping for orders of $300+",
+      "text": "Take advantage of our exciting offer of free shipping on all orders over $300! With this limited-time offer, you can enjoy fast and reliable shipping on your purchases without having to worry about any extra costs.",
+      "linkName": "Shipping policy",
+      "path": "refund-policy"
+    },
+    "paymentSystems": [
+      {
+        "id": 1,
+        "img": "visa.svg"
+      },
+      {
+        "id": 2,
+        "img": "mastercard.svg"
+      },
+      {
+        "id": 3,
+        "img": "amex.svg"
+      },
+      {
+        "id": 4,
+        "img": "paypal.svg"
+      },
+      {
+        "id": 5,
+        "img": "diners_club.svg"
+      },
+      {
+        "id": 6,
+        "img": "discover.svg"
+      }
+    ],
+    "copyright": "© 2023 All rights reserved"
+  },
+  "products": {
+    "filters": {
+      "tittle": "Filter by",
+      "price": {
+        "tittle": "Price",
+        "fromText": "From",
+        "toText": "To"
+      },
+      "availability": {
+        "tittle": "Availability",
+        "options": {
+          "onStock": {
+            "name": "On stock",
+            "value": "on-stock"
+          },
+          "outOfStock": {
+            "name": "Out of stock",
+            "value": "out-of-stock"
+          }
+        }
+      },
+      "productType": {
+        "tittle": "Product type",
+        "options": {
+          "earbuds": {
+            "name": "Earbuds",
+            "value": "earbuds"
+          },
+          "headphones": {
+            "name": "Headphones",
+            "value": "headphones"
+          },
+          "speakers": {
+            "name": "Speakers",
+            "value": "speakers"
+          }
+        }
+      },
+      "color": {
+        "tittle": "Color",
+        "options": [
+          {
+            "id": 1,
+            "name": "Blue",
+            "value": "blue",
+            "color": "#1E48B6"
+          },
+          {
+            "id": 2,
+            "name": "Clementine",
+            "value": "clementine",
+            "color": "#EF5436"
+          },
+          {
+            "id": 3,
+            "name": "Dark green",
+            "value": "dark_green",
+            "color": "#515A49"
+          },
+          {
+            "id": 4,
+            "name": "Dark grey",
+            "value": "dark_grey",
+            "color": "#515C70"
+          },
+          {
+            "id": 5,
+            "name": "Green",
+            "value": "green",
+            "color": "#008000FF"
+          },
+          {
+            "id": 6,
+            "name": "Grey",
+            "value": "grey",
+            "color": "#737478"
+          },
+          {
+            "id": 7,
+            "name": "Light brown",
+            "value": "light_brown",
+            "color": "#AB895E"
+          },
+          {
+            "id": 8,
+            "name": "Orange",
+            "value": "orange",
+            "color": "#FFA500FF"
+          },
+          {
+            "id": 9,
+            "name": "Pink",
+            "value": "pink",
+            "color": "#D31370"
+          },
+          {
+            "id": 10,
+            "name": "Red",
+            "value": "red",
+            "color": "#CC2626"
+          },
+          {
+            "id": 11,
+            "name": "Sand",
+            "value": "sand",
+            "color": "#989375"
+          },
+          {
+            "id": 12,
+            "name": "Soft pink",
+            "value": "soft_pink",
+            "color": "#C59193"
+          },
+          {
+            "id": 13,
+            "name": "Teal",
+            "value": "teal",
+            "color": "#75C9BC"
+          },
+          {
+            "id": 14,
+            "name": "White",
+            "value": "white",
+            "color": "#FFF"
+          },
+          {
+            "id": 15,
+            "name": "Yellow",
+            "value": "yellow",
+            "color": "#EABF57"
+          },
+          {
+            "id": 16,
+            "name": "Black",
+            "value": "black",
+            "color": "#000"
+          }
+        ],
+        "categories": {
+          "earbuds": false,
+          "headphones": true,
+          "speakers": true
+        },
+        "showMore": "+Show more",
+        "showLess": "-Show less"
+      },
+      "clearBtn": "Clear all"
+    },
+    "sort": {
+      "tittle": "Sort by:",
+      "options": [
+        {
+          "id": 1,
+          "name": "Featured"
+        },
+        {
+          "id": 2,
+          "name": "Alphabetically A-Z"
+        },
+        {
+          "id": 3,
+          "name": "Alphabetically Z-A"
+        },
+        {
+          "id": 4,
+          "name": "Best selling"
+        },
+        {
+          "id": 5,
+          "name": "Price, low to high"
+        },
+        {
+          "id": 6,
+          "name": "Price, high to low"
+        }
+      ]
+    },
+    "totalText": "products",
+    "cardInfo": {
+      "reviewsText": "total reviews",
+      "quantityText": "Quantity",
+      "services": [
+        {
+          "id": 1,
+          "name": "24/7 support",
+          "img": "support.svg"
+        },
+        {
+          "id": 2,
+          "name": "Secure transaction",
+          "img": "security.svg"
+        },
+        {
+          "id": 3,
+          "name": "Worldwide shipping",
+          "img": "shipping"
+        }
+      ],
+      "buttons": [
+        {
+          "id": 1,
+          "name": "Add to cart"
+        },
+        {
+          "id": 1,
+          "name": "Add to favourites"
+        }
+      ],
+      "labels": {
+        "customerPick": "Customer pick",
+        "soldOut": "Sold out",
+        "sale": "Sale"
+      },
+      "reviews": {
+        "tittle": "Customer Reviews",
+        "text": "total reviews",
+        "rating": "Total rating",
+        "post": "Write a review"
+      }
+    }
   }
 }

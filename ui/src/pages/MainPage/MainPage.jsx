@@ -2,11 +2,15 @@ import {Carousel} from '../../Components/Carousel/Carousel';
 import style from './MainPage.module.scss';
 import {getMainPageData} from "../../data/dataFunctions";
 import {NavLink} from "react-router-dom";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import mainStyles from "../../index.module.scss";
 
 export function MainPage() {
     const pageData = getMainPageData();
+
+    const handleScrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
 
     return (
         <main className={style.MainPage}>
@@ -18,14 +22,14 @@ export function MainPage() {
                         {pageData.categories.map(category => {
                             return (
                                 <li key={category.id} className={style.categories_list_item}>
-                                    <NavLink to={category.path} className={style.categories_list_link}>
+                                    <NavLink to={category.path} className={style.categories_list_link} onClick={handleScrollToTop}>
                                         <div className={style.img_wrapper}>
                                             <img src={require(`../../assets/categories/${category.img}`)}
                                                  alt={category.name} className={style.category_img}/>
                                         </div>
                                         <button className={style.category_btn}>
                                             <span className={style.category_name}> {category.name}</span>
-                                            <ArrowForwardIosIcon fontSize="small"/>
+                                            <KeyboardArrowRightIcon fontSize="small"/>
                                         </button>
                                     </NavLink>
                                 </li>

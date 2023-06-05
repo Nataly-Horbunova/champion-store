@@ -1,0 +1,32 @@
+@import "../../styles/variables.module";
+@import "../../styles/mixins_and_placeholders.module";
+
+.Filters {
+  margin-bottom: 30px;
+
+  .filters_tittle{
+    margin-bottom: 30px;
+  }
+
+  .filter_accordion {
+    background-color: transparent;
+
+    .filter_tittle {
+      color: $main-text-color;
+      font-weight: 900;
+    }
+  }
+
+  .filter_label_wrapper {
+    @include flex(space-between, center, 10px);
+    flex-grow: 1;
+
+    .filter_text {
+
+    }
+
+    .filter_qty {
+
+    }
+  }
+}

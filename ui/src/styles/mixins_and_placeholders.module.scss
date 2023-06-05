@@ -63,3 +63,20 @@
     outline: 3px solid transparentize($color-accent-1, 0.8);
   }
 }
+
+%footer-info-tittle{
+  font-size: $fz-m;
+  line-height: 1.5;
+  font-weight: 900;
+  color: $secondary-text-color;
+  padding-bottom: 16px;
+}
+
+%footer-info-text{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: $fz-m;
+  line-height: 1.5;
+  font-weight: 600;
+  color: $secondary-text-color;
+
+}

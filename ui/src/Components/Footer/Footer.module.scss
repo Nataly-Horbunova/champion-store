@@ -1,0 +1,123 @@
+@import '../../styles/variables.module';
+@import '../../styles/mixins_and_placeholders.module';
+
+Footer {
+  background: $bg-accent-4;
+  padding: 50px 0;
+
+  .footer_container {
+    @include flex(space-between, flex-start, 30px, column);
+
+    .footer_info_wrapper {
+      @include flex(space-between, flex-start, 30px);
+      flex-wrap: wrap;
+
+      .quick_links {
+        flex-basis: calc(20% - 30px);
+
+
+        &_tittle {
+          @extend %footer-info-tittle;
+        }
+
+        &_list {
+          &_item {
+            margin-bottom: 6px;
+
+            .quick_links_link {
+              @extend %footer-info-text;
+            }
+          }
+        }
+      }
+
+      .socials {
+      flex-basis: calc(20% - 30px);
+
+        .socials_tittle {
+          @extend %footer-info-tittle;
+        }
+
+        .socials_list {
+          @include flex(flex-start, center, 20px);
+
+          &_item {
+            .socials_list_link {
+              display: block;
+              width: 100%;
+
+              .socials_img {
+                display: block;
+                width: 16px;
+                height: 16px;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
+
+      .reputation {
+        flex-basis: calc(30% - 30px);
+
+        .reputation_tittle {
+          @extend %footer-info-tittle;
+        }
+
+        .reputation_text {
+          @extend %footer-info-text;
+        }
+
+        .reputation_link {
+          @extend %footer-info-text;
+          @include flex( flex-start, center, 4px);
+          margin-top: 10px;;
+        }
+      }
+
+      .shipping {
+        flex-basis: calc(30% - 30px);
+
+        .shipping_tittle {
+          @extend %footer-info-tittle;
+        }
+
+        .shipping_text {
+          @extend %footer-info-text;
+        }
+
+        .shipping_link {
+         @include flex( flex-start, center, 4px);
+          margin-top: 10px;
+          @extend %footer-info-text;
+        }
+      }
+    }
+
+    .payment_systems {
+      .payment_systems_list {
+        @include flex(space-between, center, 10px);
+
+        &_item {
+          width: 40px;
+          height: auto;
+
+          .payment_systems_img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      font-size: $fz-s;
+      line-height: $lh-s;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      color: $secondary-text-color;
+    }
+
+  }
+
+}
