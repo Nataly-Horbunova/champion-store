@@ -8,6 +8,7 @@ import {setProducts} from "../../data/redux/reducers/shopSlice";
 import {Filters} from "../../Components/Filters/Filters";
 import {ProductCard} from "../../Components/ProductCard/ProductCard";
 import {Sort} from "../../Components/Sort/Sort";
+import {CurrentFilters} from "../../Components/CurrentFilters/CurrentFilters";
 
 
 export function ProductsPage() {
@@ -26,10 +27,13 @@ export function ProductsPage() {
         <main className={style.ProductsPage}>
             <div className={`${mainStyles.container} ${style.productsPage_container}`}>
                 <Filters category={category} className={style.filters}/>
-                <Sort className={style.sort}/>
+                <div className={style.sort_and_filters_wrapper}>
+                    <CurrentFilters className={style.currentFilters}/>
+                    <Sort className={style.sort}/>
+                </div>
                 <ul className={style.products_list}>
                     {
-                        products.map(product => <ProductCard productData={product} key={product.id}/>)
+                        products.map(product => <ProductCard product={product} key={product.id}/>)
                     }
                 </ul>
 

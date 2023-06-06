@@ -8,9 +8,9 @@ export function AvailabilityFilter({filter}) {
 
     return (
         <FormGroup>
-            <FormControlLabel control={<Checkbox color="main_text_color" value={filter.options.onStock.value}/>} label={
+            <FormControlLabel control={<Checkbox color="main_text_color" value={filter.options.inStock.value}/>} label={
                 <div className={style.filter_label_wrapper}>
-                    <span className={style.filter_text}>{filter.options.onStock.name}</span>
+                    <span className={style.filter_text}>{filter.options.inStock.name}</span>
                     <span className={style.filter_qty}>35</span>
                 </div>
             }/>

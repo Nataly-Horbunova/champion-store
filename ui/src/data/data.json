@@ -278,9 +278,9 @@
       "availability": {
         "tittle": "Availability",
         "options": {
-          "onStock": {
-            "name": "On stock",
-            "value": "on-stock"
+          "inStock": {
+            "name": "In stock",
+            "value": "in-stock"
           },
           "outOfStock": {
             "name": "Out of stock",
@@ -420,31 +420,37 @@
       "options": [
         {
           "id": 1,
-          "name": "Featured"
+          "name": "Featured",
+          "value": "featured"
         },
         {
           "id": 2,
-          "name": "Alphabetically A-Z"
+          "name": "Alphabetically A-Z",
+          "value": "alphabetically_a_z"
         },
         {
           "id": 3,
-          "name": "Alphabetically Z-A"
+          "name": "Alphabetically Z-A",
+          "value": "alphabetically_z_a"
         },
         {
           "id": 4,
-          "name": "Best selling"
+          "name": "Best selling",
+          "value": "best_selling"
         },
         {
           "id": 5,
-          "name": "Price, low to high"
+          "name": "Price, low to high",
+          "value": "price_low_to_high"
         },
         {
           "id": 6,
-          "name": "Price, high to low"
+          "name": "Price, high to low",
+          "value": "price_high_to_low"
         }
-      ]
+      ],
+      "totalText": "products"
     },
-    "totalText": "products",
     "cardInfo": {
       "reviewsText": "total reviews",
       "quantityText": "Quantity",

@@ -25,7 +25,7 @@ export function Carousel() {
             {banners.map(banner => {
 
                 return (
-                    <SwiperSlide key={banner.id} className={style.carousel_slide}>
+                    <SwiperSlide key={banner.id} className={style.carousel_slide} color="color_accent_1">
                         <img src={require(`../../assets/carousel/${banner.img}`)} alt="banner" className={style.carousel_img}/>
                         <div className={style.carousel_text}>{banner.text}</div>
                     </SwiperSlide>

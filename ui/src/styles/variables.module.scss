@@ -34,7 +34,7 @@ $product-color-white: #fff;
 $product-color-black: #000;
 //$product-color-camo: url(https://cdn.shopify.com/s/files/1/0690/2566/1222/files/camo.png?v=1671568944&width=50);
 
-$fz-xxs: clamp(10px, calc(12 / 1400 * 100vw), 12px);
+$fz-xxs: clamp(8px, calc(12 / 1400 * 100vw), 10px);
 $fz-xs: clamp(12px, calc(14 / 1400 * 100vw), 14px);
 $fz-s: clamp(14px, calc(16 / 1400 * 100vw), 16px);
 $fz-m: clamp(16px, calc(18 / 1400 * 100vw), 18px);
@@ -42,7 +42,7 @@ $fz-l: clamp(20px, calc(24 / 1400 * 100vw), 24px);
 $fz-xl: clamp(26px, calc(54 / 1400 * 100vw), 54px);
 $fz-xxl: clamp(30px, calc(78 / 1400 * 100vw), 78px);
 
-$lh-xxs: clamp(14px, calc(16 / 1400 * 100vw), 16px);
+$lh-xxs: clamp(10px, calc(12 / 1400 * 100vw), 12px);
 $lh-xs: clamp(16px, calc(20 / 1400 * 100vw), 20px);
 $lh-s: clamp(18px, calc(22 / 1400 * 100vw), 22px);
 $lh-m: clamp(20px, calc(24 / 1400 * 100vw), 24px);

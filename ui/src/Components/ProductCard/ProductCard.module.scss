@@ -1,0 +1,88 @@
+@import "../../styles/mixins_and_placeholders.module";
+@import "../../styles/variables.module";
+
+.ProductCard {
+  @include flex(space-between, flex-start, 4px, column);
+  flex-basis: calc(25% - 4px);
+  transition: 0.3s ease-in-out;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: $fz-m;
+  line-height: $lh-m;
+  font-weight: 600;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  .img_wrapper {
+    position: relative;
+    overflow: hidden;
+
+    .product_img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .labels_wrapper {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      @include flex(flex-start, center, 6px);
+      font-size: $fz-xs;
+      line-height: $lh-xs;;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      color: $secondary-text-color;
+
+      .sale_label {
+        background-color: $color-accent-1;
+        padding: 1px 4px;
+      }
+
+      .customer_pick_label {
+        background-color: $color-accent-3;
+        padding: 1px 4px;
+      }
+
+      .sold_out_label {
+        background: $bg-accent-4;
+        padding: 1px 4px;
+      }
+    }
+
+    .favourite_icon {
+      position: absolute;
+      bottom: 6px;
+      left: 6px;
+      @extend %product-icon;
+    }
+
+    .add_to_cart_icon {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      @extend %product-icon;
+    }
+  }
+
+  .product_price_wrapper {
+    @include flex(flex-start, center, 10px);
+
+    .product_old_price{
+      text-decoration: line-through;
+      color: transparentize($main-text-color, 0.5);
+    }
+  }
+
+  .colors_wrapper{
+    @include flex(flex-start, center);
+
+    .colors_qty{
+      font-size: $fz-s;
+      line-height: $lh-s;
+      color: transparentize($main-text-color, 0.2);
+    }
+  }
+
+}

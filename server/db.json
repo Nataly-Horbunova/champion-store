@@ -256,7 +256,7 @@
       "id": 7,
       "name": "Bluetooth speaker",
       "images": {
-        "main": "speakers_1.webp"
+        "main": "speakers_7.webp"
       },
       "category": "speakers",
       "price": "160.00",
@@ -493,7 +493,7 @@
         }
       ],
       "sales": false,
-      "customerPick": true,
+      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -513,7 +513,7 @@
       "id": 13,
       "name": "Party speaker",
       "images": {
-        "main": "speakers_14.jpg"
+        "main": "speakers_13.webp"
       },
       "category": "speakers",
       "price": "200.00",
@@ -577,7 +577,7 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": true,
+      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -597,7 +597,7 @@
       "id": 15,
       "name": "Waterproof bluetooth speaker",
       "images": {
-        "main": "speakers_15_grey.webp",
+        "main": "speakers_15_grey.jpg",
         "soft_pink": "speakers_15_soft_pink.webp",
         "sand": "speakers_15_sand.webp",
         "dark_green": "speakers_15_dark_green.webp",
@@ -657,7 +657,7 @@
       "id": 16,
       "name": "Wireless boombox",
       "images": {
-        "main": "speakers_14.jpg"
+        "main": "speakers_16.webp"
       },
       "category": "speakers",
       "price": "140.00",
@@ -907,7 +907,7 @@
       "id": 22,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_21.webp"
+        "main": "headphones_22.webp"
       },
       "category": "headphones",
       "price": "236.00",

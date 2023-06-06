@@ -1,0 +1,23 @@
+@import "../../styles/mixins_and_placeholders.module";
+@import "../../styles/variables.module";
+
+.CurrentFilters {
+  @include flex(flex-start, center, 10px);
+  flex-wrap: wrap;
+
+  .current_filters_btn {
+    @extend %button;
+    color: transparentize($main-text-color, 0.3);
+    background-color: $secondary-text-color;
+    border: 1px solid transparentize($main-text-color, 0.7);
+
+    &:hover {
+      outline: 1px solid transparentize($overlay-bg, 0.8);
+    }
+  }
+
+  .clear_btn{
+    border: 1px solid $main-text-color;
+  }
+
+}

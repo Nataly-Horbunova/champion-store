@@ -1,3 +1,13 @@
-.Sort {
+@import "../../styles/mixins_and_placeholders.module";
+@import "../../styles/variables.module";
 
+.Sort {
+@include flex(spaace-between, center, 20px);
+
+  .product_qty_wrapper{
+    @include flex(spaace-between, center, 6px);
+    font-size: $fz-s;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+  }
 }

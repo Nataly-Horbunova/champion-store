@@ -3,6 +3,7 @@
 
 .ProductsPage {
   margin-top: 136px;
+  margin-bottom: 50px;
 
   .productsPage_container {
     display: grid;
@@ -14,20 +15,31 @@
 
 
     .filters {
-      position: sticky;
-      align-self: start;
-      top:0;
+      //position: sticky;
+      //align-self: start;
+      //top: 0;
+      //bottom: 0;
       grid-area: filters;
     }
 
-    .sort{
+    .sort_and_filters_wrapper {
+      @include flex(space-between, flex-start, 20px);
       grid-area: sort;
+
+      .currentFilters {
+        flex-basis: calc(65% - 20px);
+      }
+
+      .sort {
+        flex-basis: calc(35% - 20px);
+      }
     }
 
-    .products_list{
+    .products_list {
+      @include flex(flex-start, flex-start, 4px);
+      row-gap: 20px;
+      flex-wrap: wrap;
       grid-area: products;
     }
-
   }
-
 }
