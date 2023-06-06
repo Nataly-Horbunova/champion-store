@@ -452,8 +452,8 @@
       "totalText": "products"
     },
     "cardInfo": {
-      "reviewsText": "total reviews",
       "quantityText": "Quantity",
+      "colorText": "Color: ",
       "services": [
         {
           "id": 1,
@@ -468,19 +468,13 @@
         {
           "id": 3,
           "name": "Worldwide shipping",
-          "img": "shipping"
+          "img": "shipping.svg"
         }
       ],
-      "buttons": [
-        {
-          "id": 1,
-          "name": "Add to cart"
-        },
-        {
-          "id": 1,
-          "name": "Add to favourites"
-        }
-      ],
+      "buttons": {
+        "add": "Add to cart",
+        "favourite": "Add to favourites"
+      },
       "labels": {
         "customerPick": "Customer pick",
         "soldOut": "Sold out",

@@ -4,7 +4,8 @@
       "id": 1,
       "name": "Earbuds",
       "images": {
-        "main": "earbuds_1.webp"
+        "main": "earbuds_1.webp",
+        "list": []
       },
       "category": "earbuds",
       "price": "85.00",
@@ -46,7 +47,8 @@
       "id": 2,
       "name": "Noise cancelling earbuds",
       "images": {
-        "main": "earbuds_2.webp"
+        "main": "earbuds_2.webp",
+        "list": []
       },
       "category": "earbuds",
       "price": "150.00",
@@ -88,7 +90,8 @@
       "id": 3,
       "name": "Sport earbuds",
       "images": {
-        "main": "earbuds_3.webp"
+        "main": "earbuds_3.webp",
+        "list": []
       },
       "category": "earbuds",
       "price": "160.00",
@@ -130,7 +133,8 @@
       "id": 4,
       "name": "Wireless earbuds",
       "images": {
-        "main": "earbuds_4.webp"
+        "main": "earbuds_4.webp",
+        "list": []
       },
       "category": "earbuds",
       "price": "145.00",
@@ -172,7 +176,8 @@
       "id": 5,
       "name": "Wireless earbuds",
       "images": {
-        "main": "earbuds_5.webp"
+        "main": "earbuds_5.webp",
+        "list": []
       },
       "category": "earbuds",
       "price": "120.00",
@@ -214,7 +219,8 @@
       "id": 6,
       "name": "Wireless earbuds",
       "images": {
-        "main": "earbuds_6.webp"
+        "main": "earbuds_6.webp",
+        "list": []
       },
       "category": "earbuds",
       "price": "130.00",
@@ -256,7 +262,8 @@
       "id": 7,
       "name": "Bluetooth speaker",
       "images": {
-        "main": "speakers_7.webp"
+        "main": "speakers_7.webp",
+        "list": []
       },
       "category": "speakers",
       "price": "160.00",
@@ -298,7 +305,8 @@
       "id": 8,
       "name": "Bluetooth speaker",
       "images": {
-        "main": "speakers_8.webp"
+        "main": "speakers_8.webp",
+        "list": []
       },
       "category": "speakers",
       "price": "170.00",
@@ -340,7 +348,8 @@
       "id": 9,
       "name": "Bluetooth speaker",
       "images": {
-        "main": "speakers_9.webp"
+        "main": "speakers_9.webp",
+        "list": []
       },
       "category": "speakers",
       "price": "120.00",
@@ -382,7 +391,8 @@
       "id": 10,
       "name": "Bluetooth speaker",
       "images": {
-        "main": "speakers_10.webp"
+        "main": "speakers_10.webp",
+        "list": []
       },
       "category": "speakers",
       "price": "260.00",
@@ -424,7 +434,8 @@
       "id": 11,
       "name": "Bluetooth speaker",
       "images": {
-        "main": "speakers_11.webp"
+        "main": "speakers_11.webp",
+        "list": []
       },
       "category": "speakers",
       "price": "50.00",
@@ -467,9 +478,28 @@
       "name": "Bluetooth speaker",
       "images": {
         "main": "speakers_12.webp",
-        "yellow": "speakers_12_yellow.webp",
-        "orange": "speakers_12_orange.webp",
-        "green": "speakers_12_green.webp"
+        "list": [
+          {
+            "id": 1,
+            "name": "main",
+            "image": "speakers_12.webp"
+          },
+          {
+            "id": 2,
+            "name": "yellow",
+            "image": "speakers_12_yellow.webp"
+          },
+          {
+            "id": 3,
+            "name": "orange",
+            "image": "speakers_12_orange.webp"
+          },
+          {
+            "id": 4,
+            "name": "green",
+            "image": "speakers_12_green.webp"
+          }
+        ]
       },
       "category": "speakers",
       "price": "70.00",
@@ -513,7 +543,8 @@
       "id": 13,
       "name": "Party speaker",
       "images": {
-        "main": "speakers_13.webp"
+        "main": "speakers_13.webp",
+        "list": []
       },
       "category": "speakers",
       "price": "200.00",
@@ -555,7 +586,8 @@
       "id": 14,
       "name": "Waterproof bluetooth speaker",
       "images": {
-        "main": "speakers_14.jpg"
+        "main": "speakers_14.jpg",
+        "list": []
       },
       "category": "speakers",
       "price": "200.00",
@@ -598,15 +630,53 @@
       "name": "Waterproof bluetooth speaker",
       "images": {
         "main": "speakers_15_grey.jpg",
-        "soft_pink": "speakers_15_soft_pink.webp",
-        "sand": "speakers_15_sand.webp",
-        "dark_green": "speakers_15_dark_green.webp",
-        "yellow": "speakers_15_yellow.webp",
-        "teal": "speakers_15_teal.webp",
-        "red": "speakers_15_red.webp",
-        "white": "speakers_15_white.webp",
-        "dark_grey": "speakers_15_dark_grey.webp",
-        "grey": "speakers_15_grey.jpg"
+        "list": [
+          {
+            "id": 1,
+            "name": "soft_pink",
+            "image": "speakers_15_soft_pink.webp"
+          },
+          {
+            "id": 2,
+            "name": "sand",
+            "image": "speakers_15_sand.webp"
+          },
+          {
+            "id": 3,
+            "name": "white",
+            "image": "speakers_15_white.webp"
+          },
+          {
+            "id": 4,
+            "name": "red",
+            "image": "speakers_15_red.webp"
+          },
+          {
+            "id": 5,
+            "name": "dark_green",
+            "image": "speakers_15_dark_green.webp"
+          },
+          {
+            "id": 6,
+            "name": "yellow",
+            "image": "speakers_15_yellow.webp"
+          },
+          {
+            "id": 7,
+            "name": "teal",
+            "image": "speakers_15_teal.webp"
+          },
+          {
+            "id": 8,
+            "name": "dark_grey",
+            "image": "speakers_15_dark_grey.webp"
+          },
+          {
+            "id": 9,
+            "name": "rey",
+            "image": "speakers_15_grey.jpg"
+          }
+        ]
       },
       "category": "speakers",
       "price": "160.00",
@@ -657,7 +727,8 @@
       "id": 16,
       "name": "Wireless boombox",
       "images": {
-        "main": "speakers_16.webp"
+        "main": "speakers_16.webp",
+        "list": []
       },
       "category": "speakers",
       "price": "140.00",
@@ -700,12 +771,38 @@
       "name": "Bluetooth headphones",
       "images": {
         "main": "headphones_17_white.webp",
-        "white": "headphones_17_white.webp",
-        "yellow": "speakers_17_yellow.webp",
-        "red": "speakers_17_red.webp",
-        "pink": "speakers_17_pink.webp",
-        "blue": "speakers_17_blue.webp",
-        "green": "speakers_17_green.webp"
+        "list": [
+          {
+            "id": 1,
+            "name": "white",
+            "image": "headphones_17_white.webp"
+          },
+          {
+            "id": 2,
+            "name": "yellow",
+            "image": "speakers_17_yellow.webp"
+          },
+          {
+            "id": 3,
+            "name": "red",
+            "image": "speakers_17_red.webp"
+          },
+          {
+            "id": 4,
+            "name": "pink",
+            "image": "speakers_17_pink.webp"
+          },
+          {
+            "id": 5,
+            "name": "blue",
+            "image": "speakers_17_blue.webp"
+          },
+          {
+            "id": 6,
+            "name": "green",
+            "image": "speakers_17_green.webp"
+          }
+        ]
       },
       "category": "headphones",
       "price": "220.00",
@@ -752,7 +849,8 @@
       "id": 18,
       "name": "Bluetooth headphones",
       "images": {
-        "main": "headphones_18.webp"
+        "main": "headphones_18.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "250.00",
@@ -794,7 +892,8 @@
       "id": 19,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_19.webp"
+        "main": "headphones_19.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "310.00",
@@ -823,7 +922,8 @@
       "id": 20,
       "name": "Bluetooth headphones",
       "images": {
-        "main": "headphones_20.webp"
+        "main": "headphones_20.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "390.00",
@@ -865,7 +965,8 @@
       "id": 21,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_21.webp"
+        "main": "headphones_21.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "215.00",
@@ -907,7 +1008,8 @@
       "id": 22,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_22.webp"
+        "main": "headphones_22.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "236.00",
@@ -949,7 +1051,8 @@
       "id": 23,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_23.webp"
+        "main": "headphones_23.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "310.00",
@@ -992,10 +1095,29 @@
       "name": "Wireless headphones",
       "images": {
         "main": "headphones_24_light_brown.webp",
-        "light_brown": "headphones_24_light_brown.webp",
-        "grey": "headphones_24_grey.webp",
-        "clementine": "headphones_24_clementine.webp",
-        "yellow": "headphones_24_yellow.webp"
+        "list": [
+          {
+            "id": 1,
+            "name": "light_brown",
+            "image": "headphones_24_light_brown.webp"
+          },
+          {
+            "id": 2,
+            "name": "grey",
+            "image": "headphones_24_grey.webp"
+          },
+          {
+            "id": 3,
+            "name": "clementine",
+            "image": "headphones_24_clementine.webp"
+          },
+          {
+            "id": 4,
+            "name": "yellow",
+            "image": "headphones_24_yellow.webp"
+          }
+        ]
+
       },
       "category": "headphones",
       "price": "280.00",
@@ -1040,7 +1162,8 @@
       "id": 25,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_25.webp"
+        "main": "headphones_25.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "255.00",
@@ -1082,7 +1205,8 @@
       "id": 26,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_26.webp"
+        "main": "headphones_26.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "210.00",
@@ -1124,7 +1248,8 @@
       "id": 27,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_27.webp"
+        "main": "headphones_27.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "230.00",
@@ -1166,7 +1291,8 @@
       "id": 28,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_28.webp"
+        "main": "headphones_28.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "250.00",
@@ -1208,7 +1334,8 @@
       "id": 29,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_29.webp"
+        "main": "headphones_29.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "250.00",
@@ -1237,7 +1364,8 @@
       "id": 30,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_30.webp"
+        "main": "headphones_30.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "195.00",
@@ -1279,7 +1407,8 @@
       "id": 31,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_31.webp"
+        "main": "headphones_31.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "315.00",
@@ -1321,7 +1450,8 @@
       "id": 32,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_32.webp"
+        "main": "headphones_32.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "275.00",
@@ -1363,7 +1493,8 @@
       "id": 33,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_33.webp"
+        "main": "headphones_33.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "360.00",
@@ -1405,7 +1536,8 @@
       "id": 34,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_34.webp"
+        "main": "headphones_34.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "310.00",
@@ -1447,7 +1579,8 @@
       "id": 35,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_35.webp"
+        "main": "headphones_35.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "420.00",
@@ -1489,7 +1622,8 @@
       "id": 36,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_36.webp"
+        "main": "headphones_36.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "340.00",
@@ -1531,7 +1665,8 @@
       "id": 37,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_37.webp"
+        "main": "headphones_37.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "285.00",
@@ -1573,7 +1708,8 @@
       "id": 38,
       "name": "Wireless headphones",
       "images": {
-        "main": "headphones_38.webp"
+        "main": "headphones_38.webp",
+        "list": []
       },
       "category": "headphones",
       "price": "200.00",

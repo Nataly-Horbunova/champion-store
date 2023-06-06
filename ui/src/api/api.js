@@ -10,3 +10,9 @@ export const getProducts = (category) => {
         .then(response => response.data);
 }
 
+export const getProduct = (id) => {
+    return axios
+        .get(baseUrl + productsUrl + id)
+        .then(response => response.data);
+}
+
