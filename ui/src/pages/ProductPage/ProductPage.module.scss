@@ -124,29 +124,20 @@
             font-weight: 600;
             color: transparentize($main-text-color, 0.3)
           }
-        }
 
-        .buttons_group {
-          @include flex(space-between, center, 10px);
-
-          .product_add_btn {
-            @extend %button;
-            @extend %primary-button-red;
-            padding: 12px 18px;
-          }
-
-          .product_favourite_btn {
-            @extend %button;
-            @extend %secondary-button-red;
-            padding: 12px 18px;
+          .selected{
+            border: 1px solid $main-text-color;
+            border-radius: 50%;
           }
         }
+
 
         .services_wrapper {
           @include flex(space-between, center, 32px);
 
           .product_service_wrapper {
             @include flex(space-between, center, 6px);
+            margin-top: 20px;
 
             .product_service_img {
               display: block;

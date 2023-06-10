@@ -1,0 +1,27 @@
+@import '../../styles/variables.module';
+
+.Counter {
+  display: flex;
+  border: 1px solid transparentize($main-text-color, 0.6);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 4px;
+
+  .decrement_btn, .increment_btn {
+    cursor: pointer;
+
+  }
+
+  .product_count, .decrement_btn, .increment_btn {
+    width: 30px;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    color: $main-text-color;
+    font-size: $fz-m;
+    background-color: transparent;
+    border: none;
+  }
+
+}
+

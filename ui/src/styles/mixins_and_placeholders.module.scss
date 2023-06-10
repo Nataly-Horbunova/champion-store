@@ -9,7 +9,7 @@
 }
 
 %button {
-  @include flex(space-between, center, 4px);
+  @include flex(center, center, 4px);
   padding: 6px 16px;
   border-radius: 50px;
   font-size: $fz-xxs;

@@ -9,37 +9,51 @@ import CircleIcon from '@mui/icons-material/Circle';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import {useNavigate} from "react-router-dom";
-import {v4 as uuidv4} from 'uuid';
+import {useDispatch, useSelector} from "react-redux";
+import {useState} from "react";
+import {addToCart} from "../../data/redux/reducers/cartSlice";
 
 
-export function ProductCard({product}) {
+export function ProductCard({currentProduct}) {
+    const [product, setProduct] = useState(currentProduct);
     const productData = getProductCardData();
     const colorsToShow = 4;
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const cart = useSelector(state => state.cart.cartProducts);
+
 
     function showMoreHandler(id) {
         navigate(`/product/${id}`);
     }
 
     return (
-        <li className={style.ProductCard} onClick={() => {
-            showMoreHandler(product.id)
-        }}>
+        <li className={style.ProductCard}>
             <div className={style.img_wrapper}>
-                <img className={style.product_img} src={require(`../../assets/products/${product.images.main}`)}
-                     alt=""/>
+                <img className={style.product_img}
+                     src={require(`../../assets/products/${product.currentImage.imageName}`)}
+                     alt="product"
+                     onClick={() => showMoreHandler(product.id)}/>
                 <div className={style.labels_wrapper}>
-                    {(product.oldPrice !== product.price) &&
+                    {(product.categories.includes('sales')) &&
                         <div className={style.sale_label}>{productData.labels.sale}</div>}
-                    {product.customerPick &&
+                    {product.categories.includes('customer-pick') &&
                         <div className={style.customer_pick_label}>{productData.labels.customerPick}</div>}
                     {!product.onStock && <div className={style.sold_out_label}>{productData.labels.soldOut}</div>}
                 </div>
                 <FavoriteBorderIcon color="color_accent_3" fontSize="medium" className={style.favourite_icon}/>
                 {/*<FavoriteIcon color="color_accent_3" fontSize="medium" className={style.favourite_icon}/>*/}
-                <AddBoxIcon color="color_accent_1" fontSize="large" className={style.add_to_cart_icon}/>
+                <AddBoxIcon
+                    color="color_accent_1"
+                    fontSize="large"
+                    className={style.add_to_cart_icon}
+                onClick={()=> {
+                    dispatch(addToCart({product, count:1}));
+                    console.log(cart);
+                }
+                }/>
             </div>
-            <div>{product.name}</div>
+            <div onClick={() => showMoreHandler(product.id)} className={style.product_name}>{product.name}</div>
             <div className={style.product_price_wrapper}>
                 <div className={style.product_current_price}>{`$${product.price}`}</div>
                 {(product.oldPrice !== product.price) &&
@@ -52,12 +66,16 @@ export function ProductCard({product}) {
                     size="small"
             />
             <div className={style.colors_wrapper}>
-                {(product.colors.length > 1) && product.colors.map((color, i) => {
+                {(product.images.length > 1) && product.images.map((item, i) => {
                     if (i < colorsToShow) {
                         return (
-                            <Tooltip title={color} key={uuidv4()}>
-                                <IconButton size="small">
-                                    <CircleIcon color={color} fontSize="medium"/>
+                            <Tooltip title={item.color} key={item.id}>
+                                <IconButton size="small"
+                                            onClick={() => {
+                                                setProduct({...product, currentImage: item})
+                                            }}>
+                                    <CircleIcon color={item.color} fontSize="medium"
+                                                className={item.id === product.currentImage.id ? `${style.selected}` : ""}/>
                                 </IconButton>
                             </Tooltip>
                         )

@@ -1,0 +1,76 @@
+@import '../../styles/variables.module';
+@import '../../styles/mixins_and_placeholders.module';
+
+.CartPage {
+  margin-top: 136px;
+  margin-bottom: 50px;
+
+  .cartPage_container {
+    @include flex(space-between, flex-start, 30px, column);
+
+    .cart_tittle{
+      font-size: $fz-xl;
+      line-height: $lh-xl;
+      font-weight: 700;
+    }
+
+    .cart_wrapper{
+      @include flex(space-between, flex-start, 30px);
+      width: 100%;
+
+      .products_list {
+        flex-basis: calc(70% - 30px);
+        @include flex(space-between, flex-start, 10px, column);
+
+        li:not(li:first-child) {
+          border-top: 1px solid transparentize($main-text-color, 0.7)
+        }
+
+        .products_list_tittles {
+          display: grid;
+          grid-template-columns: 2fr 1fr 1fr;
+          gap: 20px;
+          width: 100%;
+          font-family: 'Rajdhani', sans-serif;
+          font-size: $fz-s;
+          line-height: $lh-s;
+          font-weight: 700;
+          color: transparentize($main-text-color, 0.4);
+
+          .products_list_tittle:last-child {
+            justify-self: end;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.CartEmptyPage {
+  margin-top: 200px;
+  margin-bottom: 150px;
+
+  .cartEmptyPage_container {
+    @include flex(space-between, center, 30px, column);
+
+    .cart_tittle {
+      font-size: $fz-xl;
+      line-height: $lh-xl;
+      font-weight: 700;
+    }
+
+    .cart_text {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: $fz-l;
+      line-height: $lh-l;
+      font-weight: 600;
+    }
+
+    .shop_btn {
+      @extend %button;
+      @extend %primary-button-black
+    }
+
+  }
+}

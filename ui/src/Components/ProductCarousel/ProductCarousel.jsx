@@ -3,8 +3,11 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import {Mousewheel, Pagination} from "swiper";
+import {useDispatch} from "react-redux";
+import {changeCurrentColor} from "../../data/redux/reducers/shopSlice";
 
-export function ProductCarousel({images}) {
+export function ProductCarousel({product, setProduct}) {
+
 
     return (
         <Swiper
@@ -15,10 +18,14 @@ export function ProductCarousel({images}) {
             modules={[Mousewheel, Pagination]}
             className="mySwiper"
         >
-            {images.map(image => {
+            {product.images.map(image => {
                 return (
-                    <SwiperSlide className="swiper_slide_custom" key={image.id}>
-                        <img src={require(`../../assets/products/${image.image}`)} alt="product"/>
+                    <SwiperSlide
+                        className={image.id === product.currentImage.id ? "selected" : ""}
+                        key={image.id}
+                        onClick={() => setProduct({...product, currentImage: image})}
+                    >
+                        <img src={require(`../../assets/products/${image.imageName}`)} alt="product"/>
                     </SwiperSlide>
                 )
             })

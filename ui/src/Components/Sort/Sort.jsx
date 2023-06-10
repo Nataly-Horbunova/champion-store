@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import {getSortData} from "../../data/dataFunctions";
 
-export function Sort({className}) {
+export function Sort({className, total}) {
     const sort = getSortData();
 
     return (
@@ -34,7 +34,7 @@ export function Sort({className}) {
                 </NativeSelect>
             </FormControl>
             <div className={style.product_qty_wrapper}>
-                <span>38</span>
+                <span>{total}</span>
                 <span>{sort.totalText}</span>
             </div>
         </div>

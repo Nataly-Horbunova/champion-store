@@ -8,14 +8,19 @@ import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import {getHeaderData} from '../../data/dataFunctions';
+import {useSelector} from "react-redux";
+import {Badge} from "@mui/material";
 
 export function Header() {
     const headerData = getHeaderData();
     const logoBlack = require(`../../assets/${headerData.logo.black}`);
     const logoWhite = require(`../../assets/${headerData.logo.white}`);
+    const cart = useSelector(state => state.cart.cartProducts);
 
     let [scrollDown, setScrollDown] = useState(false);
     let [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
+    console.log(cart);
 
 
     useEffect(() => {
@@ -53,7 +58,7 @@ export function Header() {
                                 <li key={item.id}
                                     className={style.header_nav_list_item}
                                     onMouseEnter={item.name === "Shop" ? handleShowDropDown : handleHideDropDown}
-                                    onClick={()=> {
+                                    onClick={() => {
                                         handleHideDropDown();
                                         handleScrollToTop();
                                     }}>
@@ -126,13 +131,18 @@ export function Header() {
                         <SearchIcon className={`${style.icon} ${scrollDown ? style.scroll : ""}`}></SearchIcon>
                     </div>
                     <NavLink to='favourites' className={style.icon_wrapper}>
-                        <FavoriteBorderOutlinedIcon
-                            className={`${style.icon} ${scrollDown ? style.scroll : ""}`}></FavoriteBorderOutlinedIcon>
+                        <Badge badgeContent={0} color="color_accent_1" className={style.icon_badge}>
+                            <FavoriteBorderOutlinedIcon
+                                className={`${style.icon} ${scrollDown ? style.scroll : ""}`}></FavoriteBorderOutlinedIcon>
+                        </Badge>
                     </NavLink>
                     <NavLink to='cart' className={style.icon_wrapper}>
-                        <LocalMallOutlinedIcon
-                            className={`${style.icon} ${scrollDown ? style.scroll : ""}`}></LocalMallOutlinedIcon>
+                        <Badge badgeContent={cart.length} color="color_accent_1" className={style.icon_badge}>
+                            <LocalMallOutlinedIcon
+                                className={`${style.icon} ${scrollDown ? style.scroll : ""}`}></LocalMallOutlinedIcon>
+                        </Badge>
                     </NavLink>
+
                 </div>
             </div>
 

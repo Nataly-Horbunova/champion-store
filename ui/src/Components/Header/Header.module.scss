@@ -146,6 +146,10 @@
       @include flex(space-between, center, 20px);
       grid-area: icons;
 
+      .icon_badge{
+        color: white;
+      }
+
       .icon_wrapper {
         cursor: pointer;
 

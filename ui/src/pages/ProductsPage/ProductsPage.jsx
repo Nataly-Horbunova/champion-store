@@ -15,7 +15,7 @@ export function ProductsPage() {
     const products = useSelector(state => state.shop.products);
     const dispatch = useDispatch();
     const {category} = useParams();
-    const categoryUrl = category ? `?category=${category}` : "";
+    const categoryUrl = category ? `?categories_like=${category}` : "";
 
     useEffect(() => {
         getProducts(categoryUrl)
@@ -28,12 +28,12 @@ export function ProductsPage() {
             <div className={`${mainStyles.container} ${style.productsPage_container}`}>
                 <Filters category={category} className={style.filters}/>
                 <div className={style.sort_and_filters_wrapper}>
-                    <CurrentFilters className={style.currentFilters}/>
-                    <Sort className={style.sort}/>
+                    <CurrentFilters className={style.currentFilters} />
+                    <Sort className={style.sort} total={products.length}/>
                 </div>
                 <ul className={style.products_list}>
                     {
-                        products.map(product => <ProductCard product={product} key={product.id}/>)
+                        products.map(product => <ProductCard currentProduct={product} key={product.id}/>)
                     }
                 </ul>
 

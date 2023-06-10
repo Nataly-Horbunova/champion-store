@@ -70,7 +70,7 @@
         {
           "name": "Customer pick",
           "id": 3,
-          "path": "products/customer-pick",
+          "path": "collections/customer-pick",
           "img": "customer_pick.webp"
         }
       ]
@@ -486,6 +486,30 @@
         "rating": "Total rating",
         "post": "Write a review"
       }
+    }
+  },
+  "cart": {
+    "tittle": "Cart",
+    "subtitles": ["Product", "Quantity", "Total"],
+    "removeBtn": "Remove",
+    "colorText": "Color:",
+    "orderForm": {
+      "name": "Name",
+      "email": "E-mail",
+      "address": "Address",
+      "tel": "Telephone",
+      "note": "Add order note",
+      "totalText": "Total:",
+      "orderBtn": "Order"
+    },
+    "modal": {
+      "text": "Thank you for placing an order! It has been successfully processed and will be shipped shortly. ",
+      "button": "Home"
+    },
+    "emptyCart": {
+      "tittle": "Cart",
+      "text": "Your cart is empty",
+      "btn": "continue shopping"
     }
   }
 }

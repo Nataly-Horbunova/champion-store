@@ -3,17 +3,28 @@
     {
       "id": 1,
       "name": "Earbuds",
-      "images": {
-        "main": "earbuds_1.webp",
-        "list": []
-      },
-      "category": "earbuds",
+      "images": [
+        {
+          "id": 1,
+          "color": "grey",
+          "imageName": "earbuds_1.webp"
+        }
+      ],
+      "categories": [
+        "earbuds",
+        "customer-pick"
+      ],
       "price": "85.00",
       "oldPrice": "85.00",
       "onStock": 1,
       "colors": [
         "grey"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "grey",
+        "imageName": "earbuds_1.webp"
+      },
       "sold": 30,
       "rating": 3,
       "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -46,17 +57,28 @@
     {
       "id": 2,
       "name": "Noise cancelling earbuds",
-      "images": {
-        "main": "earbuds_2.webp",
-        "list": []
-      },
-      "category": "earbuds",
+      "images": [
+        {
+          "id": 1,
+          "color": "white",
+          "imageName": "earbuds_2.webp"
+        }
+      ],
+      "categories": [
+        "earbuds",
+        "sales"
+      ],
       "price": "150.00",
       "oldPrice": "170.00",
       "onStock": 10,
       "colors": [
         "white"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "white",
+        "imageName": "earbuds_2.webp"
+      },
       "sold": 10,
       "rating": 4,
       "description": "These earbuds feature the most advanced true wireless technology. Use the app to adjust the noise-cancelling modes and get a mind-blowing listening experience. The  sound personalization tech uses real time adjustments to tailor to your hearing needs. The result is a listening experience that protects you hearing while delivering unparalleled sound quality. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -70,7 +92,6 @@
           "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -89,17 +110,28 @@
     {
       "id": 3,
       "name": "Sport earbuds",
-      "images": {
-        "main": "earbuds_3.webp",
-        "list": []
-      },
-      "category": "earbuds",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "earbuds_3.webp"
+        }
+      ],
+      "categories": [
+        "earbuds",
+        "customer-pick"
+      ],
       "price": "160.00",
       "oldPrice": "160.00",
       "onStock": 10,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "earbuds_3.webp"
+      },
       "sold": 20,
       "rating": 3,
       "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -113,7 +145,6 @@
           "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -132,17 +163,28 @@
     {
       "id": 4,
       "name": "Wireless earbuds",
-      "images": {
-        "main": "earbuds_4.webp",
-        "list": []
-      },
-      "category": "earbuds",
+      "images": [
+        {
+          "id": 1,
+          "color": "grey",
+          "imageName": "earbuds_4.webp"
+        }
+      ],
+      "categories": [
+        "earbuds",
+        "customer-pick"
+      ],
       "price": "145.00",
       "oldPrice": "145.00",
       "onStock": 5,
       "colors": [
         "grey"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "grey",
+        "imageName": "earbuds_4.webp"
+      },
       "sold": 20,
       "rating": 3,
       "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -156,7 +198,6 @@
           "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -175,17 +216,28 @@
     {
       "id": 5,
       "name": "Wireless earbuds",
-      "images": {
-        "main": "earbuds_5.webp",
-        "list": []
-      },
-      "category": "earbuds",
+      "images": [
+        {
+          "id": 1,
+          "color": "grey",
+          "imageName": "earbuds_5.webp"
+        }
+      ],
+      "categories": [
+        "earbuds",
+        "sales"
+      ],
       "price": "120.00",
       "oldPrice": "130.00",
       "onStock": 15,
       "colors": [
         "grey"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "grey",
+        "imageName": "earbuds_5.webp"
+      },
       "sold": 5,
       "rating": 4,
       "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -199,7 +251,6 @@
           "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -218,17 +269,27 @@
     {
       "id": 6,
       "name": "Wireless earbuds",
-      "images": {
-        "main": "earbuds_6.webp",
-        "list": []
-      },
-      "category": "earbuds",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "earbuds_6.webp"
+        }
+      ],
+      "categories": [
+        "earbuds"
+      ],
       "price": "130.00",
       "oldPrice": "130.00",
       "onStock": 15,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "earbuds_6.webp"
+      },
       "sold": 20,
       "rating": 5,
       "description": "Wireless Bluetooth earbuds engineered for your best workout yet. Makes your music sound like the performer is right there beside you, pushing you to go 1 more mile or do 1 more rep. Customize your fit with the included 3 sizes of tips that won't hurt your ears and won't fall out no matter tough your workout is. It also has electronics wrapped in special materials to protect from moisture wherever you exercise. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -242,7 +303,6 @@
           "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -261,17 +321,27 @@
     {
       "id": 7,
       "name": "Bluetooth speaker",
-      "images": {
-        "main": "speakers_7.webp",
-        "list": []
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "speakers_7.webp"
+        }
+      ],
+      "categories": [
+        "earbuds"
+      ],
       "price": "160.00",
       "oldPrice": "160.00",
       "onStock": 0,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "speakers_7.webp"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -285,7 +355,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -304,17 +373,27 @@
     {
       "id": 8,
       "name": "Bluetooth speaker",
-      "images": {
-        "main": "speakers_8.webp",
-        "list": []
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "speakers_8.webp"
+        }
+      ],
+      "categories": [
+        "earbuds"
+      ],
       "price": "170.00",
       "oldPrice": "170.00",
       "onStock": 10,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "speakers_8.webp"
+      },
       "sold": 20,
       "rating": 4.5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -328,7 +407,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -347,17 +425,28 @@
     {
       "id": 9,
       "name": "Bluetooth speaker",
-      "images": {
-        "main": "speakers_9.webp",
-        "list": []
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "speakers_9.webp"
+        }
+      ],
+      "categories": [
+        "speakers",
+        "customer-pick"
+      ],
       "price": "120.00",
       "oldPrice": "120.00",
       "onStock": 10,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "speakers_9.webp"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -371,7 +460,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -390,17 +478,28 @@
     {
       "id": 10,
       "name": "Bluetooth speaker",
-      "images": {
-        "main": "speakers_10.webp",
-        "list": []
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "speakers_10.webp"
+        }
+      ],
+      "categories": [
+        "speakers",
+        "sales"
+      ],
       "price": "260.00",
       "oldPrice": "280.00",
       "onStock": 20,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "speakers_10.webp"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -414,7 +513,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -433,17 +531,28 @@
     {
       "id": 11,
       "name": "Bluetooth speaker",
-      "images": {
-        "main": "speakers_11.webp",
-        "list": []
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "blue",
+          "imageName": "speakers_11.webp"
+        }
+      ],
+      "categories": [
+        "speakers",
+        "customer-pick"
+      ],
       "price": "50.00",
       "oldPrice": "50.00",
       "onStock": 20,
       "colors": [
         "blue"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "blue",
+        "imageName": "speakers_11.webp"
+      },
       "sold": 20,
       "rating": 4.5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -457,7 +566,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -476,40 +584,39 @@
     {
       "id": 12,
       "name": "Bluetooth speaker",
-      "images": {
-        "main": "speakers_12.webp",
-        "list": [
-          {
-            "id": 1,
-            "name": "main",
-            "image": "speakers_12.webp"
-          },
-          {
-            "id": 2,
-            "name": "yellow",
-            "image": "speakers_12_yellow.webp"
-          },
-          {
-            "id": 3,
-            "name": "orange",
-            "image": "speakers_12_orange.webp"
-          },
-          {
-            "id": 4,
-            "name": "green",
-            "image": "speakers_12_green.webp"
-          }
-        ]
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "yellow",
+          "imageName": "speakers_12_yellow.webp"
+        },
+        {
+          "id": 2,
+          "color": "orange",
+          "imageName": "speakers_12_orange.webp"
+        },
+        {
+          "id": 3,
+          "color": "green",
+          "imageName": "speakers_12_green.webp"
+        }
+      ],
+      "categories": [
+        "speakers"
+      ],
       "price": "70.00",
       "oldPrice": "70.00",
       "onStock": 20,
       "colors": [
-        "green",
         "yellow",
-        "orange"
+        "orange",
+        "green"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "yellow",
+        "imageName": "speakers_12_yellow.webp"
+      },
       "rating": 4.5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
       "additionalInfo": [
@@ -522,8 +629,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "sales": false,
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -542,17 +647,28 @@
     {
       "id": 13,
       "name": "Party speaker",
-      "images": {
-        "main": "speakers_13.webp",
-        "list": []
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "red",
+          "imageName": "speakers_13.webp"
+        }
+      ],
+      "categories": [
+        "speakers",
+        "customer-pick"
+      ],
       "price": "200.00",
       "oldPrice": "200.00",
       "onStock": 12,
       "colors": [
         "red"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "red",
+        "imageName": "speakers_13.webp"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -566,7 +682,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -585,17 +700,27 @@
     {
       "id": 14,
       "name": "Waterproof bluetooth speaker",
-      "images": {
-        "main": "speakers_14.jpg",
-        "list": []
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "grey",
+          "imageName": "speakers_14.jpg"
+        }
+      ],
+      "categories": [
+        "speakers"
+      ],
       "price": "200.00",
       "oldPrice": "200.00",
       "onStock": 20,
       "colors": [
         "grey"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "grey",
+        "imageName": "speakers_14.jpg"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -609,7 +734,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -628,57 +752,58 @@
     {
       "id": 15,
       "name": "Waterproof bluetooth speaker",
-      "images": {
-        "main": "speakers_15_grey.jpg",
-        "list": [
-          {
-            "id": 1,
-            "name": "soft_pink",
-            "image": "speakers_15_soft_pink.webp"
-          },
-          {
-            "id": 2,
-            "name": "sand",
-            "image": "speakers_15_sand.webp"
-          },
-          {
-            "id": 3,
-            "name": "white",
-            "image": "speakers_15_white.webp"
-          },
-          {
-            "id": 4,
-            "name": "red",
-            "image": "speakers_15_red.webp"
-          },
-          {
-            "id": 5,
-            "name": "dark_green",
-            "image": "speakers_15_dark_green.webp"
-          },
-          {
-            "id": 6,
-            "name": "yellow",
-            "image": "speakers_15_yellow.webp"
-          },
-          {
-            "id": 7,
-            "name": "teal",
-            "image": "speakers_15_teal.webp"
-          },
-          {
-            "id": 8,
-            "name": "dark_grey",
-            "image": "speakers_15_dark_grey.webp"
-          },
-          {
-            "id": 9,
-            "name": "rey",
-            "image": "speakers_15_grey.jpg"
-          }
-        ]
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "grey",
+          "imageName": "speakers_15_grey.jpg"
+        },
+        {
+          "id": 2,
+          "color": "soft_pink",
+          "imageName": "speakers_15_soft_pink.webp"
+        },
+        {
+          "id": 3,
+          "color": "sand",
+          "imageName": "speakers_15_sand.webp"
+        },
+        {
+          "id": 4,
+          "color": "white",
+          "imageName": "speakers_15_white.webp"
+        },
+        {
+          "id": 5,
+          "color": "red",
+          "imageName": "speakers_15_red.webp"
+        },
+        {
+          "id": 6,
+          "color": "dark_green",
+          "imageName": "speakers_15_dark_green.webp"
+        },
+        {
+          "id": 7,
+          "color": "yellow",
+          "imageName": "speakers_15_yellow.webp"
+        },
+        {
+          "id": 8,
+          "color": "teal",
+          "imageName": "speakers_15_teal.webp"
+        },
+        {
+          "id": 9,
+          "color": "dark_grey",
+          "imageName": "speakers_15_dark_grey.webp"
+        }
+      ],
+      "categories": [
+        "speakers",
+        "customer-pick",
+        "sales"
+      ],
       "price": "160.00",
       "oldPrice": "175.00",
       "onStock": 20,
@@ -691,9 +816,13 @@
         "teal",
         "red",
         "white",
-        "dark_grey",
-        "grey"
+        "dark_grey"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "grey",
+        "imageName": "speakers_15_grey.jpg"
+      },
       "sold": 20,
       "rating": 3,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -707,7 +836,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -726,17 +854,28 @@
     {
       "id": 16,
       "name": "Wireless boombox",
-      "images": {
-        "main": "speakers_16.webp",
-        "list": []
-      },
-      "category": "speakers",
+      "images": [
+        {
+          "id": 1,
+          "color": "red",
+          "imageName": "speakers_16.webp"
+        }
+      ],
+      "categories": [
+        "speakers",
+        "customer-pick"
+      ],
       "price": "140.00",
       "oldPrice": "140.00",
       "onStock": 2,
       "colors": [
         "red"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "red",
+        "imageName": "speakers_16.webp"
+      },
       "sold": 6,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -750,7 +889,6 @@
           "description": "Incorporating rugged materials and design features that protect the internal components from damage caused by impact or vibration. This includes a durable exterior casing made from materials such as rubber and silicone, reinforced internal structures, and secure mounting for the speaker components. Additionally, it is designed with shock-absorbing materials and gaskets around the speakers to absorb and dissipate shock, helping to prevent damage to the speaker and preserving the audio quality. It protects the speaker from the wear and tear of daily use and help it withstand accidental bumps, drops, and other impacts."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -769,53 +907,58 @@
     {
       "id": 17,
       "name": "Bluetooth headphones",
-      "images": {
-        "main": "headphones_17_white.webp",
-        "list": [
-          {
-            "id": 1,
-            "name": "white",
-            "image": "headphones_17_white.webp"
-          },
-          {
-            "id": 2,
-            "name": "yellow",
-            "image": "speakers_17_yellow.webp"
-          },
-          {
-            "id": 3,
-            "name": "red",
-            "image": "speakers_17_red.webp"
-          },
-          {
-            "id": 4,
-            "name": "pink",
-            "image": "speakers_17_pink.webp"
-          },
-          {
-            "id": 5,
-            "name": "blue",
-            "image": "speakers_17_blue.webp"
-          },
-          {
-            "id": 6,
-            "name": "green",
-            "image": "speakers_17_green.webp"
-          }
-        ]
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "white",
+          "imageName": "headphones_17_white.webp"
+        },
+        {
+          "id": 2,
+          "color": "yellow",
+          "imageName": "headphones_17_yellow.webp"
+        },
+        {
+          "id": 3,
+          "color": "red",
+          "imageName": "headphones_17_red.webp"
+        },
+        {
+          "id": 4,
+          "color": "pink",
+          "imageName": "headphones_17_pink.webp"
+        },
+        {
+          "id": 5,
+          "color": "blue",
+          "imageName": "headphones_17_blue.webp"
+        },
+        {
+          "id": 6,
+          "color": "green",
+          "imageName": "headphones_17_green.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "customer-pick"
+      ],
       "price": "220.00",
       "oldPrice": "220.00",
       "onStock": 2,
       "colors": [
-        "white",
         "green",
         "yellow",
+        "white",
         "red",
         "blue",
         "pink"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "white",
+        "imageName": "headphones_17_white.webp"
+      },
       "sold": 40,
       "rating": 4.5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -829,7 +972,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -848,17 +990,27 @@
     {
       "id": 18,
       "name": "Bluetooth headphones",
-      "images": {
-        "main": "headphones_18.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "white",
+          "imageName": "headphones_18.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "250.00",
       "oldPrice": "250.00",
       "onStock": 12,
       "colors": [
         "white"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "white",
+        "imageName": "headphones_18.webp"
+      },
       "sold": 60,
       "rating": 3,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -891,17 +1043,28 @@
     {
       "id": 19,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_19.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_19.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "sales"
+      ],
       "price": "310.00",
       "oldPrice": "325.00",
       "onStock": 12,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_19.webp"
+      },
       "sold": 10,
       "rating": 0,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -915,23 +1078,33 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": []
     },
     {
       "id": 20,
       "name": "Bluetooth headphones",
-      "images": {
-        "main": "headphones_20.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "grey",
+          "imageName": "headphones_20.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "customer-pick"
+      ],
       "price": "390.00",
       "oldPrice": "390.00",
       "onStock": 20,
       "colors": [
         "grey"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "grey",
+        "imageName": "headphones_20.webp"
+      },
       "sold": 50,
       "rating": 5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -945,7 +1118,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -964,17 +1136,27 @@
     {
       "id": 21,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_21.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_21.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "215.00",
       "oldPrice": "215.00",
       "onStock": 20,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_21.webp"
+      },
       "sold": 30,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -988,7 +1170,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1007,17 +1188,27 @@
     {
       "id": 22,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_22.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_22.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "236.00",
       "oldPrice": "236.00",
       "onStock": 0,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_22.webp"
+      },
       "sold": 30,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1031,7 +1222,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1050,17 +1240,27 @@
     {
       "id": 23,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_23.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_23.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "310.00",
       "oldPrice": "310.00",
       "onStock": 10,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_23.webp"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1074,7 +1274,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1093,33 +1292,31 @@
     {
       "id": 24,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_24_light_brown.webp",
-        "list": [
-          {
-            "id": 1,
-            "name": "light_brown",
-            "image": "headphones_24_light_brown.webp"
-          },
-          {
-            "id": 2,
-            "name": "grey",
-            "image": "headphones_24_grey.webp"
-          },
-          {
-            "id": 3,
-            "name": "clementine",
-            "image": "headphones_24_clementine.webp"
-          },
-          {
-            "id": 4,
-            "name": "yellow",
-            "image": "headphones_24_yellow.webp"
-          }
-        ]
-
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "light_brown",
+          "imageName": "headphones_24_light_brown.webp"
+        },
+        {
+          "id": 2,
+          "color": "grey",
+          "imageName": "headphones_24_grey.webp"
+        },
+        {
+          "id": 3,
+          "color": "clementine",
+          "imageName": "headphones_24_clementine.webp"
+        },
+        {
+          "id": 4,
+          "color": "yellow",
+          "imageName": "headphones_24_yellow.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "280.00",
       "oldPrice": "280.00",
       "onStock": 30,
@@ -1129,6 +1326,11 @@
         "clementine",
         "yellow"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "light_brown",
+        "imageName": "headphones_24_light_brown.webp"
+      },
       "sold": 20,
       "rating": 5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1142,7 +1344,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1161,17 +1362,29 @@
     {
       "id": 25,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_25.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "light_brown",
+          "imageName": "headphones_25.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "customer-pick",
+        "sales"
+      ],
       "price": "255.00",
       "oldPrice": "275.00",
       "onStock": 30,
       "colors": [
         "light_brown"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "light_brown",
+        "imageName": "headphones_25.webp"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1185,7 +1398,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -1204,17 +1416,28 @@
     {
       "id": 26,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_26.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "white",
+          "imageName": "headphones_26.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "sales"
+      ],
       "price": "210.00",
       "oldPrice": "250.00",
       "onStock": 30,
       "colors": [
         "white"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "white",
+        "imageName": "headphones_26.webp"
+      },
       "sold": 20,
       "rating": 5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1228,7 +1451,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1247,17 +1469,27 @@
     {
       "id": 27,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_27.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "white",
+          "imageName": "headphones_27.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "230.00",
       "oldPrice": "230.00",
       "onStock": 30,
       "colors": [
         "white"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "white",
+        "imageName": "headphones_27.webp"
+      },
       "sold": 10,
       "rating": 5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1271,7 +1503,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1290,17 +1521,28 @@
     {
       "id": 28,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_28.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_28.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "customer-pick"
+      ],
       "price": "250.00",
       "oldPrice": "250.00",
       "onStock": 30,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_28.webp"
+      },
       "sold": 20,
       "rating": 5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1314,7 +1556,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1333,17 +1574,27 @@
     {
       "id": 29,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_29.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_29.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "250.00",
       "oldPrice": "250.00",
       "onStock": 30,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_29.webp"
+      },
       "sold": 2,
       "rating": 0,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1357,23 +1608,33 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": []
     },
     {
       "id": 30,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_30.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_30.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "sales"
+      ],
       "price": "195.00",
-      "oldPrice": "195.00",
+      "oldPrice": "220.00",
       "onStock": 30,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_30.webp"
+      },
       "sold": 10,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1387,7 +1648,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1406,17 +1666,28 @@
     {
       "id": 31,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_31.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "dark_green",
+          "imageName": "headphones_31.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "customer-pick"
+      ],
       "price": "315.00",
       "oldPrice": "315.00",
       "onStock": 30,
       "colors": [
         "dark_green"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "dark_green",
+        "imageName": "headphones_31.webp"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1430,7 +1701,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1449,17 +1719,27 @@
     {
       "id": 32,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_32.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "white",
+          "imageName": "headphones_32.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "275.00",
       "oldPrice": "275.00",
       "onStock": 30,
       "colors": [
         "white"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "white",
+        "imageName": "headphones_32.webp"
+      },
       "sold": 40,
       "rating": 5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1473,7 +1753,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1492,17 +1771,27 @@
     {
       "id": 33,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_33.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_33.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "360.00",
       "oldPrice": "380.00",
       "onStock": 30,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_33.webp"
+      },
       "sold": 40,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1516,7 +1805,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1535,17 +1823,27 @@
     {
       "id": 34,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_34.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_34.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "310.00",
       "oldPrice": "310.00",
       "onStock": 0,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_34.webp"
+      },
       "sold": 40,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1559,7 +1857,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1578,17 +1875,27 @@
     {
       "id": 35,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_35.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_35.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "420.00",
       "oldPrice": "420.00",
       "onStock": 1,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_35.webp"
+      },
       "sold": 40,
       "rating": 5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1602,7 +1909,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1621,17 +1927,32 @@
     {
       "id": 36,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_36.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_36.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "customer-pick"
+      ],
       "price": "340.00",
       "oldPrice": "340.00",
       "onStock": 3,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_36.webp"
+        },
+        "imageName": "headphones_36.webp"
+      },
       "sold": 60,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1645,7 +1966,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1664,17 +1984,27 @@
     {
       "id": 37,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_37.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_37.webp"
+        }
+      ],
+      "categories": [
+        "headphones"
+      ],
       "price": "285.00",
       "oldPrice": "285.00",
       "onStock": 15,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_37.webp"
+      },
       "sold": 20,
       "rating": 5,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1707,17 +2037,29 @@
     {
       "id": 38,
       "name": "Wireless headphones",
-      "images": {
-        "main": "headphones_38.webp",
-        "list": []
-      },
-      "category": "headphones",
+      "images": [
+        {
+          "id": 1,
+          "color": "black",
+          "imageName": "headphones_38.webp"
+        }
+      ],
+      "categories": [
+        "headphones",
+        "customer-pick",
+        "sales"
+      ],
       "price": "200.00",
-      "oldPrice": "200.00",
+      "oldPrice": "260.00",
       "onStock": 2,
       "colors": [
         "black"
       ],
+      "currentImage": {
+        "id": 1,
+        "color": "black",
+        "imageName": "headphones_38.webp"
+      },
       "sold": 20,
       "rating": 4,
       "description": "Waterproof, dustproof and shockproof, the speaker combines tough design with a long-lasting battery, so there are no more limits to enjoying music festival sound. It is also salt water resistant so you’ve no worries using it by the sea or the pool, and there’s no problem washing it either. This is a demo store with dummy content and products. You cannot purchase products from this store.",
@@ -1731,7 +2073,6 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "customerPick": false,
       "reviews": [
         {
           "id": 1,
@@ -1744,6 +2085,24 @@
           "name": "Peter Black",
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
+        }
+      ]
+    }
+  ],
+  "user": [
+    {
+      "id": "email@gmail.com",
+      "orders": [
+        {
+          "id": 123,
+          "products": [],
+          "delivery": {
+            "email": "email@gmail.com",
+            "name": "Peter Jonson",
+            "address": "Odessa, Ukraine",
+            "tel": "+380951232499",
+            "note": ""
+          }
         }
       ]
     }

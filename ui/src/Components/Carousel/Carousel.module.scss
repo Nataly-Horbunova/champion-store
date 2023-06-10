@@ -1,14 +1,11 @@
 @import "../../styles/variables.module";
 
 .Carousel {
-  //height: 30%;
-
 
   .carousel_slide{
     position: relative;
 
     .carousel_img {
-
       display: block;
       width: 100%;
       object-fit: cover;

@@ -1,0 +1,64 @@
+@import '../../styles/variables.module';
+@import '../../styles/mixins_and_placeholders.module';
+
+.ProductInCart {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  padding: 30px 0;
+  font-family: 'Rajdhani', sans-serif;
+  align-items: center;
+
+  .image_and_info_wrapper {
+    @include flex(flex-start, center, 30px);
+
+    .image_wrapper {
+      width: 100px;
+      overflow: hidden;
+
+      .product_img {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .product_info {
+      @include flex(flex-start, flex-start, 8px, column);
+      font-size: $fz-s;
+      line-height: $lh-s;
+      font-weight: 600;
+      color: transparentize($main-text-color, 0.1);
+
+      .product_name {
+        font-weight: 600;
+      }
+
+      .product_color {
+        margin-top: 10px;
+      }
+    }
+  }
+
+
+  .counter {
+    @include flex(flex-start, center, 8px, column);
+
+    .remove_btn {
+      font-size: $fz-s;
+      line-height: $lh-s;
+      font-weight: 500;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+
+  .total_product_amount {
+    justify-self: end;
+    font-size: $fz-l;
+    line-height: $lh-l;
+    font-weight: 500;
+  }
+}

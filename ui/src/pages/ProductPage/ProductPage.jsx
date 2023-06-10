@@ -16,6 +16,7 @@ import {v4 as uuidv4} from "uuid";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import CircleIcon from "@mui/icons-material/Circle";
+import {ProductCountForm} from "../../Components/ProductCountForm/ProductCountForm";
 
 
 export function ProductPage() {
@@ -23,9 +24,12 @@ export function ProductPage() {
     let [product, setProduct] = useState(null);
     const productData = getProductCardData();
 
+
     useEffect(() => {
         getProduct(productId)
-            .then((resp) => setProduct(resp))
+            .then((resp) => {
+                setProduct(resp);
+            })
     }, [productId]);
 
 
@@ -33,18 +37,21 @@ export function ProductPage() {
         product && <main className={style.Product}>
             <div className={`${mainStyles.container} ${style.productPage_container}`}>
                 <div className={style.product_card}>
+                    {/*-------------- Image ------------------*/}
                     <div className={style.images_wrapper}>
                         {
-                            product.images.list.length > 0 &&
+                            product.images.length > 1 &&
                             <div className={style.carousel_wrapper}>
-                                <ProductCarousel images={product.images.list}/>
+                                <ProductCarousel product={product} setProduct={setProduct}/>
                             </div>
                         }
                         <div className={style.main_img_wrapper}>
-                            <img src={require(`../../assets/products/${product.images.main}`)} alt="product img"
+                            <img src={require(`../../assets/products/${product.currentImage.imageName}`)}
+                                 alt="product img"
                                  className={style.main_img}/>
                         </div>
                     </div>
+                    {/*-------------------- Info ------------*/}
                     <div className={style.product_info}>
                         <h2 className={style.product_tittle}>{product.name}</h2>
                         <div className={style.price_and_labels_wrapper}>
@@ -53,6 +60,7 @@ export function ProductPage() {
                                 {(product.oldPrice !== product.price) &&
                                     <div className={style.product_old_price}>{`$${product.oldPrice}`}</div>}
                             </div>
+                            {/* ------------- Labels ---------*/}
                             <div className={style.labels_wrapper}>
                                 {(product.oldPrice !== product.price) &&
                                     <div className={style.sale_label}>{productData.labels.sale}</div>}
@@ -61,28 +69,33 @@ export function ProductPage() {
                                 {!product.onStock &&
                                     <div className={style.sold_out_label}>{productData.labels.soldOut}</div>}
                             </div>
-
                         </div>
+                        {/* ------------- Rating -------------*/}
                         <div className={style.rating_wrapper}>
                             <Rating name="half-rating-read"
                                     defaultValue={product.rating}
                                     precision={0.5}
                                     readOnly
-                                    size="small"
-                            />
+                                    size="small"/>
                             <div
                                 className={style.total_reviews}>{`(${product.reviews.length} ${productData.reviews.text})`}</div>
                         </div>
+
                         <p className={style.product_description}>{product.description}</p>
+
+                        {/* ------------- Colors ----------*/}
                         {
-                            product.images.list.length > 1 && <div className={style.colors_wrapper}>
-                                <p className={style.color_text}>{`${productData.colorText} ${product.images.list[1].name}`}</p>
+                            product.images.length > 1 && <div className={style.colors_wrapper}>
+                                <p className={style.color_text}>{`${productData.colorText} ${product.images[1].color}`}</p>
                                 <div className={style.colors_wrapper}>
-                                    {(product.colors.length > 1) && product.colors.map((color, i) => {
+                                    {(product.images.length > 1) && product.images.map((item, i) => {
                                         return (
-                                            <Tooltip title={color} key={uuidv4()}>
-                                                <IconButton size="medium">
-                                                    <CircleIcon color={color} fontSize="large"/>
+                                            <Tooltip title={item.color} key={item.id}>
+                                                <IconButton size="medium"
+                                                            onClick={() => setProduct({...product, currentImage: item})}>
+                                                    <CircleIcon color={item.color} fontSize="large"
+                                                                className={item.id === product.currentImage.id ? `${style.selected}` : ""}
+                                                    />
                                                 </IconButton>
                                             </Tooltip>
                                         )
@@ -90,10 +103,10 @@ export function ProductPage() {
                                 </div>
                             </div>
                         }
-                        <div className={style.buttons_group}>
-                            <button className={style.product_add_btn}>{productData.buttons.add}</button>
-                            <button className={style.product_favourite_btn}>{productData.buttons.favourite}</button>
-                        </div>
+                        {/*  ------------- Form ------------*/}
+                        <ProductCountForm product={product} productData={productData}/>
+
+                        {/* --------------- Services --------------*/}
                         <div className={style.services_wrapper}>
                             {
                                 productData.services.map(item => {

@@ -14,6 +14,7 @@
     transform: translateY(-6px);
   }
 
+
   .img_wrapper {
     position: relative;
     overflow: hidden;
@@ -57,6 +58,7 @@
       bottom: 6px;
       left: 6px;
       @extend %product-icon;
+      cursor: pointer;
     }
 
     .add_to_cart_icon {
@@ -64,6 +66,17 @@
       bottom: 6px;
       right: 6px;
       @extend %product-icon;
+      cursor: pointer;
+    }
+  }
+
+  .product_name{
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: .3s ease-in-out;
+
+    &:hover{
+    border-bottom: 1px solid $main-text-color;
     }
   }
 
@@ -83,6 +96,11 @@
       font-size: $fz-s;
       line-height: $lh-s;
       color: transparentize($main-text-color, 0.2);
+    }
+
+    .selected{
+      border: 1px solid $main-text-color;
+      border-radius: 50%;
     }
   }
 

@@ -1,0 +1,22 @@
+@import '../../styles/variables.module';
+@import '../../styles/mixins_and_placeholders.module';
+
+.ProductCountForm {
+  @include flex(space-between, flex-start, 14px, column);
+
+  .buttons_group {
+    @include flex(space-between, center, 10px);
+
+    .product_add_btn {
+      @extend %button;
+      @extend %primary-button-red;
+      padding: 12px 18px;
+    }
+
+    .product_favourite_btn {
+      @extend %button;
+      @extend %secondary-button-red;
+      padding: 12px 18px;
+    }
+  }
+}
