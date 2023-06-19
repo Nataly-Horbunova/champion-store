@@ -23,35 +23,45 @@ export function ProductInCart({product}) {
     };
 
     const handleChangeCount = (e) => {
-        const value = e.target.value;
+        const value = Number(e.target.value);
 
         if (isNaN(value)) {
             setCount(1);
             dispatch(changeCount({product, count: 1}));
-        } else if (value === "0") {
-            setCount(0);
-            dispatch(removeFromCart(product.id));
         } else {
             setCount(value);
             dispatch(changeCount({product, count: value}));
         }
     }
 
+    const handleRemoveProductOnBlur = (e) => {
+        const value = Number(e.target.value);
+
+        if (value === 0) {
+            setCount(0);
+            dispatch(removeFromCart(product.id));
+        }
+    }
+
+
     const handleRemoveProduct = () => {
         dispatch(removeFromCart(product.id));
     }
+
 
     return (
         <li className={style.ProductInCart}>
             <div className={style.image_and_info_wrapper}>
                 <div className={style.image_wrapper}>
-                    <img src={require(`../../assets/products/${product.currentImage.imageName}`)} alt="ProductInCart" className={style.product_img}/>
+                    <img src={require(`../../assets/products/${product.currentImage.imageName}`)} alt="ProductInCart"
+                         className={style.product_img}/>
                 </div>
                 <div className={style.product_info}>
                     <h3 className={style.product_name}>{product.name}</h3>
                     <div className={style.product_price}>{`$${product.price}`}</div>
                     {product.colors.length > 1 &&
-                        <div className={style.product_color}>{`${cartData.colorText} ${product.currentImage.color}`}</div>}
+                        <div
+                            className={style.product_color}>{`${cartData.colorText} ${product.currentImage.color}`}</div>}
                 </div>
             </div>
             <div className={style.counter}>
@@ -60,6 +70,7 @@ export function ProductInCart({product}) {
                     incrementCount={handleIncrementCount}
                     decrementCount={handleDecrementCount}
                     changeCount={handleChangeCount}
+                    removeOnBlur={handleRemoveProductOnBlur}
                 />
                 <div className={style.remove_btn} onClick={handleRemoveProduct}>{cartData.removeBtn}</div>
             </div>

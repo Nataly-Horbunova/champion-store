@@ -2,7 +2,7 @@ import style from "./Counter.module.scss";
 import * as React from "react";
 import {useState} from "react";
 
-export function Counter ({count, incrementCount, decrementCount, changeCount}) {
+export function Counter ({count, incrementCount, decrementCount, changeCount, removeOnBlur=null}) {
 
     return(
         <div className={style.Counter}>
@@ -10,10 +10,11 @@ export function Counter ({count, incrementCount, decrementCount, changeCount}) {
             </button>
             <input className={style.product_count}
                    required
-                   pattern="[0-9]"
                    type="text"
                    value={count}
-                   onInput={changeCount}/>
+                   onInput={changeCount}
+                   onBlur={removeOnBlur}
+            />
             <button type="button" className={style.increment_btn} onClick={incrementCount}>+
             </button>
         </div>

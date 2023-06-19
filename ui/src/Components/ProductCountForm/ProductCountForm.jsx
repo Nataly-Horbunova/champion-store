@@ -26,7 +26,7 @@ export function ProductCountForm({product, productData}) {
     };
 
     const handleChangeCount = (e) => {
-        const value = e.target.value;
+        const value = Number(e.target.value);
         if (value < 1) {
             e.target.setCustomValidity("The value must be 1 or more");
         } else {
