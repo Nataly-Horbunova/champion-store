@@ -1,11 +1,11 @@
 import style from "./ProductPage.module.scss";
-import mainStyles from "../../index.module.scss";
+import mainStyles from "../../../index.module.scss";
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {getProduct} from "../../api/api";
-import {ProductCarousel} from "../../Components/ProductCarousel/ProductCarousel";
+import {getProduct} from "../../../api/api";
+import {ProductCarousel} from "../../ProductCarousel/ProductCarousel";
 import * as React from "react";
-import {getProductCardData} from "../../data/dataFunctions";
+import {getProductCardData} from "../../../data/dataFunctions";
 import Rating from "@mui/material/Rating";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -16,7 +16,7 @@ import {v4 as uuidv4} from "uuid";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import CircleIcon from "@mui/icons-material/Circle";
-import {ProductCountForm} from "../../Components/ProductCountForm/ProductCountForm";
+import {ProductCountForm} from "../../ProductCountForm/ProductCountForm";
 
 
 export function ProductPage() {
@@ -46,7 +46,7 @@ export function ProductPage() {
                             </div>
                         }
                         <div className={style.main_img_wrapper}>
-                            <img src={require(`../../assets/products/${product.currentImage.imageName}`)}
+                            <img src={require(`../../../assets/products/${product.currentImage.imageName}`)}
                                  alt="product img"
                                  className={style.main_img}/>
                         </div>
@@ -112,7 +112,7 @@ export function ProductPage() {
                                 productData.services.map(item => {
                                         return (
                                             <div className={style.product_service_wrapper} key={item.id}>
-                                                <img src={require(`../../assets/product_services/${item.img}`)}
+                                                <img src={require(`../../../assets/product_services/${item.img}`)}
                                                      alt="service icon"
                                                      className={style.product_service_img}/>
                                                 <span className={style.product_service_name}>{item.name}</span>

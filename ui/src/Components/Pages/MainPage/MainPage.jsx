@@ -1,9 +1,9 @@
-import {Carousel} from '../../Components/Carousel/Carousel';
+import {Carousel} from '../../Carousel/Carousel';
 import style from './MainPage.module.scss';
-import {getMainPageData} from "../../data/dataFunctions";
+import {getMainPageData} from "../../../data/dataFunctions";
 import {NavLink} from "react-router-dom";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import mainStyles from "../../index.module.scss";
+import mainStyles from "../../../index.module.scss";
 
 export function MainPage() {
     const pageData = getMainPageData();
@@ -24,7 +24,7 @@ export function MainPage() {
                                 <li key={category.id} className={style.categories_list_item}>
                                     <NavLink to={category.path} className={style.categories_list_link} onClick={handleScrollToTop}>
                                         <div className={style.img_wrapper}>
-                                            <img src={require(`../../assets/categories/${category.img}`)}
+                                            <img src={require(`../../../assets/categories/${category.img}`)}
                                                  alt={category.name} className={style.category_img}/>
                                         </div>
                                         <button className={style.category_btn}>
@@ -62,7 +62,7 @@ export function MainPage() {
                             pageData.earbuds.images.map(img => {
                                     return (
                                         <div key={img.id} className={style.earbuds_img_wrapper}>
-                                            <img src={require(`../../assets/earbuds_section/${img.name}`)} alt={img.name}
+                                            <img src={require(`../../../assets/earbuds_section/${img.name}`)} alt={img.name}
                                                  className={style.earbuds_img}/>
                                         </div>
                                     )
@@ -78,7 +78,7 @@ export function MainPage() {
                     {pageData.brands.map(brand => {
                         return (
                             <img
-                                src={require(`../../assets/brands/${brand.img}`)}
+                                src={require(`../../../assets/brands/${brand.img}`)}
                                 alt="brand icon"
                                 key={brand.id}
                                 className={style.brand_img}/>

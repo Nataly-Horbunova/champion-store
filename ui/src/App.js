@@ -1,13 +1,13 @@
 import style from './App.module.scss';
 import {Header} from './Components/Header/Header';
 import {Route, Routes} from "react-router-dom";
-import {MainPage} from "./pages/MainPage/MainPage";
+import {MainPage} from "./Components/Pages/MainPage/MainPage";
 import {Footer} from "./Components/Footer/Footer";
-import {ProductsPage} from "./pages/ProductsPage/ProductsPage";
-import {ProductPage} from "./pages/ProductPage/ProductPage";
-import {CartPage} from "./pages/CartPage/CartPage";
+import {ProductsPage} from "./Components/Pages/ProductsPage/ProductsPage";
+import {ProductPage} from "./Components/Pages/ProductPage/ProductPage";
+import {CartPage} from "./Components/Pages/CartPage/CartPage";
 import {useSelector} from "react-redux";
-import {CartEmptyPage} from "./pages/CartPage/CartEmptyPage";
+import {CartEmptyPage} from "./Components/Pages/CartPage/CartEmptyPage";
 
 
 function App() {

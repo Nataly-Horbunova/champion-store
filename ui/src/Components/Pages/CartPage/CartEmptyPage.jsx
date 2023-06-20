@@ -1,6 +1,6 @@
 import style from "./CartPage.module.scss";
-import mainStyles from "../../index.module.scss";
-import {getCartData} from "../../data/dataFunctions";
+import mainStyles from "../../../index.module.scss";
+import {getCartData} from "../../../data/dataFunctions";
 import {useNavigate} from "react-router-dom";
 
 export function CartEmptyPage () {

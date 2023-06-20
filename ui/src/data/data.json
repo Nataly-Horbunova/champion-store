@@ -280,11 +280,11 @@
         "options": {
           "inStock": {
             "name": "In stock",
-            "value": "in-stock"
+            "value": "inStock"
           },
           "outOfStock": {
             "name": "Out of stock",
-            "value": "out-of-stock"
+            "value": "outOfStock"
           }
         }
       },
@@ -408,7 +408,9 @@
         "categories": {
           "earbuds": false,
           "headphones": true,
-          "speakers": true
+          "speakers": true,
+          "customer-pick": true,
+          "sales":true
         },
         "showMore": "+Show more",
         "showLess": "-Show less"

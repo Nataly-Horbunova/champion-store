@@ -1,10 +1,10 @@
 import style from "./CartPage.module.scss";
 import {useSelector} from "react-redux";
-import mainStyles from "../../index.module.scss";
-import {getCartData} from "../../data/dataFunctions";
+import mainStyles from "../../../index.module.scss";
+import {getCartData} from "../../../data/dataFunctions";
 import {v4 as uuidv4} from "uuid";
-import {ProductInCart} from "../../Components/ProductInCart/ProductInCart";
-import {CartOrderForm} from "../../Components/CartOrderForm/CartOrderForm";
+import {ProductInCart} from "../../ProductInCart/ProductInCart";
+import {CartOrderForm} from "../../CartOrderForm/CartOrderForm";
 
 export function CartPage() {
     const cart = useSelector(state => state.cart.cartProducts);

@@ -39,7 +39,7 @@ export function ProductCard({currentProduct}) {
                         <div className={style.sale_label}>{productData.labels.sale}</div>}
                     {product.categories.includes('customer-pick') &&
                         <div className={style.customer_pick_label}>{productData.labels.customerPick}</div>}
-                    {!product.onStock && <div className={style.sold_out_label}>{productData.labels.soldOut}</div>}
+                    {!product.inStock && <div className={style.sold_out_label}>{productData.labels.soldOut}</div>}
                 </div>
                 <FavoriteBorderIcon color="color_accent_3" fontSize="medium" className={style.favourite_icon}/>
                 {/*<FavoriteIcon color="color_accent_3" fontSize="medium" className={style.favourite_icon}/>*/}
