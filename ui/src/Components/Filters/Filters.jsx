@@ -11,18 +11,23 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {useSearchParams} from "react-router-dom";
-import {useState} from "react";
-import {useSelector} from "react-redux";
+import {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {getProducts} from "../../api/api";
+import {setProducts} from "../../data/redux/reducers/shopSlice";
+import {setFilteredProducts, setSearchParamsStr} from "../../data/redux/reducers/filtersSlice";
 
 
-export function Filters({category, className}) {
+export function Filters({className}) {
     const filters = getFiltersData();
-    const filteredProducts = useSelector(state => state.filters.filteredProducts);
-
-
+    const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
+    const category = useSelector(state => state.filters.category);
+    const subcategory = useSelector(state => state.filters.subcategory);
 
-    function handleFilterChange(filter, value, checked) {
+
+    function handleChangeSearchParams(filter, value, checked) {
+        console.log('searchParams')
         const currentValues = searchParams.getAll(filter);
         let updatedValues;
 
@@ -33,7 +38,23 @@ export function Filters({category, className}) {
         }
 
         setSearchParams({...searchParams, [filter]: updatedValues});
+
     }
+
+
+    const handleUpdateProducts = () => {
+        const paramsString = searchParams.toString();
+        console.log('filters');
+
+        return getProducts(category, subcategory, paramsString)
+            .then(resp => {
+                dispatch(setProducts(resp)); // paginate
+                dispatch(setFilteredProducts(resp));
+                dispatch(setSearchParamsStr(paramsString));
+                                return resp;
+            });
+    }
+
 
     // const lowestPriceFilter = searchParams.get("price_gte");
     // const highestPriceFilter = searchParams.get("price_lte");
@@ -60,31 +81,15 @@ export function Filters({category, className}) {
             </Accordion>
 
             {/* ----------------- Availability filter ---------- */}
-            <Accordion className={style.filter_accordion} defaultExpanded>
-                <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
-                    <Typography className={style.filter_tittle}>{filters.availability.tittle}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <AvailabilityFilter filter={filters.availability}/>
-                </AccordionDetails>
-            </Accordion>
+            <AvailabilityFilter filter={filters.availability}/>
 
             {/* ----------------- Categories filter -------------- */}
-            <CategoriesFilter filter={filters.productType} handleFilterChange={handleFilterChange}
+            <CategoriesFilter filter={filters.productType} handleChangeSearchParams={handleChangeSearchParams}
+                              handleUpdateProducts={handleUpdateProducts}
                               categoriesFilters={categoriesFilters}/>
 
             {/* ------------------ Color filter -------------------- */}
-            {
-                (filters.color.categories[category] || !category) &&
-                <Accordion className={style.filter_accordion} defaultExpanded>
-                    <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
-                        <Typography className={style.filter_tittle}>{filters.color.tittle}</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <ColorFilter filter={filters.color}/>
-                    </AccordionDetails>
-                </Accordion>
-            }
+            <ColorFilter filter={filters.color}/>
 
 
         </div>

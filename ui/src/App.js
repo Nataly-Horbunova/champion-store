@@ -19,7 +19,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<MainPage/>}/>
                 <Route path='collections/' element={<ProductsPage/>}/>
-                <Route path='collections/:category' element={<ProductsPage/>}/>
+                <Route path='collections/:collection' element={<ProductsPage/>}/>
                 <Route path='product/:productId' element={<ProductPage/>}/>
                 <Route path='cart' element={cart.length > 0 ? <CartPage/> : <CartEmptyPage/>}/>
             </Routes>

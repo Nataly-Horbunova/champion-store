@@ -20,7 +20,7 @@ export function Header() {
     let [scrollDown, setScrollDown] = useState(false);
     let [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
-    console.log(cart);
+    // console.log(cart);
 
 
     useEffect(() => {
@@ -74,7 +74,7 @@ export function Header() {
                                              onMouseEnter={handleShowDropDown}>
                                             <div className={`${mainStyles.container} ${style.dropdown_container}`}>
                                                 <ul className={style.collections_list}> {
-                                                    headerData.dropDown.collections.map(collection => {
+                                                    headerData.dropDown.categories.map(collection => {
                                                         return (
                                                             <li key={collection.id}
                                                                 className={style.dropdown_list_item}>
@@ -89,7 +89,7 @@ export function Header() {
                                                 }
                                                 </ul>
                                                 <ul className={style.filters_list}> {
-                                                    headerData.dropDown.filters.map(filter => {
+                                                    headerData.dropDown.subcategories.map(filter => {
                                                         return (
                                                             <li key={filter.id}
                                                                 className={style.filter_list_item}>

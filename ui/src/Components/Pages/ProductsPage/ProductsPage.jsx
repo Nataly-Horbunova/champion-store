@@ -9,32 +9,53 @@ import {Filters} from "../../Filters/Filters";
 import {ProductCard} from "../../ProductCard/ProductCard";
 import {Sort} from "../../Sort/Sort";
 import {CurrentFilters} from "../../CurrentFilters/CurrentFilters";
-import {setFilteredProducts} from "../../../data/redux/reducers/filtersSlice";
+import {
+    setAvailabilityCount,
+    setCategoriesCount, setCategory,
+    setColorsCount,
+    setFilteredProducts, setSubcategory
+} from "../../../data/redux/reducers/filtersSlice";
+import {getCategoriesData, getSubCategoriesData} from "../../../data/dataFunctions";
 
 
 export function ProductsPage() {
     // const products = useSelector(state => state.shop.products);
     const products = useSelector(state => state.filters.filteredProducts);
+    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
     const dispatch = useDispatch();
-    const {category} = useParams();
-    const [searchParams] = useSearchParams();
-    const paramsString = searchParams.toString();
+    const {collection} = useParams();
+    const [searchParams, setSearchParams] = useSearchParams();
+
+
+    const subcategories = getSubCategoriesData();
+    const categories = getCategoriesData();
+
+    const category = categories.find(item => item.value === collection) ? collection : "";
+    const subcategory = subcategories.find(item => item.value === collection) ? collection : "";
+
 
     useEffect(() => {
+        dispatch(setCategory(category));
+        dispatch(setSubcategory(category))
+        console.log('products');
 
-        getProducts(category || "", paramsString)
+        getProducts(category, subcategory, searchParamsStr)
             .then(resp => {
                 dispatch(setProducts(resp)); // paginate
                 dispatch(setFilteredProducts(resp));
+                dispatch(setColorsCount(resp));
+                dispatch(setCategoriesCount(resp));
+                dispatch(setAvailabilityCount(resp));
+                !searchParamsStr && setSearchParams("");
             });
 
-    }, [category]);
+    }, [collection]);
 
 
     return (
         <main className={style.ProductsPage}>
             <div className={`${mainStyles.container} ${style.productsPage_container}`}>
-                <Filters category={category} className={style.filters}/>
+                <Filters className={style.filters}/>
                 <div className={style.sort_and_filters_wrapper}>
                     <CurrentFilters className={style.currentFilters}/>
                     <Sort className={style.sort} total={products.length}/>

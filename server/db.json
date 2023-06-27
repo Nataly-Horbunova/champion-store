@@ -38,7 +38,6 @@
           "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
         }
       ],
-      "customerPick": true,
       "reviews": [
         {
           "id": 1,
@@ -52,7 +51,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 2,
@@ -2086,7 +2089,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sales": true,
+        "customer-pick": true
+      }
     }
   ],
   "user": [
@@ -2107,4 +2114,5 @@
       ]
     }
   ]
+
 }

@@ -32,46 +32,53 @@
       }
     ],
     "dropDown": {
-      "collections": [
+      "categories": [
         {
           "name": "Shop all",
           "id": "1",
-          "path": "collections"
+          "path": "collections",
+          "value": "collections"
         },
         {
           "name": "Headphones",
           "id": "2",
-          "path": "collections/headphones"
+          "path": "collections/headphones",
+          "value": "headphones"
         },
         {
           "name": "Earbuds",
           "id": "3",
-          "path": "collections/earbuds"
+          "path": "collections/earbuds",
+          "value": "earbuds"
         },
         {
           "name": "Speakers",
           "id": "4",
-          "path": "collections/speakers"
+          "path": "collections/speakers",
+          "value": "speakers"
         }
       ],
-      "filters": [
+      "subcategories": [
         {
           "name": "Gift card",
           "id": 1,
           "path": "products/gift-card",
-          "img": "gift_card.webp"
+          "img": "gift_card.webp",
+          "value": "gift-card"
         },
         {
           "name": "Sales",
           "id": 2,
           "path": "collections/sales",
-          "img": "sales.webp"
+          "img": "sales.webp",
+          "value": "sales"
         },
         {
           "name": "Customer pick",
           "id": 3,
           "path": "collections/customer-pick",
-          "img": "customer_pick.webp"
+          "img": "customer_pick.webp",
+          "value": "customer-pick"
         }
       ]
     }
@@ -277,16 +284,16 @@
       },
       "availability": {
         "tittle": "Availability",
-        "options": {
-          "inStock": {
+        "options": [
+          {
             "name": "In stock",
             "value": "inStock"
           },
-          "outOfStock": {
+          {
             "name": "Out of stock",
             "value": "outOfStock"
           }
-        }
+        ]
       },
       "productType": {
         "tittle": "Product type",
@@ -410,7 +417,7 @@
           "headphones": true,
           "speakers": true,
           "customer-pick": true,
-          "sales":true
+          "sales": true
         },
         "showMore": "+Show more",
         "showLess": "-Show less"
@@ -488,11 +495,16 @@
         "rating": "Total rating",
         "post": "Write a review"
       }
-    }
+    },
+    "subcategories": ["customer-pick", "sales"]
   },
   "cart": {
     "tittle": "Cart",
-    "subtitles": ["Product", "Quantity", "Total"],
+    "subtitles": [
+      "Product",
+      "Quantity",
+      "Total"
+    ],
     "removeBtn": "Remove",
     "colorText": "Color:",
     "orderForm": {

@@ -2,17 +2,22 @@ import axios from "axios";
 
 const baseUrl = 'http://localhost:3001/';
 const productsUrl = "products/";
-const categoriesFilter = '?categories_like=';
+const categoriesUrl = '?categories_like=';
+const subcategoriesUrl = '?subcategories'
 
 
-export const getProducts = (category, searchParams) => {
+export const getProducts = (category, subcategory, searchParams) => {
     let requestUrl;
 
     if (category) {
-        requestUrl = `${baseUrl}${productsUrl}${categoriesFilter}${category}&${searchParams}`;
-    } else {
+        requestUrl = `${baseUrl}${productsUrl}${categoriesUrl}${category}&${searchParams}`;
+    } else if (subcategory) {
+        requestUrl = `${baseUrl}${productsUrl}${subcategoriesUrl}.${subcategory}=true&${searchParams}`;
+    }
+    else if (!category && !subcategory) {
         requestUrl = `${baseUrl}${productsUrl}?${searchParams}`;
     }
+    console.log(searchParams);
 
     return axios
         .get(requestUrl)
