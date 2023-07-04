@@ -5,8 +5,10 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import {getSortData} from "../../data/dataFunctions";
+import {useSelector} from "react-redux";
 
-export function Sort({className, total}) {
+export function Sort({className}) {
+    const products = useSelector(state => state.shop.products);
     const sort = getSortData();
 
     return (
@@ -34,7 +36,7 @@ export function Sort({className, total}) {
                 </NativeSelect>
             </FormControl>
             <div className={style.product_qty_wrapper}>
-                <span>{total}</span>
+                <span>{products.length}</span>
                 <span>{sort.totalText}</span>
             </div>
         </div>

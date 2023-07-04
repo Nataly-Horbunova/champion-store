@@ -17,6 +17,7 @@
       "price": "85.00",
       "oldPrice": "85.00",
       "inStock": 1,
+      "available": true,
       "colors": [
         "grey"
       ],
@@ -74,6 +75,7 @@
       "price": "150.00",
       "oldPrice": "170.00",
       "inStock": 10,
+      "available": true,
       "colors": [
         "white"
       ],
@@ -127,6 +129,7 @@
       "price": "160.00",
       "oldPrice": "160.00",
       "inStock": 10,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -180,6 +183,7 @@
       "price": "145.00",
       "oldPrice": "145.00",
       "inStock": 5,
+      "available": true,
       "colors": [
         "grey"
       ],
@@ -233,6 +237,7 @@
       "price": "120.00",
       "oldPrice": "130.00",
       "inStock": 15,
+      "available": true,
       "colors": [
         "grey"
       ],
@@ -285,6 +290,7 @@
       "price": "130.00",
       "oldPrice": "130.00",
       "inStock": 15,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -337,6 +343,7 @@
       "price": "160.00",
       "oldPrice": "160.00",
       "inStock": 0,
+      "available": false,
       "colors": [
         "black"
       ],
@@ -389,6 +396,7 @@
       "price": "170.00",
       "oldPrice": "170.00",
       "inStock": 10,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -442,6 +450,7 @@
       "price": "120.00",
       "oldPrice": "120.00",
       "inStock": 10,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -495,6 +504,7 @@
       "price": "260.00",
       "oldPrice": "280.00",
       "inStock": 20,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -548,6 +558,7 @@
       "price": "50.00",
       "oldPrice": "50.00",
       "inStock": 20,
+      "available": true,
       "colors": [
         "blue"
       ],
@@ -610,6 +621,7 @@
       "price": "70.00",
       "oldPrice": "70.00",
       "inStock": 20,
+      "available": true,
       "colors": [
         "yellow",
         "orange",
@@ -664,6 +676,7 @@
       "price": "200.00",
       "oldPrice": "200.00",
       "inStock": 12,
+      "available": true,
       "colors": [
         "red"
       ],
@@ -716,6 +729,7 @@
       "price": "200.00",
       "oldPrice": "200.00",
       "inStock": 20,
+      "available": true,
       "colors": [
         "grey"
       ],
@@ -810,6 +824,7 @@
       "price": "160.00",
       "oldPrice": "175.00",
       "inStock": 20,
+      "available": true,
       "colors": [
         "grey",
         "soft_pink",
@@ -871,6 +886,7 @@
       "price": "140.00",
       "oldPrice": "140.00",
       "inStock": 2,
+      "available": true,
       "colors": [
         "red"
       ],
@@ -949,6 +965,7 @@
       "price": "220.00",
       "oldPrice": "220.00",
       "inStock": 2,
+      "available": true,
       "colors": [
         "green",
         "yellow",
@@ -1006,6 +1023,7 @@
       "price": "250.00",
       "oldPrice": "250.00",
       "inStock": 12,
+      "available": true,
       "colors": [
         "white"
       ],
@@ -1060,6 +1078,7 @@
       "price": "310.00",
       "oldPrice": "325.00",
       "inStock": 12,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -1100,6 +1119,7 @@
       "price": "390.00",
       "oldPrice": "390.00",
       "inStock": 20,
+      "available": true,
       "colors": [
         "grey"
       ],
@@ -1152,6 +1172,7 @@
       "price": "215.00",
       "oldPrice": "215.00",
       "inStock": 20,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -1204,6 +1225,7 @@
       "price": "236.00",
       "oldPrice": "236.00",
       "inStock": 0,
+      "available": false,
       "colors": [
         "black"
       ],
@@ -1256,6 +1278,7 @@
       "price": "310.00",
       "oldPrice": "310.00",
       "inStock": 10,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -1323,6 +1346,7 @@
       "price": "280.00",
       "oldPrice": "280.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "light_brown",
         "grey",
@@ -1380,6 +1404,7 @@
       "price": "255.00",
       "oldPrice": "275.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "light_brown"
       ],
@@ -1433,6 +1458,7 @@
       "price": "210.00",
       "oldPrice": "250.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "white"
       ],
@@ -1485,6 +1511,7 @@
       "price": "230.00",
       "oldPrice": "230.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "white"
       ],
@@ -1538,6 +1565,7 @@
       "price": "250.00",
       "oldPrice": "250.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -1590,6 +1618,7 @@
       "price": "250.00",
       "oldPrice": "250.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -1630,6 +1659,7 @@
       "price": "195.00",
       "oldPrice": "220.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -1683,6 +1713,7 @@
       "price": "315.00",
       "oldPrice": "315.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "dark_green"
       ],
@@ -1735,6 +1766,7 @@
       "price": "275.00",
       "oldPrice": "275.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "white"
       ],
@@ -1787,6 +1819,7 @@
       "price": "360.00",
       "oldPrice": "380.00",
       "inStock": 30,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -1839,6 +1872,7 @@
       "price": "310.00",
       "oldPrice": "310.00",
       "inStock": 0,
+      "available": false,
       "colors": [
         "black"
       ],
@@ -1891,6 +1925,7 @@
       "price": "420.00",
       "oldPrice": "420.00",
       "inStock": 1,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -1944,6 +1979,7 @@
       "price": "340.00",
       "oldPrice": "340.00",
       "inStock": 3,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -2000,6 +2036,7 @@
       "price": "285.00",
       "oldPrice": "285.00",
       "inStock": 15,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -2055,6 +2092,7 @@
       "price": "200.00",
       "oldPrice": "260.00",
       "inStock": 2,
+      "available": true,
       "colors": [
         "black"
       ],
@@ -2114,5 +2152,4 @@
       ]
     }
   ]
-
 }

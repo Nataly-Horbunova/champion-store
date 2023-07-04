@@ -15,10 +15,6 @@
 
 
     .filters {
-      //position: sticky;
-      //align-self: start;
-      //top: 0;
-      //bottom: 0;
       grid-area: filters;
     }
 
@@ -35,12 +31,12 @@
       }
     }
 
-    .products_list {
-      @include flex(flex-start, flex-start, 4px);
-      row-gap: 20px;
-      flex-wrap: wrap;
-      grid-area: products;
-      align-self: start;
-    }
+    //.products_list {
+    //  @include flex(flex-start, flex-start, 4px);
+    //  row-gap: 20px;
+    //  flex-wrap: wrap;
+    //  grid-area: products;
+    //  align-self: start;
+    //}
   }
 }

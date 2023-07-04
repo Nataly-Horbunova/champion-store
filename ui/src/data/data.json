@@ -287,11 +287,13 @@
         "options": [
           {
             "name": "In stock",
-            "value": "inStock"
+            "value": "inStock",
+            "searchParamValue": "true"
           },
           {
             "name": "Out of stock",
-            "value": "outOfStock"
+            "value": "outOfStock",
+            "searchParamValue": "false"
           }
         ]
       },

@@ -13,7 +13,11 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import {getFiltersData} from "../../data/dataFunctions";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import {setAvailabilityCount, setColorsCount, setSearchParamsStr} from "../../data/redux/reducers/filtersSlice";
+import {
+    setAvailabilityCount,
+    setCategoriesCount,
+    setColorsCount
+} from "../../data/redux/reducers/filtersSlice";
 
 export function CategoriesFilter({filter, handleChangeSearchParams, handleUpdateProducts, categoriesFilters}) {
     const filters = getFiltersData();
@@ -21,19 +25,20 @@ export function CategoriesFilter({filter, handleChangeSearchParams, handleUpdate
     const {collection} = useParams();
     const categoriesCount = useSelector(state => state.filters.categoriesCount);
     const dispatch = useDispatch();
-    const [categoriesFilter, setCategoriesFilter] = useState(false);
-    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
-
+    const [categoriesFlag, setCategoriesFlag] = useState(false);
+    const [checked, setChecked] = useState(false);
 
     useEffect(() => {
-        categoriesFilter && handleFilterByCategory();
-    }, [categoriesFilter]);
+        categoriesFlag && handleFilterByCategory();
+            }, [categoriesFlag, checked]);
 
     const handleFilterByCategory = () => {
+
         handleUpdateProducts()
             .then(resp => {
                 dispatch(setColorsCount(resp));
                 dispatch(setAvailabilityCount(resp));
+                !checked && categoriesFilters.length === 0 && dispatch(setCategoriesCount(resp));
             })
     }
 
@@ -55,11 +60,12 @@ export function CategoriesFilter({filter, handleChangeSearchParams, handleUpdate
                                 <FormControlLabel key={uuidv4()} control={
                                     <Checkbox color="main_text_color"
                                               value={item}
-                                              checked={!searchParamsStr ? false : categoriesFilters.includes(item)}
-                                              disabled={!count}
+                                              checked={categoriesFilters.includes(item)}
+                                              disabled={!count && !categoriesFilters.includes(item)}
                                               onChange={(e) => {
-                                                  handleChangeSearchParams("categories_like", item, e.target.checked);
-                                                  setCategoriesFilter(uuidv4());
+                                                  handleChangeSearchParams("categories_like", item, e.target.checked, categoriesFilters);
+                                                  setCategoriesFlag(uuidv4());
+                                                  setChecked(e.target.checked);
                                               }
                                               }/>
                                 } label={

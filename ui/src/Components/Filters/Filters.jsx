@@ -11,7 +11,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {useSearchParams} from "react-router-dom";
-import {useEffect, useState} from "react";
+
 import {useDispatch, useSelector} from "react-redux";
 import {getProducts} from "../../api/api";
 import {setProducts} from "../../data/redux/reducers/shopSlice";
@@ -24,46 +24,49 @@ export function Filters({className}) {
     const [searchParams, setSearchParams] = useSearchParams();
     const category = useSelector(state => state.filters.category);
     const subcategory = useSelector(state => state.filters.subcategory);
+    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
+
+    // const lowestPriceFilter = searchParams.get("price_gte");
+    // const highestPriceFilter = searchParams.get("price_lte");
+    // const colorsFilter = searchParams.get("colors_like");
 
 
-    function handleChangeSearchParams(filter, value, checked) {
-        console.log('searchParams')
-        const currentValues = searchParams.getAll(filter);
+    const categoriesFilters = searchParams.get('categories_like')?.split(',') ?? [];
+    const availabilityFilters = searchParams.get('available')?.split(',') ?? [];
+
+
+    function handleChangeSearchParams(filter, value, checked, currentValues) {
+        const currentParam = `${filter}=${value}&`;
+        const isPresent = searchParamsStr.includes(currentParam);
         let updatedValues;
+        let updatedParams;
 
-        if (checked) {
+        if (checked && !isPresent) {
+            updatedParams = searchParamsStr.concat(currentParam);
             updatedValues = [...currentValues, value];
-        } else {
+        } else if (!checked && isPresent) {
+            updatedParams = searchParamsStr.replace(currentParam, '');
             updatedValues = currentValues.filter(v => v !== value);
         }
 
-        setSearchParams({...searchParams, [filter]: updatedValues});
+        dispatch(setSearchParamsStr(updatedParams));
+        updatedValues.length > 0 ? searchParams.set(filter, updatedValues.join(',')) : searchParams.delete(filter);
+        setSearchParams(searchParams, {
+            replace: true,
+        });
 
     }
 
 
     const handleUpdateProducts = () => {
-        const paramsString = searchParams.toString();
-        console.log('filters');
 
-        return getProducts(category, subcategory, paramsString)
+        return getProducts(category, subcategory, searchParamsStr)
             .then(resp => {
-                dispatch(setProducts(resp)); // paginate
+                dispatch(setProducts(resp));
                 dispatch(setFilteredProducts(resp));
-                dispatch(setSearchParamsStr(paramsString));
-                                return resp;
+                return resp;
             });
     }
-
-
-    // const lowestPriceFilter = searchParams.get("price_gte");
-    // const highestPriceFilter = searchParams.get("price_lte");
-    // const onStockFilter = searchParams.get("onStock");
-    // const outOfStockFilter = searchParams.get("onStock_ne");
-    // const colorsFilter = searchParams.get("colors_like");
-    // const categoriesFilter = searchParams.get("categories_like");
-
-    const categoriesFilters = searchParams.getAll('categories_like');
 
 
     return (
@@ -80,15 +83,14 @@ export function Filters({className}) {
                 </AccordionDetails>
             </Accordion>
 
-            {/* ----------------- Availability filter ---------- */}
-            <AvailabilityFilter filter={filters.availability}/>
+            <AvailabilityFilter filter={filters.availability} handleChangeSearchParams={handleChangeSearchParams}
+                                handleUpdateProducts={handleUpdateProducts}
+                                availabilityFilters={availabilityFilters}/>
 
-            {/* ----------------- Categories filter -------------- */}
             <CategoriesFilter filter={filters.productType} handleChangeSearchParams={handleChangeSearchParams}
                               handleUpdateProducts={handleUpdateProducts}
                               categoriesFilters={categoriesFilters}/>
 
-            {/* ------------------ Color filter -------------------- */}
             <ColorFilter filter={filters.color}/>
 
 
