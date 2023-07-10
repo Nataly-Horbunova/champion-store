@@ -64,5 +64,13 @@ export function getMinPrice(products) {
     return minValue;
 }
 
+export function getCategoryColors(products) {
+    return products.reduce((acc, product) => {
+        product.colors.forEach(item => {
+         !acc.includes(item) && acc.push(item);
+        });
 
+        return acc;
+    }, [])
+}
 

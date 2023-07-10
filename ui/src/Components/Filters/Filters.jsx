@@ -13,9 +13,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {useSearchParams} from "react-router-dom";
 
 import {useDispatch, useSelector} from "react-redux";
-import {getProducts} from "../../api/api";
-import {setProducts} from "../../data/redux/reducers/shopSlice";
-import {setFilteredProducts, setSearchParamsStr} from "../../data/redux/reducers/filtersSlice";
+import {useSearchParamsActions, useUpdateProducts} from "../../core/hooks";
 
 
 export function Filters({className}) {
@@ -28,45 +26,12 @@ export function Filters({className}) {
 
     // const lowestPriceFilter = searchParams.get("price_gte");
     // const highestPriceFilter = searchParams.get("price_lte");
-    // const colorsFilter = searchParams.get("colors_like");
-
 
     const categoriesFilters = searchParams.get('categories_like')?.split(',') ?? [];
     const availabilityFilters = searchParams.get('available')?.split(',') ?? [];
-
-
-    function handleChangeSearchParams(filter, value, checked, currentValues) {
-        const currentParam = `${filter}=${value}&`;
-        const isPresent = searchParamsStr.includes(currentParam);
-        let updatedValues;
-        let updatedParams;
-
-        if (checked && !isPresent) {
-            updatedParams = searchParamsStr.concat(currentParam);
-            updatedValues = [...currentValues, value];
-        } else if (!checked && isPresent) {
-            updatedParams = searchParamsStr.replace(currentParam, '');
-            updatedValues = currentValues.filter(v => v !== value);
-        }
-
-        dispatch(setSearchParamsStr(updatedParams));
-        updatedValues.length > 0 ? searchParams.set(filter, updatedValues.join(',')) : searchParams.delete(filter);
-        setSearchParams(searchParams, {
-            replace: true,
-        });
-
-    }
-
-
-    const handleUpdateProducts = () => {
-
-        return getProducts(category, subcategory, searchParamsStr)
-            .then(resp => {
-                dispatch(setProducts(resp));
-                dispatch(setFilteredProducts(resp));
-                return resp;
-            });
-    }
+    const colorsFilters = searchParams.get('colors_like')?.split(',') ?? [];
+    const { handleChangeSearchParams } = useSearchParamsActions();
+    const {updateProducts} = useUpdateProducts(category, subcategory, searchParamsStr);
 
 
     return (
@@ -84,14 +49,15 @@ export function Filters({className}) {
             </Accordion>
 
             <AvailabilityFilter filter={filters.availability} handleChangeSearchParams={handleChangeSearchParams}
-                                handleUpdateProducts={handleUpdateProducts}
+                                updateProducts={updateProducts}
                                 availabilityFilters={availabilityFilters}/>
 
             <CategoriesFilter filter={filters.productType} handleChangeSearchParams={handleChangeSearchParams}
-                              handleUpdateProducts={handleUpdateProducts}
+                              updateProducts={updateProducts}
                               categoriesFilters={categoriesFilters}/>
 
-            <ColorFilter filter={filters.color}/>
+            <ColorFilter filter={filters.color} handleChangeSearchParams={handleChangeSearchParams}
+                         updateProducts={updateProducts} colorsFilters={colorsFilters}/>
 
 
         </div>

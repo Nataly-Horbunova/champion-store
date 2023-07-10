@@ -3,22 +3,44 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import * as React from "react";
-import {useParams} from "react-router-dom";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect, useState} from "react";
+import {v4 as uuidv4} from "uuid";
+import {
+    removeColorFilter,
+    setAvailabilityCount,
+    setCategoriesCount,
+    setColorFilter,
+    setColorsCount
+} from "../../data/redux/reducers/filtersSlice";
 
-export function ColorFilter({filter}) {
-    const {category} = useParams();
+export function ColorFilter({filter, colorsFilters, handleChangeSearchParams, updateProducts}) {
+    const dispatch = useDispatch();
     const colorsCount = useSelector(state => state.filters.colorsCount);
-    // console.log(colorsCount);
+    const categoryColors = useSelector(state => state.filters.categoryColors);
+    const [flag, setFlag] = useState(false);
+    const [checked, setChecked] = useState(false);
+
+    useEffect(() => {
+        flag && handleFilterByColor();
+    }, [flag, checked]);
+
+
+    const handleFilterByColor = () => {
+        updateProducts()
+            .then(resp => {
+                dispatch(setCategoriesCount(resp));
+                dispatch(setAvailabilityCount(resp));
+                !checked && colorsFilters.length === 0 && dispatch(setColorsCount(resp));
+            })
+    }
 
     return (
-
-        (filter.categories[category] || !category) &&
         <Accordion className={style.filter_accordion} defaultExpanded>
             <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
                 <Typography className={style.filter_tittle}>{filter.tittle}</Typography>
@@ -27,7 +49,8 @@ export function ColorFilter({filter}) {
                 <FormGroup>
                     {
                         filter.options.map(item => {
-                            if(!colorsCount[item.value]) return;
+                            if(!categoryColors.includes(item.value)) return;
+                            const count = colorsCount[item.value] ? colorsCount[item.value] : 0;
 
                             return (
                                 <FormControlLabel
@@ -42,11 +65,20 @@ export function ColorFilter({filter}) {
                                                     color: `${item.color}`,
                                                 },
                                             }}
+                                            checked={colorsFilters.includes(item.value)}
+                                            disabled={!count && !colorsFilters.includes(item)}
+                                            onChange={(e) => {
+                                                handleChangeSearchParams("colors_like", item.value, e.target.checked, colorsFilters);
+                                                setFlag(uuidv4());
+                                                setChecked(e.target.checked);
+                                                e.target.checked ? dispatch(setColorFilter(item)) : dispatch(removeColorFilter(item));
+                                            }
+                                            }
                                         />
                                     } label={
                                     <div className={style.filter_label_wrapper}>
                                         <span className={style.filter_text}>{item.name}</span>
-                                        <span className={style.filter_qty}>{colorsCount[item.value]}</span>
+                                        <span className={style.filter_qty}>{count}</span>
                                     </div>
                                 }/>
                             )

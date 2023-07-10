@@ -414,13 +414,6 @@
             "color": "#000"
           }
         ],
-        "categories": {
-          "earbuds": false,
-          "headphones": true,
-          "speakers": true,
-          "customer-pick": true,
-          "sales": true
-        },
         "showMore": "+Show more",
         "showLess": "-Show less"
       },

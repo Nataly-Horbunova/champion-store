@@ -12,29 +12,26 @@ import {useDispatch, useSelector} from "react-redux";
 import {v4 as uuidv4} from "uuid";
 import {useEffect, useState} from "react";
 import {
-    setAvailabilityCount,
+    removeAvailabilityFilter,
+    setAvailabilityCount, setAvailabilityFilter,
     setCategoriesCount,
     setColorsCount
 } from "../../data/redux/reducers/filtersSlice";
 
 
-
-export function AvailabilityFilter({filter, handleChangeSearchParams, handleUpdateProducts, availabilityFilters}) {
+export function AvailabilityFilter({filter, handleChangeSearchParams, updateProducts, availabilityFilters}) {
     const availabilityCount = useSelector(state => state.filters.availabilityCount);
-    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
-    const [availabilityFlag, setAvailabilityFlag] = useState(false);
+    const [flag, setFlag] = useState(false);
     const dispatch = useDispatch();
     const [checked, setChecked] = useState(false);
 
 
     useEffect(() => {
-        availabilityFlag && handleFilterByAvailability();
-
-    }, [availabilityFlag, checked ]);
+        flag && handleFilterByAvailability();
+    }, [flag, checked]);
 
     const handleFilterByAvailability = () => {
-
-        handleUpdateProducts()
+        updateProducts()
             .then(resp => {
                 dispatch(setColorsCount(resp));
                 dispatch(setCategoriesCount(resp));
@@ -61,8 +58,9 @@ export function AvailabilityFilter({filter, handleChangeSearchParams, handleUpda
                                     disabled={!count && !availabilityFilters.includes(item.searchParamValue)}
                                     onChange={(e) => {
                                         handleChangeSearchParams("available", item.searchParamValue, e.target.checked, availabilityFilters);
-                                        setAvailabilityFlag(uuidv4());
+                                        setFlag(uuidv4());
                                         setChecked(e.target.checked);
+                                        e.target.checked ? dispatch(setAvailabilityFilter(item)) : dispatch(removeAvailabilityFilter(item));
                                     }
                                     }
                                 />
@@ -74,7 +72,6 @@ export function AvailabilityFilter({filter, handleChangeSearchParams, handleUpda
                             }/>
                         )
                     })}
-
                 </FormGroup>
             </AccordionDetails>
         </Accordion>

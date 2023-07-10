@@ -2,7 +2,7 @@ import style from "./ProductPage.module.scss";
 import mainStyles from "../../../index.module.scss";
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {getProduct} from "../../../api/api";
+import {getProduct} from "../../../core/api";
 import {ProductCarousel} from "../../ProductCarousel/ProductCarousel";
 import * as React from "react";
 import {getProductCardData} from "../../../data/dataFunctions";

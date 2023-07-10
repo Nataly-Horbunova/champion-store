@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {getAvailabilityCount, getCategoriesCount, getColorsCount} from "../../../functions";
+import {getAvailabilityCount, getCategoriesCount, getCategoryColors, getColorsCount} from "../../../core/utils";
 
 export const filtersSlice = createSlice({
     name: "filters",
@@ -12,6 +12,8 @@ export const filtersSlice = createSlice({
         colorsCount: {},
         availabilityCount: {},
         categoriesCount: {},
+
+        categoryColors: [],
 
         colorFilter: [],
         availabilityFilter: [],
@@ -47,22 +49,48 @@ export const filtersSlice = createSlice({
             state.availabilityCount = getAvailabilityCount(action.payload);
         },
 
+        setCategoryColors: (state, action) => {
+            state.categoryColors = getCategoryColors(action.payload);
+        },
+
         setColorFilter: (state, action) => {
-            state.colorFilter = action.payload;
+            state.colorFilter.push(action.payload);
+        },
+
+        removeColorFilter: (state, action) => {
+            state.colorFilter = state.colorFilter.filter(item => item.value !== action.payload.value);
         },
 
         setCategoriesFilter: (state, action) => {
-            state.categoriesFilter = action.payload;
+            state.categoriesFilter.push(action.payload);
+        },
+
+        removeCategoriesFilter: (state, action) => {
+            state.categoriesFilter = state.categoriesFilter.filter(item => item !== action.payload);
         },
 
         setAvailabilityFilter: (state, action) => {
-            state.availabilityFilter = action.payload;
+            state.availabilityFilter.push(action.payload);
+        },
+
+        removeAvailabilityFilter: (state, action) => {
+            state.availabilityFilter = state.availabilityFilter.filter(item => item.value !== action.payload.value);
         },
 
         setPriceFilter: (state, action) => {
-            state.priceFilter = action.payload;
-        }
+            state.priceFilter.push(action.payload);
+        },
 
+        removePriceFilter: (state, action) => {
+            //
+        },
+
+        clearAllFilters: (state, action) => {
+            state.colorFilter = [];
+            state.categoriesFilter = [];
+            state.availabilityFilter = [];
+            state.priceFilter = [];
+        }
     }
 });
 
@@ -74,10 +102,16 @@ export const {
     setColorsCount,
     setCategoriesCount,
     setAvailabilityCount,
+    setCategoryColors,
     setColorFilter,
     setCategoriesFilter,
     setAvailabilityFilter,
-    setPriceFilter
+    removeColorFilter,
+    removeCategoriesFilter,
+    removeAvailabilityFilter,
+    removePriceFilter,
+    setPriceFilter,
+    clearAllFilters,
 } = filtersSlice.actions;
 
 export default filtersSlice.reducer;
