@@ -52,6 +52,7 @@ export function getMaxPrice(products) {
 
 export function getMinPrice(products) {
     let minValue = Number.MAX_VALUE;
+    console.log(products);
 
     products.forEach(product => {
         const price = Number(product.price);

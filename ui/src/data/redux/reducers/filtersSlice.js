@@ -1,5 +1,11 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {getAvailabilityCount, getCategoriesCount, getCategoryColors, getColorsCount} from "../../../core/utils";
+import {
+    getAvailabilityCount,
+    getCategoriesCount,
+    getCategoryColors,
+    getColorsCount, getMaxPrice,
+    getMinPrice
+} from "../../../core/utils";
 
 export const filtersSlice = createSlice({
     name: "filters",
@@ -8,6 +14,10 @@ export const filtersSlice = createSlice({
         category: "",
         subcategory: "",
         searchParamsStr: "",
+
+        minPrice: null,
+        maxPrice: null,
+        priceRange: [],
 
         colorsCount: {},
         availabilityCount: {},
@@ -35,6 +45,19 @@ export const filtersSlice = createSlice({
 
         setSearchParamsStr: (state, action) => {
             state.searchParamsStr = action.payload;
+        },
+
+        setMinPrice: (state, action) => {
+            console.log(action.payload);
+            state.minPrice = action.payload;
+        },
+
+        setMaxPrice: (state, action) => {
+            state.maxPrice = action.payload;
+        },
+
+        setPriceRange: (state, action) => {
+            state.priceRange = action.payload;
         },
 
         setColorsCount: (state, action) => {
@@ -99,6 +122,9 @@ export const {
     setCategory,
     setSubcategory,
     setSearchParamsStr,
+    setMinPrice,
+    setMaxPrice,
+    setPriceRange,
     setColorsCount,
     setCategoriesCount,
     setAvailabilityCount,

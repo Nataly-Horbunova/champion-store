@@ -9,11 +9,12 @@ import {
     setAvailabilityCount,
     setCategoriesCount,
     setCategory, setCategoryColors,
-    setColorsCount,
+    setColorsCount, setMaxPrice, setMinPrice, setPriceRange,
     setSearchParamsStr,
     setSubcategory
 } from "../../data/redux/reducers/filtersSlice";
 import {useUpdateProducts} from "../../core/hooks";
+import {getMaxPrice, getMinPrice} from "../../core/utils";
 
 
 export const Products = () => {
@@ -29,12 +30,14 @@ export const Products = () => {
     const subcategory = subcategories.find(item => item.value === collection) ? collection : "";
     const {updateProducts} = useUpdateProducts(category, subcategory, "");
     const updateProductsAndFilters = () => {
-        updateProducts()
+
+        return updateProducts()
             .then(resp => {
                 dispatch(setColorsCount(resp));
                 dispatch(setCategoriesCount(resp));
                 dispatch(setAvailabilityCount(resp));
                 dispatch(setCategoryColors(resp));
+                return resp;
             });
     }
 
@@ -43,7 +46,14 @@ export const Products = () => {
         dispatch(setCategory(category));
         dispatch(setSubcategory(category));
         setSearchParams("");
-        updateProductsAndFilters();
+        updateProductsAndFilters()
+            .then(resp => {
+                const minPrice = getMinPrice(resp);
+                const maxPrice = getMaxPrice(resp);
+                dispatch(setMinPrice(minPrice));
+                dispatch(setMaxPrice(maxPrice));
+                dispatch(setPriceRange([minPrice, maxPrice]));
+            })
 
     }, [collection]);
 
