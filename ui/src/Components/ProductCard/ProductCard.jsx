@@ -55,9 +55,9 @@ export function ProductCard({currentProduct}) {
             </div>
             <div onClick={() => showMoreHandler(product.id)} className={style.product_name}>{product.name}</div>
             <div className={style.product_price_wrapper}>
-                <div className={style.product_current_price}>{`$${product.price}`}</div>
+                <div className={style.product_current_price}>{`$${product.price.toFixed(2)}`}</div>
                 {(product.oldPrice !== product.price) &&
-                    <div className={style.product_old_price}>{`$${product.oldPrice}`}</div>}
+                    <div className={style.product_old_price}>{`$${product.oldPrice.toFixed(2)}`}</div>}
             </div>
             <Rating name="half-rating-read"
                     defaultValue={product.rating}

@@ -3,8 +3,7 @@ import {
     getAvailabilityCount,
     getCategoriesCount,
     getCategoryColors,
-    getColorsCount, getMaxPrice,
-    getMinPrice
+    getColorsCount
 } from "../../../core/utils";
 
 export const filtersSlice = createSlice({
@@ -15,9 +14,9 @@ export const filtersSlice = createSlice({
         subcategory: "",
         searchParamsStr: "",
 
-        minPrice: null,
-        maxPrice: null,
-        priceRange: [],
+        minPrice: 0,
+        maxPrice: 0,
+        priceRange: [0, 0],
 
         colorsCount: {},
         availabilityCount: {},
@@ -28,7 +27,7 @@ export const filtersSlice = createSlice({
         colorFilter: [],
         availabilityFilter: [],
         categoriesFilter: [],
-        priceFilter: {}
+        priceFilter: []
     },
     reducers: {
         setFilteredProducts: (state, action) => {
@@ -48,7 +47,6 @@ export const filtersSlice = createSlice({
         },
 
         setMinPrice: (state, action) => {
-            console.log(action.payload);
             state.minPrice = action.payload;
         },
 
@@ -101,11 +99,11 @@ export const filtersSlice = createSlice({
         },
 
         setPriceFilter: (state, action) => {
-            state.priceFilter.push(action.payload);
+            state.priceFilter = action.payload;
         },
 
         removePriceFilter: (state, action) => {
-            //
+            state.priceFilter = [];
         },
 
         clearAllFilters: (state, action) => {

@@ -37,12 +37,12 @@ export function getAvailabilityCount(products) {
 }
 
 export function getMaxPrice(products) {
-    let maxValue= Number.MIN_VALUE;
+    let maxValue = Number.MIN_VALUE;
 
     products.forEach(product => {
         const price = Number(product.price);
 
-        if(price > maxValue) {
+        if (price > maxValue) {
             maxValue = price;
         }
     });
@@ -52,12 +52,11 @@ export function getMaxPrice(products) {
 
 export function getMinPrice(products) {
     let minValue = Number.MAX_VALUE;
-    console.log(products);
 
     products.forEach(product => {
         const price = Number(product.price);
 
-        if(price < minValue) {
+        if (price < minValue) {
             minValue = price;
         }
     });
@@ -68,7 +67,7 @@ export function getMinPrice(products) {
 export function getCategoryColors(products) {
     return products.reduce((acc, product) => {
         product.colors.forEach(item => {
-         !acc.includes(item) && acc.push(item);
+            !acc.includes(item) && acc.push(item);
         });
 
         return acc;

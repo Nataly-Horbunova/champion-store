@@ -29,7 +29,50 @@ export const useSearchParamsActions = () => {
         });
     }
 
-    return {handleChangeSearchParams};
+    // const handleChangePriceSearchParams = (filter, value) => {
+    //     const regex = new RegExp(`${filter}=\\d+&`);
+    //     const currentParam = `${filter}=${value}&`;
+    //     const isPresent = searchParamsStr.includes(filter);
+    //     let updatedParams;
+    //
+    //     if (!isPresent) {
+    //         updatedParams = searchParamsStr.concat(currentParam);
+    //     } else {
+    //         updatedParams = searchParamsStr.replace(regex, currentParam);
+    //     }
+    //
+    //     console.log(currentParam);
+    //     console.log(updatedParams);
+    //
+    //     dispatch(setSearchParamsStr(updatedParams));
+    //     searchParams.set(filter, value);
+    //     setSearchParams(searchParams, {
+    //         replace: true,
+    //     });
+    // }
+
+    const handleChangePriceSearchParams = (minPriceFilter, maxPriceFilter, priceRange) => {
+        const minPriceRegex = new RegExp(`${minPriceFilter}=\\d+&`);
+        const maxPriceRegex = new RegExp(`${maxPriceFilter}=\\d+&`);
+        const currentMinPriceParam = `${minPriceFilter}=${priceRange[0]}&`;
+        const currentMaxPriceParam = `${maxPriceFilter}=${priceRange[1]}&`;
+        let updatedParams = searchParamsStr;
+
+        const updateParam = (regex, param) => {
+            const isPresent = searchParamsStr.match(regex);
+            updatedParams = isPresent ? updatedParams.replace(regex, param) : updatedParams.concat(param);
+        };
+
+        updateParam(minPriceRegex, currentMinPriceParam);
+        updateParam(maxPriceRegex, currentMaxPriceParam);
+
+        dispatch(setSearchParamsStr(updatedParams));
+        searchParams.set(minPriceFilter, priceRange[0]);
+        searchParams.set(maxPriceFilter, priceRange[1]);
+        setSearchParams(searchParams, { replace: true });
+    }
+
+    return {handleChangeSearchParams, handleChangePriceSearchParams};
 }
 
 

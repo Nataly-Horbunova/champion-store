@@ -13,8 +13,7 @@ export const getProducts = (category, subcategory, searchParams) => {
         requestUrl = `${baseUrl}${productsUrl}${categoriesUrl}${category}&${searchParams}`;
     } else if (subcategory) {
         requestUrl = `${baseUrl}${productsUrl}${subcategoriesUrl}.${subcategory}=true&${searchParams}`;
-    }
-    else if (!category && !subcategory) {
+    } else if (!category && !subcategory) {
         requestUrl = `${baseUrl}${productsUrl}?${searchParams}`;
     }
 

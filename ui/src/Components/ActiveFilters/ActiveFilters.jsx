@@ -7,15 +7,15 @@ import {useDispatch, useSelector} from "react-redux";
 import {v4 as uuidv4} from "uuid";
 import {
     clearAllFilters, removeAvailabilityFilter,
-    removeCategoriesFilter, removeColorFilter,
+    removeCategoriesFilter, removeColorFilter, removePriceFilter,
     setAvailabilityCount, setCategoriesCount,
-    setColorsCount
+    setColorsCount, setPriceRange
 } from "../../data/redux/reducers/filtersSlice";
 import {useSearchParamsActions, useUpdateProducts} from "../../core/hooks";
 import {useSearchParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
-export function CurrentFilters({className}) {
+export function ActiveFilters({className}) {
     const filters = getFiltersData();
     const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
@@ -23,6 +23,10 @@ export function CurrentFilters({className}) {
     const colorFilters = useSelector(state => state.filters.colorFilter);
     const categoriesFilters = useSelector(state => state.filters.categoriesFilter);
     const availabilityFilters = useSelector(state => state.filters.availabilityFilter);
+    const priceFilter = useSelector(state => state.filters.priceFilter);
+
+    const minPrice = useSelector(state => state.filters.minPrice);
+    const maxPrice = useSelector(state => state.filters.maxPrice);
 
     const categoriesParamsFilters = searchParams.get('categories_like')?.split(',') ?? [];
     const availabilityParamsFilters = searchParams.get('available')?.split(',') ?? [];
@@ -48,7 +52,6 @@ export function CurrentFilters({className}) {
                 dispatch(setCategoriesCount(resp));
             })
     }
-
 
     return (
         <div className={`${style.CurrentFilters} ${className}`}>
@@ -102,10 +105,25 @@ export function CurrentFilters({className}) {
                 )
             })}
 
-            {(colorFilters.length > 0 || categoriesFilters.length > 0 || availabilityFilters.length > 0) &&
+            {
+                priceFilter.length > 0 && (
+                    <button
+                        className={style.current_filters_btn}
+                        onClick={(e) => {
+                            dispatch(removePriceFilter());
+                        }}
+                    >
+                        <span>{`$${priceFilter[0]} - $${priceFilter[1]}`}</span>
+                        <CloseIcon fontSize="small"/>
+                    </button>
+                )
+            }
+
+            {(colorFilters.length > 0 || categoriesFilters.length > 0 || availabilityFilters.length > 0 || priceFilter.length > 0)  &&
                 <button className={`${style.current_filters_btn} ${style.clear_btn}`}
                         onClick={() => {
                             dispatch(clearAllFilters());
+                            dispatch(setPriceRange([minPrice, maxPrice]));
                             setSearchParams("");
                         }}
                 >

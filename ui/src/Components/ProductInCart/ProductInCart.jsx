@@ -58,7 +58,7 @@ export function ProductInCart({product}) {
                 </div>
                 <div className={style.product_info}>
                     <h3 className={style.product_name}>{product.name}</h3>
-                    <div className={style.product_price}>{`$${product.price}`}</div>
+                    <div className={style.product_price}>{`$${product.price.toFixed(2)}`}</div>
                     {product.colors.length > 1 &&
                         <div
                             className={style.product_color}>{`${cartData.colorText} ${product.currentImage.color}`}</div>}
@@ -75,7 +75,7 @@ export function ProductInCart({product}) {
                 <div className={style.remove_btn} onClick={handleRemoveProduct}>{cartData.removeBtn}</div>
             </div>
             <div className={style.total_product_amount}>
-                {`$${product.price * product.count}`}
+                {`$${(product.price * product.count).toFixed(2)}`}
             </div>
 
         </li>

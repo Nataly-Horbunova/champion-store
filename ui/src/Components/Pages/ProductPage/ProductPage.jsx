@@ -56,9 +56,9 @@ export function ProductPage() {
                         <h2 className={style.product_tittle}>{product.name}</h2>
                         <div className={style.price_and_labels_wrapper}>
                             <div className={style.product_price_wrapper}>
-                                <div className={style.product_current_price}>{`$${product.price}`}</div>
+                                <div className={style.product_current_price}>{`$${product.price.toFixed(2)}`}</div>
                                 {(product.oldPrice !== product.price) &&
-                                    <div className={style.product_old_price}>{`$${product.oldPrice}`}</div>}
+                                    <div className={style.product_old_price}>{`$${product.oldPrice.toFixed(2)}`}</div>}
                             </div>
                             {/* ------------- Labels ---------*/}
                             <div className={style.labels_wrapper}>

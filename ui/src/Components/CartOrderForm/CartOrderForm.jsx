@@ -64,7 +64,7 @@ export function CartOrderForm({cart, cartData, totalAmount}) {
                        onChange={handleChange}/>
             <label className={style.form_note_label} htmlFor="note">{cartData.orderForm.note}</label>
             <textarea className={style.form_note} id="note" onChange={handleChange} value={formData.note} name="note"/>
-            <p className={style.total_amount}>{`${cartData.orderForm.totalText} $${totalAmount}`}</p>
+            <p className={style.total_amount}>{`${cartData.orderForm.totalText} $${totalAmount.toFixed(2)}`}</p>
             <button className={style.order_btn} type="submit">{cartData.orderForm.orderBtn}</button>
         </form>
     )

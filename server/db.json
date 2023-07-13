@@ -14,8 +14,8 @@
         "earbuds",
         "customer-pick"
       ],
-      "price": "85.00",
-      "oldPrice": "85.00",
+      "price": 85,
+      "oldPrice": 85,
       "inStock": 1,
       "available": true,
       "colors": [
@@ -72,8 +72,8 @@
         "earbuds",
         "sales"
       ],
-      "price": "150.00",
-      "oldPrice": "170.00",
+      "price": 150,
+      "oldPrice": 170,
       "inStock": 10,
       "available": true,
       "colors": [
@@ -126,8 +126,8 @@
         "earbuds",
         "customer-pick"
       ],
-      "price": "160.00",
-      "oldPrice": "160.00",
+      "price": 160,
+      "oldPrice": 160,
       "inStock": 10,
       "available": true,
       "colors": [
@@ -180,8 +180,8 @@
         "earbuds",
         "customer-pick"
       ],
-      "price": "145.00",
-      "oldPrice": "145.00",
+      "price": 145,
+      "oldPrice": 145,
       "inStock": 5,
       "available": true,
       "colors": [
@@ -234,8 +234,8 @@
         "earbuds",
         "sales"
       ],
-      "price": "120.00",
-      "oldPrice": "130.00",
+      "price": 120,
+      "oldPrice": 130,
       "inStock": 15,
       "available": true,
       "colors": [
@@ -287,8 +287,8 @@
       "categories": [
         "earbuds"
       ],
-      "price": "130.00",
-      "oldPrice": "130.00",
+      "price": 130,
+      "oldPrice": 130,
       "inStock": 15,
       "available": true,
       "colors": [
@@ -340,8 +340,8 @@
       "categories": [
         "speakers"
       ],
-      "price": "160.00",
-      "oldPrice": "160.00",
+      "price": 160,
+      "oldPrice": 160,
       "inStock": 0,
       "available": false,
       "colors": [
@@ -393,8 +393,8 @@
       "categories": [
         "speakers"
       ],
-      "price": "170.00",
-      "oldPrice": "170.00",
+      "price": 170,
+      "oldPrice": 170,
       "inStock": 10,
       "available": true,
       "colors": [
@@ -447,8 +447,8 @@
         "speakers",
         "customer-pick"
       ],
-      "price": "120.00",
-      "oldPrice": "120.00",
+      "price": 120,
+      "oldPrice": 120,
       "inStock": 10,
       "available": true,
       "colors": [
@@ -501,8 +501,8 @@
         "speakers",
         "sales"
       ],
-      "price": "260.00",
-      "oldPrice": "280.00",
+      "price": 260,
+      "oldPrice": 280,
       "inStock": 20,
       "available": true,
       "colors": [
@@ -555,8 +555,8 @@
         "speakers",
         "customer-pick"
       ],
-      "price": "50.00",
-      "oldPrice": "50.00",
+      "price": 50,
+      "oldPrice": 50,
       "inStock": 20,
       "available": true,
       "colors": [
@@ -618,8 +618,8 @@
       "categories": [
         "speakers"
       ],
-      "price": "70.00",
-      "oldPrice": "70.00",
+      "price": 70,
+      "oldPrice": 70,
       "inStock": 20,
       "available": true,
       "colors": [
@@ -673,8 +673,8 @@
         "speakers",
         "customer-pick"
       ],
-      "price": "200.00",
-      "oldPrice": "200.00",
+      "price": 200,
+      "oldPrice": 200,
       "inStock": 12,
       "available": true,
       "colors": [
@@ -726,8 +726,8 @@
       "categories": [
         "speakers"
       ],
-      "price": "200.00",
-      "oldPrice": "200.00",
+      "price": 200,
+      "oldPrice": 200,
       "inStock": 20,
       "available": true,
       "colors": [
@@ -821,8 +821,8 @@
         "customer-pick",
         "sales"
       ],
-      "price": "160.00",
-      "oldPrice": "175.00",
+      "price": 160,
+      "oldPrice": 175,
       "inStock": 20,
       "available": true,
       "colors": [
@@ -883,8 +883,8 @@
         "speakers",
         "customer-pick"
       ],
-      "price": "140.00",
-      "oldPrice": "140.00",
+      "price": 140,
+      "oldPrice": 140,
       "inStock": 2,
       "available": true,
       "colors": [
@@ -962,8 +962,8 @@
         "headphones",
         "customer-pick"
       ],
-      "price": "220.00",
-      "oldPrice": "220.00",
+      "price": 220,
+      "oldPrice": 220,
       "inStock": 2,
       "available": true,
       "colors": [
@@ -1020,8 +1020,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "250.00",
-      "oldPrice": "250.00",
+      "price": 250,
+      "oldPrice": 250,
       "inStock": 12,
       "available": true,
       "colors": [
@@ -1075,8 +1075,8 @@
         "headphones",
         "sales"
       ],
-      "price": "310.00",
-      "oldPrice": "325.00",
+      "price": 310,
+      "oldPrice": 325,
       "inStock": 12,
       "available": true,
       "colors": [
@@ -1116,8 +1116,8 @@
         "headphones",
         "customer-pick"
       ],
-      "price": "390.00",
-      "oldPrice": "390.00",
+      "price": 390,
+      "oldPrice": 390,
       "inStock": 20,
       "available": true,
       "colors": [
@@ -1169,8 +1169,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "215.00",
-      "oldPrice": "215.00",
+      "price": 215,
+      "oldPrice": 215,
       "inStock": 20,
       "available": true,
       "colors": [
@@ -1222,8 +1222,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "236.00",
-      "oldPrice": "236.00",
+      "price": 236,
+      "oldPrice": 236,
       "inStock": 0,
       "available": false,
       "colors": [
@@ -1275,8 +1275,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "310.00",
-      "oldPrice": "310.00",
+      "price": 310,
+      "oldPrice": 310,
       "inStock": 10,
       "available": true,
       "colors": [
@@ -1343,8 +1343,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "280.00",
-      "oldPrice": "280.00",
+      "price": 280,
+      "oldPrice": 280,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1401,8 +1401,8 @@
         "customer-pick",
         "sales"
       ],
-      "price": "255.00",
-      "oldPrice": "275.00",
+      "price": 255,
+      "oldPrice": 275,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1455,8 +1455,8 @@
         "headphones",
         "sales"
       ],
-      "price": "210.00",
-      "oldPrice": "250.00",
+      "price": 210,
+      "oldPrice": 250,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1508,8 +1508,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "230.00",
-      "oldPrice": "230.00",
+      "price": 230,
+      "oldPrice": 230,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1562,8 +1562,8 @@
         "headphones",
         "customer-pick"
       ],
-      "price": "250.00",
-      "oldPrice": "250.00",
+      "price": 250,
+      "oldPrice": 250,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1615,8 +1615,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "250.00",
-      "oldPrice": "250.00",
+      "price": 250,
+      "oldPrice": 250,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1656,8 +1656,8 @@
         "headphones",
         "sales"
       ],
-      "price": "195.00",
-      "oldPrice": "220.00",
+      "price": 195,
+      "oldPrice": 220,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1710,8 +1710,8 @@
         "headphones",
         "customer-pick"
       ],
-      "price": "315.00",
-      "oldPrice": "315.00",
+      "price": 315,
+      "oldPrice": 315,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1763,8 +1763,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "275.00",
-      "oldPrice": "275.00",
+      "price": 275,
+      "oldPrice": 275,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1816,8 +1816,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "360.00",
-      "oldPrice": "380.00",
+      "price": 360,
+      "oldPrice": 380,
       "inStock": 30,
       "available": true,
       "colors": [
@@ -1869,8 +1869,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "310.00",
-      "oldPrice": "310.00",
+      "price": 310,
+      "oldPrice": 310,
       "inStock": 0,
       "available": false,
       "colors": [
@@ -1922,8 +1922,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "420.00",
-      "oldPrice": "420.00",
+      "price": 420,
+      "oldPrice": 420,
       "inStock": 1,
       "available": true,
       "colors": [
@@ -1976,8 +1976,8 @@
         "headphones",
         "customer-pick"
       ],
-      "price": "340.00",
-      "oldPrice": "340.00",
+      "price": 340,
+      "oldPrice": 340,
       "inStock": 3,
       "available": true,
       "colors": [
@@ -2033,8 +2033,8 @@
       "categories": [
         "headphones"
       ],
-      "price": "285.00",
-      "oldPrice": "285.00",
+      "price": 285,
+      "oldPrice": 285,
       "inStock": 15,
       "available": true,
       "colors": [
@@ -2089,8 +2089,8 @@
         "customer-pick",
         "sales"
       ],
-      "price": "200.00",
-      "oldPrice": "260.00",
+      "price": 200,
+      "oldPrice": 260,
       "inStock": 2,
       "available": true,
       "colors": [
