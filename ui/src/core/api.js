@@ -16,6 +16,7 @@ export const getProducts = (category, subcategory, searchParams) => {
     } else if (!category && !subcategory) {
         requestUrl = `${baseUrl}${productsUrl}?${searchParams}`;
     }
+    console.log(requestUrl);
 
     return axios
         .get(requestUrl)

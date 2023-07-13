@@ -125,7 +125,7 @@ export function ProductPage() {
                         <div>
                             {product.additionalInfo.map(item => {
                                 return (
-                                    <Accordion className={style.product_accordion} key={uuidv4()}>
+                                    <Accordion className={style.product_accordion} key={uuidv4()} defaultExpanded>
                                         <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
                                             <Typography
                                                 className={style.additional_info_tittle}>{item.tittle}</Typography>

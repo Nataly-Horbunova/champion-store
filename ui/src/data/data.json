@@ -67,11 +67,11 @@
           "value": "gift-card"
         },
         {
-          "name": "Sales",
+          "name": "Sale",
           "id": 2,
-          "path": "collections/sales",
+          "path": "collections/sale",
           "img": "sales.webp",
-          "value": "sales"
+          "value": "sale"
         },
         {
           "name": "Customer pick",
@@ -425,32 +425,51 @@
         {
           "id": 1,
           "name": "Featured",
-          "value": "featured"
+          "value": "featured",
+          "sortValue": "",
+          "orderValue": ""
         },
         {
           "id": 2,
           "name": "Alphabetically A-Z",
-          "value": "alphabetically_a_z"
+          "value": "name_asc",
+          "sortValue": "name",
+          "orderValue": "asc"
         },
         {
           "id": 3,
           "name": "Alphabetically Z-A",
-          "value": "alphabetically_z_a"
+          "value": "name_desc",
+          "sortValue": "name",
+          "orderValue": "desc"
         },
         {
           "id": 4,
-          "name": "Best selling",
-          "value": "best_selling"
+          "name": "Price, low to high",
+          "value": "price_asc",
+          "sortValue": "price",
+          "orderValue": "asc"
         },
         {
           "id": 5,
-          "name": "Price, low to high",
-          "value": "price_low_to_high"
+          "name": "Price, high to low",
+          "value": "price_desc",
+          "sortValue": "price",
+          "orderValue": "desc"
         },
         {
           "id": 6,
-          "name": "Price, high to low",
-          "value": "price_high_to_low"
+          "name": "Rating, low to high",
+          "value": "rating_asc",
+          "sortValue": "rating",
+          "orderValue": "asc"
+        },
+        {
+          "id":7,
+          "name": "Rating, high to low",
+          "value": "rating&_order=desc",
+          "sortValue": "rating",
+          "orderValue": "desc"
         }
       ],
       "totalText": "products"

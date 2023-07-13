@@ -29,12 +29,13 @@ export function PriceFilter({
     const maxPrice = useSelector(state => state.filters.maxPrice);
     const priceRange = useSelector(state => state.filters.priceRange) || [minPrice, maxPrice];
     const dispatch = useDispatch();
-    const [flag, setFlag] = useState(false);
+    const [productsFlag, setProductsFlag] = useState(false);
+    const [priceRangeFlag, setPriceRangeFlag] = useState(priceRange);
 
     useEffect(() => {
         handleChangePriceSearchParams("price_gte", "price_lte", priceRange);
-        setFlag(uuidv4());
-    }, [priceRange]);
+        setProductsFlag(uuidv4());
+    }, [priceRangeFlag]);
 
 
     useEffect(() => {
@@ -44,7 +45,7 @@ export function PriceFilter({
                 dispatch(setAvailabilityCount(resp));
                 dispatch(setCategoriesCount(resp));
             });
-    }, [flag]);
+    }, [productsFlag]);
 
     const handlePriceRangeChange = (event, newValue) => {
         dispatch(setPriceFilter(newValue));
@@ -68,6 +69,7 @@ export function PriceFilter({
                         color="main_text_color"
                         onChange={(e, newValue) => {
                             handlePriceRangeChange(e, newValue);
+                            setPriceRangeFlag(priceRange);
                         }}
                     />
                     <FormControl fullWidth sx={{m: 1}} color="main_text_color" size="small">
@@ -86,6 +88,7 @@ export function PriceFilter({
                                 const newMinPrice = Number(e.target.value);
                                 const newValue = [newMinPrice, priceRange[1]];
                                 handlePriceRangeChange(e, newValue);
+                                setPriceRangeFlag(priceRange);
                             }}
                         />
                     </FormControl>
@@ -105,6 +108,7 @@ export function PriceFilter({
                                 const newMaxPrice = Number(e.target.value);
                                 const newValue = [priceRange[0], newMaxPrice];
                                 handlePriceRangeChange(e, newValue);
+                                setPriceRangeFlag(priceRange);
                             }}
                         />
                     </FormControl>

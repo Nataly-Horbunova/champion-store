@@ -110,7 +110,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": true,
+        "customer-pick": false
+      }
     },
     {
       "id": 3,
@@ -164,7 +168,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 4,
@@ -218,7 +226,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 5,
@@ -272,7 +284,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": true,
+        "customer-pick": false
+      }
     },
     {
       "id": 6,
@@ -325,7 +341,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 7,
@@ -378,7 +398,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 8,
@@ -431,7 +455,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 9,
@@ -485,7 +513,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 10,
@@ -539,7 +571,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": true,
+        "customer-pick": false
+      }
     },
     {
       "id": 11,
@@ -593,7 +629,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 12,
@@ -657,7 +697,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 13,
@@ -711,7 +755,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 14,
@@ -764,7 +812,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 15,
@@ -867,7 +919,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": true,
+        "customer-pick": true
+      }
     },
     {
       "id": 16,
@@ -921,7 +977,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 17,
@@ -1005,7 +1065,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 18,
@@ -1059,7 +1123,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 19,
@@ -1100,7 +1168,11 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "subcategories": {
+        "sale": true,
+        "customer-pick": false
+      }
     },
     {
       "id": 20,
@@ -1154,7 +1226,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 21,
@@ -1207,7 +1283,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 22,
@@ -1260,7 +1340,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 23,
@@ -1313,7 +1397,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 24,
@@ -1384,7 +1472,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 25,
@@ -1439,7 +1531,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 26,
@@ -1493,7 +1589,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": true,
+        "customer-pick": false
+      }
     },
     {
       "id": 27,
@@ -1546,7 +1646,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 28,
@@ -1600,7 +1704,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 29,
@@ -1640,7 +1748,11 @@
           "description": "Offers a clear, balanced, and detailed audio experience with good bass, treble, and mid-range response. The sound is dynamic and immersive, with accurate representation of the music and minimal distortion. Additionally, the headphone is able to produce a wide soundstage, creating the illusion of a live performance. The superior sound quality is consistent across all frequencies, with a smooth transition between the different frequencies. It also remains consistent even at high volumes. All of these factors combined create a superior audio experience for the listener."
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 30,
@@ -1694,7 +1806,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": true,
+        "customer-pick": false
+      }
     },
     {
       "id": 31,
@@ -1748,7 +1864,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 32,
@@ -1801,7 +1921,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 33,
@@ -1854,7 +1978,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 34,
@@ -1907,7 +2035,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 35,
@@ -1960,7 +2092,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 36,
@@ -2018,7 +2154,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": true
+      }
     },
     {
       "id": 37,
@@ -2072,7 +2212,11 @@
           "description": "Customer's support could be better, the product itself is great",
           "rating": "4"
         }
-      ]
+      ],
+      "subcategories": {
+        "sale": false,
+        "customer-pick": false
+      }
     },
     {
       "id": 38,
@@ -2129,7 +2273,7 @@
         }
       ],
       "subcategories": {
-        "sales": true,
+        "sale": true,
         "customer-pick": true
       }
     }

@@ -29,28 +29,6 @@ export const useSearchParamsActions = () => {
         });
     }
 
-    // const handleChangePriceSearchParams = (filter, value) => {
-    //     const regex = new RegExp(`${filter}=\\d+&`);
-    //     const currentParam = `${filter}=${value}&`;
-    //     const isPresent = searchParamsStr.includes(filter);
-    //     let updatedParams;
-    //
-    //     if (!isPresent) {
-    //         updatedParams = searchParamsStr.concat(currentParam);
-    //     } else {
-    //         updatedParams = searchParamsStr.replace(regex, currentParam);
-    //     }
-    //
-    //     console.log(currentParam);
-    //     console.log(updatedParams);
-    //
-    //     dispatch(setSearchParamsStr(updatedParams));
-    //     searchParams.set(filter, value);
-    //     setSearchParams(searchParams, {
-    //         replace: true,
-    //     });
-    // }
-
     const handleChangePriceSearchParams = (minPriceFilter, maxPriceFilter, priceRange) => {
         const minPriceRegex = new RegExp(`${minPriceFilter}=\\d+&`);
         const maxPriceRegex = new RegExp(`${maxPriceFilter}=\\d+&`);
@@ -69,10 +47,33 @@ export const useSearchParamsActions = () => {
         dispatch(setSearchParamsStr(updatedParams));
         searchParams.set(minPriceFilter, priceRange[0]);
         searchParams.set(maxPriceFilter, priceRange[1]);
-        setSearchParams(searchParams, { replace: true });
+        setSearchParams(searchParams, {replace: true});
     }
 
-    return {handleChangeSearchParams, handleChangePriceSearchParams};
+    const handleChangeSortSearchParams = (sortFilter, orderFilter, sortValue, orderValue) => {
+        let updatedParams = searchParamsStr;
+        const regex = /_sort=[^&]+&_order=[^&]+&/;
+        const isPresent = searchParamsStr.match(regex);
+
+        if (!sortValue && !isPresent) return;
+
+        if (!sortValue && isPresent) {
+            updatedParams = updatedParams.replace(regex, "");
+            searchParams.delete(sortFilter);
+            searchParams.delete(orderFilter);
+
+        } else if (sortValue) {
+            const currentSortParams = `${sortFilter}=${sortValue}&${orderFilter}=${orderValue}&`;
+            updatedParams = isPresent ? updatedParams.replace(regex, currentSortParams) : updatedParams.concat(currentSortParams);
+            searchParams.set(sortFilter, sortValue);
+            searchParams.set(orderFilter, orderValue);
+        }
+
+        setSearchParams(searchParams, {replace: true});
+        dispatch(setSearchParamsStr(updatedParams));
+    }
+
+    return {handleChangeSearchParams, handleChangePriceSearchParams, handleChangeSortSearchParams};
 }
 
 
