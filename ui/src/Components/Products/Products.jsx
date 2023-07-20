@@ -83,13 +83,13 @@ export const Products = () => {
     }, [searchParams]);
 
     return (
-        <>
-            <ul className={style.Products}>
+        <div className={style.Products}>
+            <ul className={style.products_list}>
                 {
                     productsPerPage.map(product => <ProductCard currentProduct={product} key={product.id}/>)
                 }
             </ul>
             <ProductPagination/>
-        </>
+        </div>
     )
 }

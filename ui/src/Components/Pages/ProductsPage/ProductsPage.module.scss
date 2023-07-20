@@ -10,7 +10,8 @@
     grid-template-columns: 280px 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 'filters sort'
-                          'filters products';
+                          'filters products'
+                          'filters pagination';
     grid-gap: 40px;
 
 
@@ -30,13 +31,5 @@
         flex-basis: calc(35% - 20px);
       }
     }
-
-    //.products_list {
-    //  @include flex(flex-start, flex-start, 4px);
-    //  row-gap: 20px;
-    //  flex-wrap: wrap;
-    //  grid-area: products;
-    //  align-self: start;
-    //}
   }
 }

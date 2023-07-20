@@ -1,9 +1,14 @@
 @import "../../styles/mixins_and_placeholders.module";
 
 .Products {
-    @include flex(flex-start, flex-start, 4px);
-    row-gap: 20px;
-    flex-wrap: wrap;
-    grid-area: products;
-    align-self: start;
+    @include flex(flex-start, center, 30px, column);
+
+    .products_list {
+        @include flex(flex-start, flex-start, 4px);
+        row-gap: 20px;
+        flex-wrap: wrap;
+        grid-area: products;
+        align-self: start;
+    }
+
 }
