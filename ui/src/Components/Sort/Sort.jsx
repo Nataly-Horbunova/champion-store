@@ -5,25 +5,18 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import {getSortData} from "../../data/dataFunctions";
-import {useSelector} from "react-redux";
-import {useSearchParamsActions, useUpdateProducts} from "../../core/hooks";
-import {useEffect, useState} from "react";
-import {v4 as uuidv4} from "uuid";
+import {useDispatch, useSelector} from "react-redux";
+import {useSearchParamsActions} from "../../core/hooks";
+import {setPageNumber, setSortValue} from "../../data/redux/reducers/filtersSlice";
 
 export function Sort({className}) {
     const products = useSelector(state => state.shop.products);
+    const pageNumber = useSelector(state => state.filters.pageNumber);
     const sort = getSortData();
-    const category = useSelector(state => state.filters.category);
-    const subcategory = useSelector(state => state.filters.subcategory);
-    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
-
-    const {updateProducts} = useUpdateProducts(category, subcategory, searchParamsStr);
     const {handleChangeSortSearchParams} = useSearchParamsActions();
-    const [flag, setFlag] = useState(false);
+    const dispatch = useDispatch();
 
-    useEffect(() => {
-        updateProducts();
-    }, [flag])
+    const sortValue = useSelector(state => state.filters.sortValue);
 
     return (
         <div className={`${style.Sort} ${className}`}>
@@ -33,20 +26,22 @@ export function Sort({className}) {
                     {sort.tittle}
                 </InputLabel>
                 <NativeSelect
+                    value={sortValue === "" ? sort.options[0].value : sortValue}
                     color="main_text_color"
                     inputProps={{
                         name: 'sort',
                         id: 'sort',
                     }}
                     onChange={(e) => {
+                        pageNumber > 1 && dispatch(setPageNumber(1));
                         const sortValue = e.target.options[e.target.selectedIndex].getAttribute('data-sort');
                         const orderValue = e.target.options[e.target.selectedIndex].getAttribute('data-order');
                         handleChangeSortSearchParams("_sort", "_order", sortValue, orderValue);
-                        setFlag(uuidv4());
+                        dispatch(setSortValue(e.target.value));
                     }}
                 >
                     {
-                        sort.options.map(item => {
+                        sort.options.map((item, i) => {
                             return (
                                 <option
                                     value={item.value}

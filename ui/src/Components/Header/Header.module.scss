@@ -146,8 +146,18 @@
       @include flex(space-between, center, 20px);
       grid-area: icons;
 
-      .icon_badge{
-        color: white;
+      .icon_badge {
+        color: $secondary-text-color;
+      }
+
+      .search_field_wrappper {
+        //@include flex (space-between, center, 10px);
+
+        .searchField {
+
+
+        }
+
       }
 
       .icon_wrapper {

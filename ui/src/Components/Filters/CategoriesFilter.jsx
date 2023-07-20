@@ -17,7 +17,7 @@ import {
     removeCategoriesFilter,
     setAvailabilityCount,
     setCategoriesCount, setCategoriesFilter,
-    setColorsCount
+    setColorsCount, setPageNumber
 } from "../../data/redux/reducers/filtersSlice";
 
 export function CategoriesFilter({filter, handleChangeSearchParams, updateProducts, categoriesFilters}) {
@@ -26,6 +26,7 @@ export function CategoriesFilter({filter, handleChangeSearchParams, updateProduc
     const {collection} = useParams();
     const categoriesCount = useSelector(state => state.filters.categoriesCount);
     const currentFilter = useSelector(state => state.filters.categoriesFilter);
+    const pageNumber = useSelector(state => state.filters.pageNumber);
     const dispatch = useDispatch();
     const [flag, setFlag] = useState(false);
     const [checked, setChecked] = useState(false);
@@ -37,6 +38,7 @@ export function CategoriesFilter({filter, handleChangeSearchParams, updateProduc
     const handleFilterByCategory = () => {
         updateProducts()
             .then(resp => {
+                console.log('category');
                 dispatch(setColorsCount(resp));
                 dispatch(setAvailabilityCount(resp));
                 !checked && categoriesFilters.length === 0 && dispatch(setCategoriesCount(resp));
@@ -63,6 +65,7 @@ export function CategoriesFilter({filter, handleChangeSearchParams, updateProduc
                                               checked={categoriesFilters.includes(item) && currentFilter.includes(item)}
                                               disabled={!count && !categoriesFilters.includes(item)}
                                               onChange={(e) => {
+                                                  pageNumber > 1 && dispatch(setPageNumber(1));
                                                   handleChangeSearchParams("categories_like", item, e.target.checked, categoriesFilters);
                                                   setFlag(uuidv4());
                                                   setChecked(e.target.checked);

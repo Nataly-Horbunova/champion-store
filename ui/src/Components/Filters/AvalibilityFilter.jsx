@@ -15,12 +15,13 @@ import {
     removeAvailabilityFilter,
     setAvailabilityCount, setAvailabilityFilter,
     setCategoriesCount,
-    setColorsCount
+    setColorsCount, setPageNumber
 } from "../../data/redux/reducers/filtersSlice";
 
 
 export function AvailabilityFilter({filter, handleChangeSearchParams, updateProducts, availabilityFilters}) {
     const availabilityCount = useSelector(state => state.filters.availabilityCount);
+    const pageNumber = useSelector(state => state.filters.pageNumber);
     const [flag, setFlag] = useState(false);
     const dispatch = useDispatch();
     const [checked, setChecked] = useState(false);
@@ -57,6 +58,7 @@ export function AvailabilityFilter({filter, handleChangeSearchParams, updateProd
                                     checked={availabilityFilters.includes(item.searchParamValue)}
                                     disabled={!count && !availabilityFilters.includes(item.searchParamValue)}
                                     onChange={(e) => {
+                                        pageNumber > 1 && dispatch(setPageNumber(1));
                                         handleChangeSearchParams("available", item.searchParamValue, e.target.checked, availabilityFilters);
                                         setFlag(uuidv4());
                                         setChecked(e.target.checked);

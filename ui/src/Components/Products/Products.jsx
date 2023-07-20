@@ -9,16 +9,19 @@ import {
     setAvailabilityCount,
     setCategoriesCount,
     setCategory, setCategoryColors,
-    setColorsCount, setMaxPrice, setMinPrice, setPriceRange,
-    setSearchParamsStr,
+    setColorsCount, setMaxPrice, setMinPrice, setPageNumber, setPriceRange,
+    setSearchParamsStr, setSortValue,
     setSubcategory
 } from "../../data/redux/reducers/filtersSlice";
 import {useUpdateProducts} from "../../core/hooks";
 import {getMaxPrice, getMinPrice} from "../../core/utils";
-
+import {ProductPagination} from "./ProductPagination";
 
 export const Products = () => {
-    const products = useSelector(state => state.filters.filteredProducts);
+    console.log('products')
+    const productsPerPage = useSelector(state => state.shop.productPerPage);
+    const pageNumber = useSelector(state => state.filters.pageNumber);
+
     const dispatch = useDispatch();
     const {collection} = useParams();
     const [searchParams, setSearchParams] = useSearchParams();
@@ -28,10 +31,12 @@ export const Products = () => {
 
     const category = categories.find(item => item.value === collection) ? collection : "";
     const subcategory = subcategories.find(item => item.value === collection) ? collection : "";
-    const {updateProducts} = useUpdateProducts(category, subcategory, "");
+    const sortValue = useSelector(state => state.filters.sortValue);
+    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
+    const {updateAllProducts, updateProductsPerPage} = useUpdateProducts();
     const updateProductsAndFilters = () => {
-
-        return updateProducts()
+        updateProductsPerPage(category, subcategory, "", pageNumber);
+        return updateAllProducts(category, subcategory, "")
             .then(resp => {
                 dispatch(setColorsCount(resp));
                 dispatch(setCategoriesCount(resp));
@@ -41,6 +46,17 @@ export const Products = () => {
             });
     }
 
+    useEffect(() => {
+        if (sortValue) {
+            updateProductsPerPage(category, subcategory, searchParamsStr, pageNumber);
+            updateAllProducts(category, subcategory, searchParamsStr);
+        }
+    }, [sortValue]);
+
+    useEffect(() => {
+        updateProductsPerPage(category, subcategory, searchParamsStr, pageNumber);
+    }, [pageNumber])
+
 
     useEffect(() => {
         dispatch(setCategory(category));
@@ -48,17 +64,17 @@ export const Products = () => {
         setSearchParams("");
         updateProductsAndFilters()
             .then(resp => {
+                dispatch(setPageNumber(1));
                 const minPrice = getMinPrice(resp);
                 const maxPrice = getMaxPrice(resp);
                 dispatch(setMinPrice(minPrice));
                 dispatch(setMaxPrice(maxPrice));
                 dispatch(setPriceRange([minPrice, maxPrice]));
-            })
-
+                dispatch(setSortValue(""));
+            });
     }, [collection]);
 
     useEffect(() => {
-
         if (searchParams.size === 0) {
             dispatch(clearAllFilters());
             dispatch(setSearchParamsStr(""));
@@ -66,12 +82,14 @@ export const Products = () => {
         }
     }, [searchParams]);
 
-
     return (
-        <ul className={style.Products}>
-            {
-                products.map(product => <ProductCard currentProduct={product} key={product.id}/>)
-            }
-        </ul>
+        <>
+            <ul className={style.Products}>
+                {
+                    productsPerPage.map(product => <ProductCard currentProduct={product} key={product.id}/>)
+                }
+            </ul>
+            <ProductPagination/>
+        </>
     )
 }

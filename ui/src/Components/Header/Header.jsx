@@ -10,6 +10,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import {getHeaderData} from '../../data/dataFunctions';
 import {useSelector} from "react-redux";
 import {Badge} from "@mui/material";
+import TextField from "@mui/material/TextField";
 
 export function Header() {
     const headerData = getHeaderData();
@@ -127,7 +128,17 @@ export function Header() {
                 </NavLink>
 
                 <div className={style.icons_wrapper}>
-                    <div className={style.icon_wrapper}>
+                    <div className={`${style.icon_wrapper} ${style.search_field_wrappper}`}>
+                        <TextField id="outlined-basic" variant="outlined" size="small"
+                                   className={`${style.searchField} ${scrollDown ? style.scroll : ""}`}
+                                   color={scrollDown ? "main_text_color" : "color_accent_2"} autoFocus={true}
+                                   InputProps={{
+                                       style: {
+                                           color: scrollDown ? "main_text_color" : "color_accent_2",
+                                           borderColor: scrollDown ? "main_text_color" : "color_accent_2"
+                                       },
+                                   }}
+                        />
                         <SearchIcon className={`${style.icon} ${scrollDown ? style.scroll : ""}`}></SearchIcon>
                     </div>
                     <NavLink to='favourites' className={style.icon_wrapper}>

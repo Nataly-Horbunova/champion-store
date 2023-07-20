@@ -8,7 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import {useDispatch, useSelector} from "react-redux";
 import {
     setAvailabilityCount, setCategoriesCount,
-    setColorsCount,
+    setColorsCount, setPageNumber,
     setPriceFilter,
     setPriceRange
 } from "../../data/redux/reducers/filtersSlice";
@@ -28,19 +28,22 @@ export function PriceFilter({
     const minPrice = useSelector(state => state.filters.minPrice);
     const maxPrice = useSelector(state => state.filters.maxPrice);
     const priceRange = useSelector(state => state.filters.priceRange) || [minPrice, maxPrice];
+    const pageNumber = useSelector(state => state.filters.pageNumber);
     const dispatch = useDispatch();
     const [productsFlag, setProductsFlag] = useState(false);
-    const [priceRangeFlag, setPriceRangeFlag] = useState(priceRange);
+    const [priceRangeFlag, setPriceRangeFlag] = useState(false);
 
     useEffect(() => {
-        handleChangePriceSearchParams("price_gte", "price_lte", priceRange);
-        setProductsFlag(uuidv4());
+        if (priceRangeFlag) {
+            handleChangePriceSearchParams("price_gte", "price_lte", priceRange);
+            setProductsFlag(uuidv4());
+        }
     }, [priceRangeFlag]);
 
-
     useEffect(() => {
-        updateProducts()
+        productsFlag && updateProducts()
             .then(resp => {
+                console.log('price');
                 dispatch(setColorsCount(resp));
                 dispatch(setAvailabilityCount(resp));
                 dispatch(setCategoriesCount(resp));
@@ -68,6 +71,7 @@ export function PriceFilter({
                         valueLabelDisplay="auto"
                         color="main_text_color"
                         onChange={(e, newValue) => {
+                            pageNumber > 1 && dispatch(setPageNumber(1));
                             handlePriceRangeChange(e, newValue);
                             setPriceRangeFlag(priceRange);
                         }}
@@ -85,6 +89,7 @@ export function PriceFilter({
                                 max: maxPrice,
                             }}
                             onChange={(e) => {
+                                pageNumber > 1 && dispatch(setPageNumber(1));
                                 const newMinPrice = Number(e.target.value);
                                 const newValue = [newMinPrice, priceRange[1]];
                                 handlePriceRangeChange(e, newValue);
@@ -105,6 +110,7 @@ export function PriceFilter({
                                 max: maxPrice,
                             }}
                             onChange={(e) => {
+                                pageNumber > 1 && dispatch(setPageNumber(1));
                                 const newMaxPrice = Number(e.target.value);
                                 const newValue = [priceRange[0], newMaxPrice];
                                 handlePriceRangeChange(e, newValue);

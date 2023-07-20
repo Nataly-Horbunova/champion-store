@@ -16,13 +16,14 @@ import {
     setAvailabilityCount,
     setCategoriesCount,
     setColorFilter,
-    setColorsCount
+    setColorsCount, setPageNumber
 } from "../../data/redux/reducers/filtersSlice";
 
 export function ColorFilter({filter, colorsFilters, handleChangeSearchParams, updateProducts}) {
     const dispatch = useDispatch();
     const colorsCount = useSelector(state => state.filters.colorsCount);
     const categoryColors = useSelector(state => state.filters.categoryColors);
+    const pageNumber = useSelector(state => state.filters.pageNumber);
     const [flag, setFlag] = useState(false);
     const [checked, setChecked] = useState(false);
 
@@ -34,6 +35,7 @@ export function ColorFilter({filter, colorsFilters, handleChangeSearchParams, up
     const handleFilterByColor = () => {
         updateProducts()
             .then(resp => {
+                console.log('color');
                 dispatch(setCategoriesCount(resp));
                 dispatch(setAvailabilityCount(resp));
                 !checked && colorsFilters.length === 0 && dispatch(setColorsCount(resp));
@@ -68,6 +70,7 @@ export function ColorFilter({filter, colorsFilters, handleChangeSearchParams, up
                                             checked={colorsFilters.includes(item.value)}
                                             disabled={!count && !colorsFilters.includes(item)}
                                             onChange={(e) => {
+                                                pageNumber > 1 && dispatch(setPageNumber(1));
                                                 handleChangeSearchParams("colors_like", item.value, e.target.checked, colorsFilters);
                                                 setFlag(uuidv4());
                                                 setChecked(e.target.checked);

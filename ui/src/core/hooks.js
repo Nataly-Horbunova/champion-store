@@ -2,7 +2,7 @@ import {setFilteredProducts, setSearchParamsStr} from "../data/redux/reducers/fi
 import {useDispatch, useSelector} from "react-redux";
 import {useSearchParams} from "react-router-dom";
 import {getProducts} from "./api";
-import {setProducts} from "../data/redux/reducers/shopSlice";
+import {setProducts, setProductsPerPage} from "../data/redux/reducers/shopSlice";
 
 export const useSearchParamsActions = () => {
     const dispatch = useDispatch();
@@ -24,6 +24,7 @@ export const useSearchParamsActions = () => {
 
         dispatch(setSearchParamsStr(updatedParams));
         updatedValues.length > 0 ? searchParams.set(filter, updatedValues.join(',')) : searchParams.delete(filter);
+        searchParams.delete("_page");
         setSearchParams(searchParams, {
             replace: true,
         });
@@ -47,6 +48,7 @@ export const useSearchParamsActions = () => {
         dispatch(setSearchParamsStr(updatedParams));
         searchParams.set(minPriceFilter, priceRange[0]);
         searchParams.set(maxPriceFilter, priceRange[1]);
+        searchParams.delete("_page");
         setSearchParams(searchParams, {replace: true});
     }
 
@@ -69,6 +71,7 @@ export const useSearchParamsActions = () => {
             searchParams.set(orderFilter, orderValue);
         }
 
+        searchParams.delete("_page");
         setSearchParams(searchParams, {replace: true});
         dispatch(setSearchParamsStr(updatedParams));
     }
@@ -77,16 +80,24 @@ export const useSearchParamsActions = () => {
 }
 
 
-export const useUpdateProducts = (category, subcategory, searchParamsStr) => {
+export const useUpdateProducts = () => {
+
     const dispatch = useDispatch();
-    const updateProducts = () => {
+
+    const updateAllProducts = (category, subcategory, searchParamsStr) => {
         return getProducts(category, subcategory, searchParamsStr)
             .then(resp => {
                 dispatch(setProducts(resp));
-                dispatch(setFilteredProducts(resp));
                 return resp;
             });
     }
 
-    return {updateProducts}
+    const updateProductsPerPage = (category, subcategory, searchParamsStr, pageNumber) => {
+        getProducts(category, subcategory, searchParamsStr, pageNumber)
+            .then(resp => {
+                dispatch(setProductsPerPage(resp));
+            });
+    }
+
+    return {updateAllProducts, updateProductsPerPage}
 }
