@@ -19,6 +19,7 @@ import Typography from "@mui/material/Typography";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import {v4 as uuidv4} from "uuid";
 import {useEffect, useState} from "react";
+import {maxPriceUrl, minPriceUrl} from "../../core/api";
 
 export function PriceFilter({
                                 filter,
@@ -35,7 +36,7 @@ export function PriceFilter({
 
     useEffect(() => {
         if (priceRangeFlag) {
-            handleChangePriceSearchParams("price_gte", "price_lte", priceRange);
+            handleChangePriceSearchParams(minPriceUrl, maxPriceUrl, priceRange);
             setProductsFlag(uuidv4());
         }
     }, [priceRangeFlag]);
@@ -43,7 +44,7 @@ export function PriceFilter({
     useEffect(() => {
         productsFlag && updateProducts()
             .then(resp => {
-                console.log('price');
+                // console.log('price');
                 dispatch(setColorsCount(resp));
                 dispatch(setAvailabilityCount(resp));
                 dispatch(setCategoriesCount(resp));

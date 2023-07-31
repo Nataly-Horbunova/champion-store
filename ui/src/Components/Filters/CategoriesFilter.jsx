@@ -19,6 +19,7 @@ import {
     setCategoriesCount, setCategoriesFilter,
     setColorsCount, setPageNumber
 } from "../../data/redux/reducers/filtersSlice";
+import {categoriesUrl} from "../../core/api";
 
 export function CategoriesFilter({filter, handleChangeSearchParams, updateProducts, categoriesFilters}) {
     const filters = getFiltersData();
@@ -66,7 +67,7 @@ export function CategoriesFilter({filter, handleChangeSearchParams, updateProduc
                                               disabled={!count && !categoriesFilters.includes(item)}
                                               onChange={(e) => {
                                                   pageNumber > 1 && dispatch(setPageNumber(1));
-                                                  handleChangeSearchParams("categories_like", item, e.target.checked, categoriesFilters);
+                                                  handleChangeSearchParams(categoriesUrl, item, e.target.checked, categoriesFilters);
                                                   setFlag(uuidv4());
                                                   setChecked(e.target.checked);
                                                   e.target.checked ? dispatch(setCategoriesFilter(item)) : dispatch(removeCategoriesFilter(item));

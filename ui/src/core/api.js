@@ -1,24 +1,48 @@
 import axios from "axios";
 
-const baseUrl = 'http://localhost:3001/';
-const productsUrl = "products/";
-const categoriesUrl = '?categories_like=';
-const subcategoriesUrl = '?subcategories';
-const pageUrl = '_page=';
-const limitUrl = '_limit=';
-export const searchUrl = 'name_like='
-export const limitCount = 16;
+const urlParams = {
+    baseUrl: 'http://localhost:3001/',
+    productsUrl: "products/",
+    categoriesUrl: 'categories_like',
+    subcategoriesUrl: 'subcategories',
+    pageUrl: '_page',
+    availabilityUrl: 'available',
+    colorsUrl: 'colors_like',
+    minPriceUrl: 'price_gte',
+    maxPriceUrl: 'price_lte',
+    sortUrl: '_sort',
+    orderUrl: '_order',
+    searchUrl: 'name_like',
+    limitUrl: '_limit=',
+    limitCount: 16,
+}
 
+export const {
+    baseUrl,
+    productsUrl,
+    categoriesUrl,
+    subcategoriesUrl,
+    searchUrl,
+    pageUrl,
+    availabilityUrl,
+    colorsUrl,
+    minPriceUrl,
+    maxPriceUrl,
+    sortUrl,
+    orderUrl,
+    limitUrl,
+    limitCount
+} = urlParams;
 
 export const getProducts = (category, subcategory, searchParams, pageNumber = "") => {
     let requestUrl;
-    const paginationParam = pageNumber ? `${pageUrl}${pageNumber}&${limitUrl}${limitCount}` : "";
+    const paginationParam = pageNumber ? `${pageUrl}=${pageNumber}&${limitUrl}${limitCount}` : "";
 
 
     if (category) {
-        requestUrl = `${baseUrl}${productsUrl}${categoriesUrl}${category}&${searchParams}&${paginationParam}`;
+        requestUrl = `${baseUrl}${productsUrl}?${categoriesUrl}=${category}&${searchParams}&${paginationParam}`;
     } else if (subcategory) {
-        requestUrl = `${baseUrl}${productsUrl}${subcategoriesUrl}.${subcategory}=true&${searchParams}&${paginationParam}`;
+        requestUrl = `${baseUrl}${productsUrl}?${subcategoriesUrl}.${subcategory}=true&${searchParams}&${paginationParam}`;
     } else if (!category && !subcategory) {
         requestUrl = `${baseUrl}${productsUrl}?${searchParams}${paginationParam}`;
     }

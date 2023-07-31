@@ -1,7 +1,7 @@
 import {setSearchParamsStr} from "../data/redux/reducers/filtersSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate, useSearchParams} from "react-router-dom";
-import {getProducts} from "./api";
+import {getProducts, pageUrl} from "./api";
 import {setProducts, setProductsPerPage} from "../data/redux/reducers/shopSlice";
 
 export const useSearchParamsActions = () => {
@@ -25,7 +25,7 @@ export const useSearchParamsActions = () => {
 
         dispatch(setSearchParamsStr(updatedParams));
         updatedValues.length > 0 ? searchParams.set(filter, updatedValues.join(',')) : searchParams.delete(filter);
-        searchParams.delete("_page");
+        searchParams.delete(pageUrl);
         setSearchParams(searchParams, {
             replace: true,
         });
@@ -56,7 +56,7 @@ export const useSearchParamsActions = () => {
         }
 
         dispatch(setSearchParamsStr(updatedParams));
-        searchParams.delete("_page");
+        searchParams.delete(pageUrl);
         setSearchParams(searchParams, {replace: true});
     }
 
@@ -79,7 +79,7 @@ export const useSearchParamsActions = () => {
             searchParams.set(orderFilter, orderValue);
         }
 
-        searchParams.delete("_page");
+        searchParams.delete(pageUrl);
         setSearchParams(searchParams, {replace: true});
         dispatch(setSearchParamsStr(updatedParams));
     }

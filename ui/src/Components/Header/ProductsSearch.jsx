@@ -6,6 +6,7 @@ import {useState} from "react";
 import {useDispatch} from "react-redux";
 import {setSearchValue} from "../../data/redux/reducers/filtersSlice";
 import {useSearchParamsActions} from "../../core/hooks";
+import { searchUrl } from '../../core/api';
 
 export const ProductsSearch = ({scrollDown}) => {
     const theme = useTheme();
@@ -18,7 +19,7 @@ export const ProductsSearch = ({scrollDown}) => {
         }
     }
     const handleSearchOnChange = (e) => {
-        handleChangeSearchValueParams('name_like', e.target.value);
+        handleChangeSearchValueParams(searchUrl, e.target.value);
         e.target.value ? dispatch(setSearchValue(e.target.value)) : dispatch(setSearchValue(''));
     }
 

@@ -58,14 +58,12 @@ export const Products = () => {
             });
     }
 
-
     useEffect(() => {
         if (sortValue) {
             updateProductsPerPage(category, subcategory, searchParamsStr, pageNumber);
             updateAllProducts(category, subcategory, searchParamsStr);
         }
     }, [sortValue]);
-
 
     useEffect(() => {
         updateProductsPerPage(category, subcategory, searchParamsStr, pageNumber);

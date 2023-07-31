@@ -18,6 +18,7 @@ import {
     setColorFilter,
     setColorsCount, setPageNumber
 } from "../../data/redux/reducers/filtersSlice";
+import {colorsUrl} from "../../core/api";
 
 export function ColorFilter({filter, colorsFilters, handleChangeSearchParams, updateProducts}) {
     const dispatch = useDispatch();
@@ -71,7 +72,7 @@ export function ColorFilter({filter, colorsFilters, handleChangeSearchParams, up
                                             disabled={!count && !colorsFilters.includes(item)}
                                             onChange={(e) => {
                                                 pageNumber > 1 && dispatch(setPageNumber(1));
-                                                handleChangeSearchParams("colors_like", item.value, e.target.checked, colorsFilters);
+                                                handleChangeSearchParams(colorsUrl, item.value, e.target.checked, colorsFilters);
                                                 setFlag(uuidv4());
                                                 setChecked(e.target.checked);
                                                 e.target.checked ? dispatch(setColorFilter(item)) : dispatch(removeColorFilter(item));

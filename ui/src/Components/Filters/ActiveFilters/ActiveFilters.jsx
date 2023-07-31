@@ -14,6 +14,7 @@ import {
 import {useSearchParamsActions, useUpdateProducts} from "../../../core/hooks";
 import {useSearchParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {availabilityUrl, categoriesUrl, colorsUrl, maxPriceUrl, minPriceUrl} from "../../../core/api";
 
 export function ActiveFilters({className}) {
     // console.log('active filters')
@@ -28,9 +29,9 @@ export function ActiveFilters({className}) {
     const minPrice = useSelector(state => state.filters.minPrice);
     const maxPrice = useSelector(state => state.filters.maxPrice);
 
-    const categoriesParamsFilters = searchParams.get('categories_like')?.split(',') ?? [];
-    const availabilityParamsFilters = searchParams.get('available')?.split(',') ?? [];
-    const colorsParamsFilters = searchParams.get('colors_like')?.split(',') ?? [];
+    const categoriesParamsFilters = searchParams.get(categoriesUrl)?.split(',') ?? [];
+    const availabilityParamsFilters = searchParams.get(availabilityUrl)?.split(',') ?? [];
+    const colorsParamsFilters = searchParams.get(colorsUrl)?.split(',') ?? [];
 
     const category = useSelector(state => state.filters.category);
     const subcategory = useSelector(state => state.filters.subcategory);
@@ -65,7 +66,7 @@ export function ActiveFilters({className}) {
                         onClick={(e) => {
                             pageNumber > 1 && dispatch(setPageNumber(1));
                             dispatch(removeCategoriesFilter(item));
-                            handleChangeSearchParams("categories_like", item, false, categoriesParamsFilters);
+                            handleChangeSearchParams(categoriesUrl, item, false, categoriesParamsFilters);
                             setFlag(uuidv4());
                         }}
                     >
@@ -82,7 +83,7 @@ export function ActiveFilters({className}) {
                         onClick={(e) => {
                             pageNumber > 1 && dispatch(setPageNumber(1));
                             dispatch(removeColorFilter(item));
-                            handleChangeSearchParams("colors_like", item.value, false, colorsParamsFilters);
+                            handleChangeSearchParams(colorsUrl, item.value, false, colorsParamsFilters);
                             setFlag(uuidv4());
                         }}
                     >
@@ -100,7 +101,7 @@ export function ActiveFilters({className}) {
                         onClick={(e) => {
                             pageNumber > 1 && dispatch(setPageNumber(1));
                             dispatch(removeAvailabilityFilter(item));
-                            handleChangeSearchParams("available", item.searchParamValue, false, availabilityParamsFilters);
+                            handleChangeSearchParams(availabilityUrl, item.searchParamValue, false, availabilityParamsFilters);
                             setFlag(uuidv4());
                         }}
                     >
@@ -118,7 +119,7 @@ export function ActiveFilters({className}) {
                             pageNumber > 1 && dispatch(setPageNumber(1));
                             dispatch(removePriceFilter());
                             dispatch(setPriceRange([minPrice, maxPrice]));
-                            handleChangePriceSearchParams("price_gte", "price_lte", [null, null]);
+                            handleChangePriceSearchParams(minPriceUrl, maxPriceUrl, [null, null]);
                             setFlag(uuidv4());
                         }}
                     >

@@ -8,6 +8,7 @@ import {getSortData} from "../../data/dataFunctions";
 import {useDispatch, useSelector} from "react-redux";
 import {useSearchParamsActions} from "../../core/hooks";
 import {setPageNumber, setSortValue} from "../../data/redux/reducers/filtersSlice";
+import {orderUrl, sortUrl} from "../../core/api";
 
 export function Sort({className}) {
     const products = useSelector(state => state.shop.products);
@@ -36,7 +37,7 @@ export function Sort({className}) {
                         pageNumber > 1 && dispatch(setPageNumber(1));
                         const sortValue = e.target.options[e.target.selectedIndex].getAttribute('data-sort');
                         const orderValue = e.target.options[e.target.selectedIndex].getAttribute('data-order');
-                        handleChangeSortSearchParams("_sort", "_order", sortValue, orderValue);
+                        handleChangeSortSearchParams(sortUrl, orderUrl, sortValue, orderValue);
                         dispatch(setSortValue(e.target.value));
                     }}
                 >

@@ -8,20 +8,21 @@ import * as React from 'react';
 import {useSearchParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {useSearchParamsActions, useUpdateProducts} from "../../core/hooks";
+import {categoriesUrl, availabilityUrl, colorsUrl} from "../../core/api";
 
 
 export function Filters({className}) {
     // console.log('filters')
     const filters = getFiltersData();
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const category = useSelector(state => state.filters.category);
     const subcategory = useSelector(state => state.filters.subcategory);
     const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
     const pageNumber = useSelector(state => state.filters.pageNumber);
 
-    const categoriesFilters = searchParams.get('categories_like')?.split(',') ?? [];
-    const availabilityFilters = searchParams.get('available')?.split(',') ?? [];
-    const colorsFilters = searchParams.get('colors_like')?.split(',') ?? [];
+    const categoriesFilters = searchParams.get(categoriesUrl)?.split(',') ?? [];
+    const availabilityFilters = searchParams.get(availabilityUrl)?.split(',') ?? [];
+    const colorsFilters = searchParams.get(colorsUrl)?.split(',') ?? [];
 
     const {handleChangeSearchParams, handleChangePriceSearchParams} = useSearchParamsActions();
     const {updateAllProducts, updateProductsPerPage} = useUpdateProducts();

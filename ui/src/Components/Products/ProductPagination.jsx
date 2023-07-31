@@ -2,7 +2,7 @@ import style from './Products.module.scss';
 import Stack from "@mui/material/Stack";
 import {setPageNumber} from "../../data/redux/reducers/filtersSlice";
 import {useDispatch, useSelector} from "react-redux";
-import {limitCount} from "../../core/api";
+import {limitCount, pageUrl} from "../../core/api";
 import {Pagination} from "@mui/material";
 import {useSearchParams} from "react-router-dom";
 
@@ -22,7 +22,7 @@ export const ProductPagination = () => {
                 page={pageNumber}
                 onChange={(e, page) => {
                     dispatch(setPageNumber(page));
-                    searchParams.set("_page", page);
+                    searchParams.set(pageUrl, page);
                     setSearchParams(searchParams, {
                         replace: true,
                     });
