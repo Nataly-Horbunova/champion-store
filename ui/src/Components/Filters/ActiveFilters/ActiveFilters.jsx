@@ -25,6 +25,8 @@ export function ActiveFilters({className}) {
     const categoriesFilters = useSelector(state => state.filters.categoriesFilter);
     const availabilityFilters = useSelector(state => state.filters.availabilityFilter);
     const priceFilter = useSelector(state => state.filters.priceFilter);
+    const minPrice = useSelector(state => state.filters.minPrice);
+    const maxPrice = useSelector(state => state.filters.maxPrice);
 
     const categoriesParamsFilters = searchParams.get('categories_like')?.split(',') ?? [];
     const availabilityParamsFilters = searchParams.get('available')?.split(',') ?? [];
@@ -35,7 +37,7 @@ export function ActiveFilters({className}) {
     const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
     const pageNumber = useSelector(state => state.filters.pageNumber);
 
-    const {handleChangeSearchParams} = useSearchParamsActions();
+    const {handleChangeSearchParams, handleChangePriceSearchParams} = useSearchParamsActions();
     const {updateAllProducts, updateProductsPerPage} = useUpdateProducts();
     const [flag, setFlag] = useState(false);
 
@@ -115,6 +117,9 @@ export function ActiveFilters({className}) {
                         onClick={(e) => {
                             pageNumber > 1 && dispatch(setPageNumber(1));
                             dispatch(removePriceFilter());
+                            dispatch(setPriceRange([minPrice, maxPrice]));
+                            handleChangePriceSearchParams("price_gte", "price_lte", [null, null]);
+                            setFlag(uuidv4());
                         }}
                     >
                         <span>{`$${priceFilter[0]} - $${priceFilter[1]}`}</span>

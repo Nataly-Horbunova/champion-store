@@ -6,7 +6,7 @@ import {ActiveFilters} from "../../Filters/ActiveFilters/ActiveFilters";
 import {Products} from "../../Products/Products";
 
 export function ProductsPage() {
-    console.log('products page')
+    // console.log('products page');
 
     return (
         <main className={style.ProductsPage}>

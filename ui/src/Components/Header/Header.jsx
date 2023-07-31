@@ -4,13 +4,12 @@ import {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import {getHeaderData} from '../../data/dataFunctions';
 import {useSelector} from "react-redux";
 import {Badge} from "@mui/material";
-import TextField from "@mui/material/TextField";
+import {ProductsSearch} from "./ProductsSearch";
 
 export function Header() {
     const headerData = getHeaderData();
@@ -20,9 +19,6 @@ export function Header() {
 
     let [scrollDown, setScrollDown] = useState(false);
     let [isDropDownOpen, setIsDropDownOpen] = useState(false);
-
-    // console.log(cart);
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -128,19 +124,7 @@ export function Header() {
                 </NavLink>
 
                 <div className={style.icons_wrapper}>
-                    <div className={`${style.icon_wrapper} ${style.search_field_wrappper}`}>
-                        <TextField id="outlined-basic" variant="outlined" size="small"
-                                   className={`${style.searchField} ${scrollDown ? style.scroll : ""}`}
-                                   color={scrollDown ? "main_text_color" : "color_accent_2"} autoFocus={true}
-                                   InputProps={{
-                                       style: {
-                                           color: scrollDown ? "main_text_color" : "color_accent_2",
-                                           borderColor: scrollDown ? "main_text_color" : "color_accent_2"
-                                       },
-                                   }}
-                        />
-                        <SearchIcon className={`${style.icon} ${scrollDown ? style.scroll : ""}`}></SearchIcon>
-                    </div>
+                    <ProductsSearch scrollDown={scrollDown}/>
                     <NavLink to='favourites' className={style.icon_wrapper}>
                         <Badge badgeContent={0} color="color_accent_1" className={style.icon_badge}>
                             <FavoriteBorderOutlinedIcon

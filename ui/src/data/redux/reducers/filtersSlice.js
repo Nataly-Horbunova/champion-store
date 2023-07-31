@@ -13,6 +13,7 @@ export const filtersSlice = createSlice({
         subcategory: "",
         searchParamsStr: "",
         pageNumber: 1,
+        searchValue: '',
 
         minPrice: 0,
         maxPrice: 0,
@@ -45,6 +46,10 @@ export const filtersSlice = createSlice({
 
         setPageNumber: (state, action) => {
             state.pageNumber = action.payload;
+        },
+
+        setSearchValue: (state, action) => {
+            state.searchValue = action.payload;
         },
 
         setMinPrice: (state, action) => {
@@ -113,8 +118,6 @@ export const filtersSlice = createSlice({
             state.availabilityFilter = [];
             state.priceFilter = [];
             state.priceRange = [state.minPrice, state.maxPrice];
-            // dispatch(setPriceRange([minPrice, maxPrice]));
-
         },
 
         setSortValue: (state, action) => {
@@ -128,6 +131,7 @@ export const {
     setSubcategory,
     setSearchParamsStr,
     setPageNumber,
+    setSearchValue,
     setMinPrice,
     setMaxPrice,
     setPriceRange,

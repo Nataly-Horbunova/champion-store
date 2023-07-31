@@ -1,10 +1,11 @@
-import {setFilteredProducts, setSearchParamsStr} from "../data/redux/reducers/filtersSlice";
+import {setSearchParamsStr} from "../data/redux/reducers/filtersSlice";
 import {useDispatch, useSelector} from "react-redux";
-import {useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 import {getProducts} from "./api";
 import {setProducts, setProductsPerPage} from "../data/redux/reducers/shopSlice";
 
 export const useSearchParamsActions = () => {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
     const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
@@ -42,19 +43,26 @@ export const useSearchParamsActions = () => {
             updatedParams = isPresent ? updatedParams.replace(regex, param) : updatedParams.concat(param);
         };
 
-        updateParam(minPriceRegex, currentMinPriceParam);
-        updateParam(maxPriceRegex, currentMaxPriceParam);
+        if (priceRange[0] !== null && priceRange[1] !== null) {
+            updateParam(minPriceRegex, currentMinPriceParam);
+            updateParam(maxPriceRegex, currentMaxPriceParam);
+            searchParams.set(minPriceFilter, priceRange[0]);
+            searchParams.set(maxPriceFilter, priceRange[1]);
+        } else {
+            updateParam(minPriceRegex, "");
+            updateParam(maxPriceRegex, "");
+            searchParams.delete(minPriceFilter);
+            searchParams.delete(maxPriceFilter);
+        }
 
         dispatch(setSearchParamsStr(updatedParams));
-        searchParams.set(minPriceFilter, priceRange[0]);
-        searchParams.set(maxPriceFilter, priceRange[1]);
         searchParams.delete("_page");
         setSearchParams(searchParams, {replace: true});
     }
 
     const handleChangeSortSearchParams = (sortFilter, orderFilter, sortValue, orderValue) => {
         let updatedParams = searchParamsStr;
-        const regex = /_sort=[^&]+&_order=[^&]+&/;
+        const regex = new RegExp(`${sortFilter}=[^&]+&${orderFilter}=[^&]+&`);
         const isPresent = searchParamsStr.match(regex);
 
         if (!sortValue && !isPresent) return;
@@ -76,12 +84,34 @@ export const useSearchParamsActions = () => {
         dispatch(setSearchParamsStr(updatedParams));
     }
 
-    return {handleChangeSearchParams, handleChangePriceSearchParams, handleChangeSortSearchParams};
+
+    const handleChangeSearchValueParams = (searchFilter, searchValue) => {
+        const value = searchValue.trim();
+        const regex = new RegExp(`${searchFilter}=[^&]+&`);
+        const isPresent = searchParamsStr.match(regex);
+
+        if (!value && !isPresent) return;
+
+        const updatedSearchParams = new URLSearchParams();
+
+        if (value.length !== 0) {
+            const currentSearchValueParams = `${searchFilter}=${searchValue}&`;
+            updatedSearchParams.set(searchFilter, searchValue);
+            dispatch(setSearchParamsStr(currentSearchValueParams));
+        }
+
+        setSearchParams(updatedSearchParams, {replace: true});
+        navigate("collections?" + updatedSearchParams.toString());
+    }
+
+    return {
+        handleChangeSearchParams,
+        handleChangePriceSearchParams,
+        handleChangeSortSearchParams,
+        handleChangeSearchValueParams
+    };
 }
-
-
 export const useUpdateProducts = () => {
-
     const dispatch = useDispatch();
 
     const updateAllProducts = (category, subcategory, searchParamsStr) => {
@@ -91,7 +121,6 @@ export const useUpdateProducts = () => {
                 return resp;
             });
     }
-
     const updateProductsPerPage = (category, subcategory, searchParamsStr, pageNumber) => {
         getProducts(category, subcategory, searchParamsStr, pageNumber)
             .then(resp => {

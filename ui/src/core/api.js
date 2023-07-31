@@ -6,8 +6,9 @@ const categoriesUrl = '?categories_like=';
 const subcategoriesUrl = '?subcategories';
 const pageUrl = '_page=';
 const limitUrl = '_limit=';
-const searchUrl = 'name_like='
+export const searchUrl = 'name_like='
 export const limitCount = 16;
+
 
 export const getProducts = (category, subcategory, searchParams, pageNumber = "") => {
     let requestUrl;
@@ -22,7 +23,7 @@ export const getProducts = (category, subcategory, searchParams, pageNumber = ""
         requestUrl = `${baseUrl}${productsUrl}?${searchParams}${paginationParam}`;
     }
 
-    console.log(requestUrl);
+    // console.log(requestUrl);
 
     return axios
         .get(requestUrl)

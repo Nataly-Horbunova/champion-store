@@ -10,7 +10,7 @@ import {
     setCategoriesCount,
     setCategory, setCategoryColors,
     setColorsCount, setMaxPrice, setMinPrice, setPageNumber, setPriceRange,
-    setSearchParamsStr, setSortValue,
+    setSearchParamsStr, setSearchValue, setSortValue,
     setSubcategory
 } from "../../data/redux/reducers/filtersSlice";
 import {useUpdateProducts} from "../../core/hooks";
@@ -18,7 +18,6 @@ import {getMaxPrice, getMinPrice} from "../../core/utils";
 import {ProductPagination} from "./ProductPagination";
 
 export const Products = () => {
-    console.log('products')
     const productsPerPage = useSelector(state => state.shop.productPerPage);
     const pageNumber = useSelector(state => state.filters.pageNumber);
 
@@ -33,18 +32,32 @@ export const Products = () => {
     const subcategory = subcategories.find(item => item.value === collection) ? collection : "";
     const sortValue = useSelector(state => state.filters.sortValue);
     const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
+    const searchValue = useSelector(state => state.filters.searchValue);
     const {updateAllProducts, updateProductsPerPage} = useUpdateProducts();
-    const updateProductsAndFilters = () => {
+
+    // console.log(searchValue)
+
+    const updateFilters = (products) => {
+        dispatch(setColorsCount(products));
+        dispatch(setCategoriesCount(products));
+        dispatch(setAvailabilityCount(products));
+        dispatch(setCategoryColors(products));
+        const minPrice = products.length > 0 ? getMinPrice(products) : 0;
+        const maxPrice = products.length > 0 ? getMaxPrice(products) : 0;
+        dispatch(setMinPrice(minPrice));
+        dispatch(setMaxPrice(maxPrice));
+        dispatch(setPriceRange([minPrice, maxPrice]));
+    }
+
+    const resetProductsAndFilters = () => {
         updateProductsPerPage(category, subcategory, "", pageNumber);
         return updateAllProducts(category, subcategory, "")
             .then(resp => {
-                dispatch(setColorsCount(resp));
-                dispatch(setCategoriesCount(resp));
-                dispatch(setAvailabilityCount(resp));
-                dispatch(setCategoryColors(resp));
+                updateFilters(resp);
                 return resp;
             });
     }
+
 
     useEffect(() => {
         if (sortValue) {
@@ -53,32 +66,46 @@ export const Products = () => {
         }
     }, [sortValue]);
 
+
     useEffect(() => {
         updateProductsPerPage(category, subcategory, searchParamsStr, pageNumber);
     }, [pageNumber])
 
 
     useEffect(() => {
+        if (searchValue) return;
+        dispatch(setSearchValue(''));
+        // console.log('products collection');
         dispatch(setCategory(category));
         dispatch(setSubcategory(category));
         setSearchParams("");
-        updateProductsAndFilters()
-            .then(resp => {
-                dispatch(setPageNumber(1));
-                const minPrice = getMinPrice(resp);
-                const maxPrice = getMaxPrice(resp);
-                dispatch(setMinPrice(minPrice));
-                dispatch(setMaxPrice(maxPrice));
-                dispatch(setPriceRange([minPrice, maxPrice]));
-                dispatch(setSortValue(""));
-            });
+        dispatch(setPageNumber(1));
+        dispatch(setSortValue(""));
+        resetProductsAndFilters();
     }, [collection]);
 
+
     useEffect(() => {
+        // console.log('products search');
+        if (searchValue) {
+            updateProductsPerPage(category, subcategory, searchParamsStr, pageNumber);
+            updateAllProducts(category, subcategory, searchParamsStr)
+                .then(resp => {
+                    updateFilters(resp);
+                });
+            dispatch(clearAllFilters());
+            dispatch(setPageNumber(1));
+            dispatch(setSortValue(""));
+        }
+    }, [searchValue]);
+
+    useEffect(() => {
+
         if (searchParams.size === 0) {
+            // console.log('products search params')
             dispatch(clearAllFilters());
             dispatch(setSearchParamsStr(""));
-            updateProductsAndFilters();
+            resetProductsAndFilters();
         }
     }, [searchParams]);
 
