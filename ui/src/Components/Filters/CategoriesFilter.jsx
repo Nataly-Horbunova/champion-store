@@ -39,7 +39,7 @@ export function CategoriesFilter({filter, handleChangeSearchParams, updateProduc
     const handleFilterByCategory = () => {
         updateProducts()
             .then(resp => {
-                console.log('category');
+                // console.log('category');
                 dispatch(setColorsCount(resp));
                 dispatch(setAvailabilityCount(resp));
                 !checked && categoriesFilters.length === 0 && dispatch(setCategoriesCount(resp));

@@ -15,11 +15,7 @@ export function Filters({className}) {
     // console.log('filters')
     const filters = getFiltersData();
     const [searchParams] = useSearchParams();
-    const category = useSelector(state => state.filters.category);
-    const subcategory = useSelector(state => state.filters.subcategory);
-    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
-    const pageNumber = useSelector(state => state.filters.pageNumber);
-
+    const {category, subcategory, searchParamsStr, pageNumber} = useSelector(state => state.filters);
     const categoriesFilters = searchParams.get(categoriesUrl)?.split(',') ?? [];
     const availabilityFilters = searchParams.get(availabilityUrl)?.split(',') ?? [];
     const colorsFilters = searchParams.get(colorsUrl)?.split(',') ?? [];

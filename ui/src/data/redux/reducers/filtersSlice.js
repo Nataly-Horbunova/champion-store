@@ -65,19 +65,31 @@ export const filtersSlice = createSlice({
         },
 
         setColorsCount: (state, action) => {
-            state.colorsCount = getColorsCount(action.payload);
+            const products = action.payload;
+            if (products) {
+                state.colorsCount = getColorsCount(action.payload);
+            }
         },
 
         setCategoriesCount: (state, action) => {
-            state.categoriesCount = getCategoriesCount(action.payload);
+            const products = action.payload;
+            if (products) {
+                state.categoriesCount = getCategoriesCount(action.payload);
+            }
         },
 
         setAvailabilityCount: (state, action) => {
-            state.availabilityCount = getAvailabilityCount(action.payload);
+            const products = action.payload;
+            if (products) {
+                state.availabilityCount = getAvailabilityCount(action.payload);
+            }
         },
 
         setCategoryColors: (state, action) => {
-            state.categoryColors = getCategoryColors(action.payload);
+            const products = action.payload;
+            if (products) {
+                state.categoryColors = getCategoryColors(action.payload);
+            }
         },
 
         setColorFilter: (state, action) => {

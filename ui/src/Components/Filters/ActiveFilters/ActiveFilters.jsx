@@ -22,21 +22,23 @@ export function ActiveFilters({className}) {
     const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
 
-    const colorFilters = useSelector(state => state.filters.colorFilter);
-    const categoriesFilters = useSelector(state => state.filters.categoriesFilter);
-    const availabilityFilters = useSelector(state => state.filters.availabilityFilter);
-    const priceFilter = useSelector(state => state.filters.priceFilter);
-    const minPrice = useSelector(state => state.filters.minPrice);
-    const maxPrice = useSelector(state => state.filters.maxPrice);
+    const {
+        category,
+        subcategory,
+        searchParamsStr,
+        pageNumber,
+        colorFilter,
+        categoriesFilter,
+        availabilityFilter,
+        priceFilter,
+        minPrice,
+        maxPrice
+    } = useSelector(state => state.filters);
+
 
     const categoriesParamsFilters = searchParams.get(categoriesUrl)?.split(',') ?? [];
     const availabilityParamsFilters = searchParams.get(availabilityUrl)?.split(',') ?? [];
     const colorsParamsFilters = searchParams.get(colorsUrl)?.split(',') ?? [];
-
-    const category = useSelector(state => state.filters.category);
-    const subcategory = useSelector(state => state.filters.subcategory);
-    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
-    const pageNumber = useSelector(state => state.filters.pageNumber);
 
     const {handleChangeSearchParams, handleChangePriceSearchParams} = useSearchParamsActions();
     const {updateAllProducts, updateProductsPerPage} = useUpdateProducts();
@@ -58,7 +60,7 @@ export function ActiveFilters({className}) {
 
     return (
         <div className={`${style.CurrentFilters} ${className}`}>
-            {categoriesFilters.map(item => {
+            {categoriesFilter.map(item => {
                 return (
                     <button
                         className={style.current_filters_btn}
@@ -75,7 +77,7 @@ export function ActiveFilters({className}) {
                     </button>
                 )
             })}
-            {colorFilters.map(item => {
+            {colorFilter.map(item => {
                 return (
                     <button
                         className={style.current_filters_btn}
@@ -93,7 +95,7 @@ export function ActiveFilters({className}) {
                     </button>
                 )
             })}
-            {availabilityFilters.map(item => {
+            {availabilityFilter.map(item => {
                 return (
                     <button
                         className={style.current_filters_btn}
@@ -129,7 +131,7 @@ export function ActiveFilters({className}) {
                 )
             }
 
-            {(colorFilters.length > 0 || categoriesFilters.length > 0 || availabilityFilters.length > 0 || priceFilter.length > 0) &&
+            {(colorFilter.length > 0 || categoriesFilter.length > 0 || availabilityFilter.length > 0 || priceFilter.length > 0) &&
                 <button className={`${style.current_filters_btn} ${style.clear_btn}`}
                         onClick={() => {
                             pageNumber > 1 && dispatch(setPageNumber(1));

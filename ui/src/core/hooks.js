@@ -1,14 +1,17 @@
 import {setSearchParamsStr} from "../data/redux/reducers/filtersSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate, useSearchParams} from "react-router-dom";
-import {getProducts, pageUrl} from "./api";
-import {setProducts, setProductsPerPage} from "../data/redux/reducers/shopSlice";
+import { pageUrl} from "./api";
+import {
+    fetchAllProducts,
+    fetchProductsPerPage
+} from "../data/redux/reducers/shopSlice";
 
 export const useSearchParamsActions = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
-    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
+    const {searchParamsStr} = useSelector(state => state.filters);
     const handleChangeSearchParams = (filter, value, checked, currentValues) => {
         const currentParam = `${filter}=${value}&`;
         const isPresent = searchParamsStr.includes(currentParam);
@@ -84,7 +87,6 @@ export const useSearchParamsActions = () => {
         dispatch(setSearchParamsStr(updatedParams));
     }
 
-
     const handleChangeSearchValueParams = (searchFilter, searchValue) => {
         const value = searchValue.trim();
         const regex = new RegExp(`${searchFilter}=[^&]+&`);
@@ -113,19 +115,12 @@ export const useSearchParamsActions = () => {
 }
 export const useUpdateProducts = () => {
     const dispatch = useDispatch();
-
     const updateAllProducts = (category, subcategory, searchParamsStr) => {
-        return getProducts(category, subcategory, searchParamsStr)
-            .then(resp => {
-                dispatch(setProducts(resp));
-                return resp;
-            });
+        return dispatch(fetchAllProducts({category, subcategory, searchParamsStr}))
+            .then(resp => resp.payload);
     }
     const updateProductsPerPage = (category, subcategory, searchParamsStr, pageNumber) => {
-        getProducts(category, subcategory, searchParamsStr, pageNumber)
-            .then(resp => {
-                dispatch(setProductsPerPage(resp));
-            });
+        return dispatch(fetchProductsPerPage({category, subcategory, searchParamsStr, pageNumber}))
     }
 
     return {updateAllProducts, updateProductsPerPage}

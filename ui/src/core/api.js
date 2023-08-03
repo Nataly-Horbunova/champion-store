@@ -38,7 +38,6 @@ export const getProducts = (category, subcategory, searchParams, pageNumber = ""
     let requestUrl;
     const paginationParam = pageNumber ? `${pageUrl}=${pageNumber}&${limitUrl}${limitCount}` : "";
 
-
     if (category) {
         requestUrl = `${baseUrl}${productsUrl}?${categoriesUrl}=${category}&${searchParams}&${paginationParam}`;
     } else if (subcategory) {
@@ -46,9 +45,7 @@ export const getProducts = (category, subcategory, searchParams, pageNumber = ""
     } else if (!category && !subcategory) {
         requestUrl = `${baseUrl}${productsUrl}?${searchParams}${paginationParam}`;
     }
-
     // console.log(requestUrl);
-
     return axios
         .get(requestUrl)
         .then(response => {

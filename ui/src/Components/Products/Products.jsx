@@ -16,10 +16,11 @@ import {
 import {useUpdateProducts} from "../../core/hooks";
 import {getMaxPrice, getMinPrice} from "../../core/utils";
 import {ProductPagination} from "./ProductPagination";
+import { ProductsPreloader} from "../Preloaders/ProductsPreloader";
 
 export const Products = () => {
-    const productsPerPage = useSelector(state => state.shop.productPerPage);
-    const pageNumber = useSelector(state => state.filters.pageNumber);
+    const {searchParamsStr, pageNumber, sortValue, searchValue} = useSelector(state => state.filters);
+    const {productsPerPage, loading, error} = useSelector(state => state.shop);
 
     const dispatch = useDispatch();
     const {collection} = useParams();
@@ -27,17 +28,14 @@ export const Products = () => {
 
     const subcategories = getSubCategoriesData();
     const categories = getCategoriesData();
-
     const category = categories.find(item => item.value === collection) ? collection : "";
     const subcategory = subcategories.find(item => item.value === collection) ? collection : "";
-    const sortValue = useSelector(state => state.filters.sortValue);
-    const searchParamsStr = useSelector(state => state.filters.searchParamsStr);
-    const searchValue = useSelector(state => state.filters.searchValue);
     const {updateAllProducts, updateProductsPerPage} = useUpdateProducts();
-
     // console.log(searchValue)
 
     const updateFilters = (products) => {
+        if (!products) return;
+
         dispatch(setColorsCount(products));
         dispatch(setCategoriesCount(products));
         dispatch(setAvailabilityCount(products));
@@ -108,13 +106,22 @@ export const Products = () => {
     }, [searchParams]);
 
     return (
+
         <div className={style.Products}>
-            <ul className={style.products_list}>
-                {
-                    productsPerPage.map(product => <ProductCard currentProduct={product} key={product.id}/>)
-                }
-            </ul>
-            <ProductPagination/>
+            {loading ? (
+                <ProductsPreloader/>
+            ) : error ? (
+                    <div>{error}</div>
+                ) : (
+                <>
+                    <ul className={style.products_list}>
+                        {productsPerPage.map((product) => (
+                            <ProductCard currentProduct={product} key={product.id}/>
+                        ))}
+                    </ul>
+                    <ProductPagination/>
+                </>
+                )}
         </div>
     )
 }
