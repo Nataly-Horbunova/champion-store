@@ -1,6 +1,6 @@
 import style from "./ProductPage.module.scss";
 import mainStyles from "../../../index.module.scss";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {getProduct} from "../../../core/api";
 import {ProductCarousel} from "../../ProductCarousel/ProductCarousel";
@@ -17,23 +17,25 @@ import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import CircleIcon from "@mui/icons-material/Circle";
 import {ProductCountForm} from "../../ProductCountForm/ProductCountForm";
-import {ProductPreloader} from "../../Preloaders/ProductPreloader";
+import {ProductPreloader} from "../../Common/Preloaders/ProductPreloader";
+import {fetchProductById} from "../../../data/redux/reducers/shopSlice";
+import {useDispatch} from "react-redux";
 
 export function ProductPage() {
     let {productId} = useParams();
     let [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
     const productData = getProductCardData();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         setLoading(true);
-        getProduct(productId)
-            .then((resp) => {
-                setProduct(resp);
-            })
-            .catch((error) => {
-                setError(error.message);
+        dispatch(fetchProductById(productId))
+            .unwrap()
+            .then(resp => setProduct(resp))
+            .catch(() => {
+                navigate('/error');
             })
             .finally(() => {
                 setLoading(false);
@@ -47,9 +49,6 @@ export function ProductPage() {
                     loading ?
                         (
                             <ProductPreloader/>
-                        )
-                        : error ? (
-                            <div>{error}</div>
                         ) : (
                             product && <div className={style.product_card}>
                                 {/*-------------- Image ------------------*/}

@@ -1,7 +1,7 @@
 import {setSearchParamsStr} from "../data/redux/reducers/filtersSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate, useSearchParams} from "react-router-dom";
-import { pageUrl} from "./api";
+import {pageUrl} from "./api";
 import {
     fetchAllProducts,
     fetchProductsPerPage
@@ -115,12 +115,22 @@ export const useSearchParamsActions = () => {
 }
 export const useUpdateProducts = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const updateAllProducts = (category, subcategory, searchParamsStr) => {
         return dispatch(fetchAllProducts({category, subcategory, searchParamsStr}))
-            .then(resp => resp.payload);
+            .unwrap()
+            .then(resp => resp.payload)
+            .catch(() => {
+                navigate('/error');
+            });
     }
     const updateProductsPerPage = (category, subcategory, searchParamsStr, pageNumber) => {
         return dispatch(fetchProductsPerPage({category, subcategory, searchParamsStr, pageNumber}))
+            .unwrap()
+            .then(resp => resp.payload)
+            .catch(() => {
+                navigate('/error');
+            });
     }
 
     return {updateAllProducts, updateProductsPerPage}

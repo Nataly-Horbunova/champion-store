@@ -16,11 +16,11 @@ import {
 import {useUpdateProducts} from "../../core/hooks";
 import {getMaxPrice, getMinPrice} from "../../core/utils";
 import {ProductPagination} from "./ProductPagination";
-import { ProductsPreloader} from "../Preloaders/ProductsPreloader";
+import {ProductsPreloader} from "../Common/Preloaders/ProductsPreloader";
 
 export const Products = () => {
     const {searchParamsStr, pageNumber, sortValue, searchValue} = useSelector(state => state.filters);
-    const {productsPerPage, loading, error} = useSelector(state => state.shop);
+    const {productsPerPage, loading} = useSelector(state => state.shop);
 
     const dispatch = useDispatch();
     const {collection} = useParams();
@@ -73,7 +73,7 @@ export const Products = () => {
         dispatch(setSearchValue(''));
         // console.log('products collection');
         dispatch(setCategory(category));
-        dispatch(setSubcategory(category));
+        dispatch(setSubcategory(subcategory));
         setSearchParams("");
         dispatch(setPageNumber(1));
         dispatch(setSortValue(""));
@@ -110,9 +110,7 @@ export const Products = () => {
         <div className={style.Products}>
             {loading ? (
                 <ProductsPreloader/>
-            ) : error ? (
-                    <div>{error}</div>
-                ) : (
+            ) : (
                 <>
                     <ul className={style.products_list}>
                         {productsPerPage.map((product) => (
@@ -121,7 +119,7 @@ export const Products = () => {
                     </ul>
                     <ProductPagination/>
                 </>
-                )}
+            )}
         </div>
     )
 }

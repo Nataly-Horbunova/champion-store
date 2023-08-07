@@ -1,4 +1,4 @@
-@import "../../styles/mixins_and_placeholders.module";
+@import "../../../styles/mixins_and_placeholders.module";
 
 .ProductsPreloader {
   @include flex(flex-start, flex-start, 4px);

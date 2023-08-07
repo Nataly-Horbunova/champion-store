@@ -50,12 +50,14 @@ export const getProducts = (category, subcategory, searchParams, pageNumber = ""
         .get(requestUrl)
         .then(response => {
             return response.data;
-        });
+        })
 }
 
 export const getProduct = (id) => {
     return axios
         .get(`${baseUrl}${productsUrl}${id}`)
-        .then(response => response.data);
+        .then(response => {
+            return response.data;
+        });
 }
 
