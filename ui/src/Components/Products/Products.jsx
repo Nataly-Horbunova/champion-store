@@ -31,7 +31,6 @@ export const Products = () => {
     const category = categories.find(item => item.value === collection) ? collection : "";
     const subcategory = subcategories.find(item => item.value === collection) ? collection : "";
     const {updateAllProducts, updateProductsPerPage} = useUpdateProducts();
-    // console.log(searchValue)
 
     const updateFilters = (products) => {
         if (!products) return;
@@ -71,7 +70,6 @@ export const Products = () => {
     useEffect(() => {
         if (searchValue) return;
         dispatch(setSearchValue(''));
-        // console.log('products collection');
         dispatch(setCategory(category));
         dispatch(setSubcategory(subcategory));
         setSearchParams("");
@@ -82,7 +80,6 @@ export const Products = () => {
 
 
     useEffect(() => {
-        // console.log('products search');
         if (searchValue) {
             updateProductsPerPage(category, subcategory, searchParamsStr, pageNumber);
             updateAllProducts(category, subcategory, searchParamsStr)
@@ -98,7 +95,6 @@ export const Products = () => {
     useEffect(() => {
 
         if (searchParams.size === 0) {
-            // console.log('products search params')
             dispatch(clearAllFilters());
             dispatch(setSearchParamsStr(""));
             resetProductsAndFilters();

@@ -4,14 +4,15 @@ import * as React from 'react';
 import Rating from '@mui/material/Rating';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import FavoriteIcon from '@mui/icons-material/FavoriteBorder';
 import CircleIcon from '@mui/icons-material/Circle';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import {useNavigate} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {useState} from "react";
 import {addToCart} from "../../data/redux/reducers/cartSlice";
+import 'animate.css/animate.min.css';
 
 
 export function ProductCard({currentProduct}) {
@@ -20,20 +21,18 @@ export function ProductCard({currentProduct}) {
     const colorsToShow = 4;
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const cart = useSelector(state => state.cart.cartProducts);
-
 
     function showMoreHandler(id) {
         navigate(`/product/${id}`);
     }
 
     return (
-        <li className={style.ProductCard}>
+        <li className={`${style.ProductCard} animate__animated animate__fadeIn`} >
             <div className={style.img_wrapper}>
-                <img className={style.product_img}
-                     src={require(`../../assets/products/${product.currentImage.imageName}`)}
-                     alt="product"
-                     onClick={() => showMoreHandler(product.id)}/>
+                <img className={`${style.product_img} animate__animated animate__fadeIn`}
+                    src={require(`../../assets/products/${product.currentImage.imageName}`)}
+                    alt="product"
+                    onClick={() => showMoreHandler(product.id)}/>
                 <div className={style.labels_wrapper}>
                     {(product.categories.includes('sales')) &&
                         <div className={style.sale_label}>{productData.labels.sale}</div>}
@@ -47,11 +46,10 @@ export function ProductCard({currentProduct}) {
                     color="color_accent_1"
                     fontSize="large"
                     className={style.add_to_cart_icon}
-                onClick={()=> {
-                    dispatch(addToCart({product, count:1}));
-                    console.log(cart);
-                }
-                }/>
+                    onClick={() => {
+                        dispatch(addToCart({product, count: 1}));
+                    }
+                    }/>
             </div>
             <div onClick={() => showMoreHandler(product.id)} className={style.product_name}>{product.name}</div>
             <div className={style.product_price_wrapper}>

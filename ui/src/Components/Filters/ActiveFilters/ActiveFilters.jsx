@@ -17,7 +17,6 @@ import {useEffect, useState} from "react";
 import {availabilityUrl, categoriesUrl, colorsUrl, maxPriceUrl, minPriceUrl} from "../../../core/api";
 
 export function ActiveFilters({className}) {
-    // console.log('active filters')
     const filters = getFiltersData();
     const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();

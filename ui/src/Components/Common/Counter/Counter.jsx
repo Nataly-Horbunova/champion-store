@@ -1,6 +1,5 @@
 import style from "./Counter.module.scss";
 import * as React from "react";
-import {useState} from "react";
 
 export function Counter ({count, incrementCount, decrementCount, changeCount, removeOnBlur=null}) {
 

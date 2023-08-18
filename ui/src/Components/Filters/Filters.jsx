@@ -12,7 +12,6 @@ import {categoriesUrl, availabilityUrl, colorsUrl} from "../../core/api";
 
 
 export function Filters({className}) {
-    // console.log('filters')
     const filters = getFiltersData();
     const [searchParams] = useSearchParams();
     const {category, subcategory, searchParamsStr, pageNumber} = useSelector(state => state.filters);

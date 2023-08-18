@@ -1,13 +1,32 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {v4 as uuidv4} from "uuid";
+import { placeOrder } from '../../../core/api';
 
+const initialState ={
+    cartProducts: [],
+    orderPlaced: false,
+    error: null
+}
+
+export const placeOrderAsync = createAsyncThunk('cart/placeOrderAsync', 
+    async (order, {rejectWithValue}) => {
+        try{        
+            return await placeOrder(order);
+        } catch(error) {
+            if(error.response) {
+                return rejectWithValue({
+                    message: error.message,
+                    responseStatus: error.response.status
+                })
+            }
+            throw error;
+        }
+    })
 
 export const cartSlice = createSlice({
     name: "cart",
-    initialState: {
-        cartProducts: [],
-        orderPlaced: false
-    },
+    initialState,
+
     reducers: {
         addToCart: (state, action) => {
             let {product, count} = action.payload;
@@ -44,6 +63,23 @@ export const cartSlice = createSlice({
         setOrderPlaced(state, action) {
             state.orderPlaced = action.payload;
         }
+    },
+
+    extraReducers: (builder) => {
+        builder
+            .addCase(placeOrderAsync.pending, (state) => {
+                state.error = null;
+            })
+            .addCase(placeOrderAsync.fulfilled, (state, action) => {
+                state.orderPlaced = true;
+            })
+            .addCase(placeOrderAsync.rejected, (state, action) => {
+                state.error = {
+                    message: action.payload.message,
+                    responseStatus: action.payload.responseStatus,
+                };
+            })
+
     }
 })
 

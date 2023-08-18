@@ -1,0 +1,9 @@
+@import '../../../styles/mixins_and_placeholders.module';
+@import '../../../styles/variables.module';
+
+.Contact {
+  margin-top: 136px;
+  height:30vh;
+  @include flex(center, center);
+  font-size: $fz-l;
+}

@@ -1,0 +1,35 @@
+@import "../../../styles/mixins_and_placeholders.module";
+@import "../../../styles/variables.module";
+
+.Error {
+  @include flex(space-between, center, 6px, column);
+  margin-top: 136px;
+  margin-bottom: 50px;
+
+  .error_status {
+        font-size: $fz-xxl;
+    line-height: $lh-xxl;   
+    background-image: $bg-accent-2;
+    background-clip: text; 
+    color: transparent;
+  }
+
+  .error_message{
+    font-size: $fz-m;
+    line-height: $lh-m; 
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .error_text{
+    font-size: $fz-s;
+    line-height: $lh-s; 
+  }
+
+  .error_btn{
+    @extend %button;
+    @extend %secondary-button-red;
+    margin-top: 20px;
+  }
+
+}

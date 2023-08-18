@@ -3,6 +3,7 @@ import axios from "axios";
 const urlParams = {
     baseUrl: 'http://localhost:3001/',
     productsUrl: "products/",
+    ordersUrl: "orders",
     categoriesUrl: 'categories_like',
     subcategoriesUrl: 'subcategories',
     pageUrl: '_page',
@@ -20,6 +21,7 @@ const urlParams = {
 export const {
     baseUrl,
     productsUrl,
+    ordersUrl,
     categoriesUrl,
     subcategoriesUrl,
     searchUrl,
@@ -45,19 +47,27 @@ export const getProducts = (category, subcategory, searchParams, pageNumber = ""
     } else if (!category && !subcategory) {
         requestUrl = `${baseUrl}${productsUrl}?${searchParams}${paginationParam}`;
     }
-    // console.log(requestUrl);
+
     return axios
         .get(requestUrl)
-        .then(response => {
-            return response.data;
-        })
+        .then(response => response.data);
 }
 
 export const getProduct = (id) => {
     return axios
         .get(`${baseUrl}${productsUrl}${id}`)
-        .then(response => {
-            return response.data;
-        });
+        .then(response => response.data);
 }
 
+export const placeOrder= (order) => {
+      const requestUrl = `${baseUrl}${ordersUrl}`;
+      const options = {
+        headers: {
+          'Content-Type': 'application/json', 
+        }
+      };
+
+    return axios
+        .post(requestUrl, order, options)
+        .then(response => response.data)
+}

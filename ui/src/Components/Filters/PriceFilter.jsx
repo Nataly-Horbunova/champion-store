@@ -21,11 +21,7 @@ import {v4 as uuidv4} from "uuid";
 import {useEffect, useState} from "react";
 import {maxPriceUrl, minPriceUrl} from "../../core/api";
 
-export function PriceFilter({
-                                filter,
-                                handleChangePriceSearchParams,
-                                updateProducts
-                            }) {
+export function PriceFilter({filter, handleChangePriceSearchParams, updateProducts }) {
     const minPrice = useSelector(state => state.filters.minPrice);
     const maxPrice = useSelector(state => state.filters.maxPrice);
     const priceRange = useSelector(state => state.filters.priceRange) || [minPrice, maxPrice];

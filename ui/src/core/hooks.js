@@ -119,7 +119,7 @@ export const useUpdateProducts = () => {
     const updateAllProducts = (category, subcategory, searchParamsStr) => {
         return dispatch(fetchAllProducts({category, subcategory, searchParamsStr}))
             .unwrap()
-            .then(resp => resp.payload)
+            .then(resp => resp)
             .catch(() => {
                 navigate('/error');
             });
@@ -127,7 +127,7 @@ export const useUpdateProducts = () => {
     const updateProductsPerPage = (category, subcategory, searchParamsStr, pageNumber) => {
         return dispatch(fetchProductsPerPage({category, subcategory, searchParamsStr, pageNumber}))
             .unwrap()
-            .then(resp => resp.payload)
+            .then(resp => resp)
             .catch(() => {
                 navigate('/error');
             });

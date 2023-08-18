@@ -15,7 +15,9 @@ export function MainPage() {
     return (
         <main className={style.MainPage}>
             <Carousel/>
+
             {/*-------- Categories section --------*/}
+
             <section className={style.section_categories}>
                 <div className={`${mainStyles.container} ${style.categories_container}`}>
                     <ul className={style.categories_list}>
@@ -39,7 +41,9 @@ export function MainPage() {
                     </ul>
                 </div>
             </section>
+
             {/*-------- Earbuds section --------*/}
+
             <section className={style.section_earbuds}>
                 <div className={`${mainStyles.container} ${style.earbuds_container}`}>
                     <div className={style.earbuds_info}>
@@ -72,7 +76,9 @@ export function MainPage() {
                     </div>
                 </div>
             </section>
-            {/*-------- Earbuds section --------*/}
+
+            {/*-------- Brands section --------*/}
+
             <section className={style.section_brands}>
                 <div className={`${mainStyles.container} ${style.brands_container}`}>
                     {pageData.brands.map(brand => {

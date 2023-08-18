@@ -45,6 +45,7 @@
     }
 
   }
+
 }
 
 .CartEmptyPage {
@@ -73,4 +74,18 @@
     }
 
   }
+}
+
+.dialog{
+  &_tittle {
+    text-align: center;
+  }
+
+
+  &_btn{
+    align-self: center;
+    @extend %button;
+    @extend %secondary-button-red;
+  }
+
 }

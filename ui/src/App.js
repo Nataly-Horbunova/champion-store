@@ -6,13 +6,12 @@ import {Footer} from "./Components/Footer/Footer";
 import {ProductsPage} from "./Components/Pages/ProductsPage/ProductsPage";
 import {ProductPage} from "./Components/Pages/ProductPage/ProductPage";
 import {CartPage} from "./Components/Pages/CartPage/CartPage";
-import {useSelector} from "react-redux";
-import {CartEmptyPage} from "./Components/Pages/CartPage/CartEmptyPage";
-import {ErrorPage} from "./Components/Common/Error/ErrorPage";
-
+import {ErrorPage} from "./Components/Pages/ErrorPage/ErrorPage";
+import {ContactPage} from "./Components/Pages/ContactPage/ContactPage";
+import {AboutPage} from "./Components/Pages/AboutPage/AboutPage";
+import {BlogPage} from "./Components/Pages/BlogPage/BlogPage";
 
 function App() {
-    const cart = useSelector(state => state.cart.cartProducts);
 
     return (
         <div className={style.App}>
@@ -22,7 +21,10 @@ function App() {
                 <Route path='/collections/' element={<ProductsPage/>}/>
                 <Route path='/collections/:collection' element={<ProductsPage/>}/>
                 <Route path='/product/:productId' element={<ProductPage/>}/>
-                <Route path='/cart' element={cart.length > 0 ? <CartPage/> : <CartEmptyPage/>}/>
+                <Route path='/cart' element={<CartPage/>}/>
+                <Route path='/about-us' element={<AboutPage/>}/>
+                <Route path='/blog' element={<BlogPage/>}/>
+                <Route path='/contact' element={<ContactPage/>}/>
                 <Route path='/error' element={<ErrorPage/>}/>
             </Routes>
             <Footer/>

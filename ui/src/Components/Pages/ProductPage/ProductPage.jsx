@@ -2,7 +2,6 @@ import style from "./ProductPage.module.scss";
 import mainStyles from "../../../index.module.scss";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {getProduct} from "../../../core/api";
 import {ProductCarousel} from "../../ProductCarousel/ProductCarousel";
 import * as React from "react";
 import {getProductCardData} from "../../../data/dataFunctions";
@@ -20,7 +19,7 @@ import {ProductCountForm} from "../../ProductCountForm/ProductCountForm";
 import {ProductPreloader} from "../../Common/Preloaders/ProductPreloader";
 import {fetchProductById} from "../../../data/redux/reducers/shopSlice";
 import {useDispatch} from "react-redux";
-
+import 'animate.css/animate.min.css';
 export function ProductPage() {
     let {productId} = useParams();
     let [product, setProduct] = useState(null);
@@ -52,7 +51,7 @@ export function ProductPage() {
                         ) : (
                             product && <div className={style.product_card}>
                                 {/*-------------- Image ------------------*/}
-                                <div className={style.images_wrapper}>
+                                <div className={`${style.images_wrapper}  animate__animated animate__fadeIn`}>
                                     {
                                         product.images.length > 1 &&
                                         <div className={style.carousel_wrapper}>
@@ -61,12 +60,12 @@ export function ProductPage() {
                                     }
                                     <div className={style.main_img_wrapper}>
                                         <img src={require(`../../../assets/products/${product.currentImage.imageName}`)}
-                                             alt="product img"
-                                             className={style.main_img}/>
+                                            alt="product img"
+                                            className={style.main_img}/>
                                     </div>
                                 </div>
                                 {/*-------------------- Info ------------*/}
-                                <div className={style.product_info}>
+                                <div className={`${style.product_info}  animate__animated animate__fadeIn`} >
                                     <h2 className={style.product_tittle}>{product.name}</h2>
                                     <div className={style.price_and_labels_wrapper}>
                                         <div className={style.product_price_wrapper}>

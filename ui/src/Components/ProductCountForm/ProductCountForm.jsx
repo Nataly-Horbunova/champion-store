@@ -3,7 +3,7 @@ import * as React from "react";
 import {addToCart} from "../../data/redux/reducers/cartSlice";
 import {useDispatch} from "react-redux";
 import {useState} from "react";
-import {Counter} from "../Counter/Counter";
+import {Counter} from "../Common/Counter/Counter";
 
 
 export function ProductCountForm({product, productData}) {

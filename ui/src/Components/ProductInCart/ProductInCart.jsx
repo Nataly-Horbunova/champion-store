@@ -1,5 +1,5 @@
 import style from "./ProductInCart.module.scss";
-import {Counter} from "../Counter/Counter";
+import {Counter} from "../Common/Counter/Counter";
 import {useDispatch} from "react-redux";
 import {changeCount, removeFromCart} from "../../data/redux/reducers/cartSlice";
 import {useState} from "react";

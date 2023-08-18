@@ -4,7 +4,7 @@ import {getProduct, getProducts} from "../../../core/api";
 const initialState = {
     products: [],
     productsPerPage: [],
-    loading: true,
+    loading: false,
     error: null
 }
 
@@ -101,7 +101,7 @@ export const shopSlice = createSlice({
             .addCase(fetchProductById.rejected, (state, action) => {
                 state.loading = false;
                 state.error = {
-                    message: action.payload.message,
+                    message:  action.payload.message,
                     responseStatus: action.payload.responseStatus,
                 };
             })

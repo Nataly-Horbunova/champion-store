@@ -1,4 +1,3 @@
-import style from './Products.module.scss';
 import Stack from "@mui/material/Stack";
 import {setPageNumber} from "../../data/redux/reducers/filtersSlice";
 import {useDispatch, useSelector} from "react-redux";
