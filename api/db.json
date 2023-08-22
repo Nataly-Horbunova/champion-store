@@ -4304,6 +4304,79 @@
         "note": ""
       },
       "totalAmount": 260
+    },
+    {
+      "id": "6469ac63-50f1-4dbc-a888-c9e1001aee92",
+      "products": [
+        {
+          "id": "ef459f91-d264-4aa4-8051-3642471fcb61",
+          "name": "Noise cancelling earbuds",
+          "images": [
+            {
+              "id": 1,
+              "color": "white",
+              "imageName": "earbuds_2.webp"
+            }
+          ],
+          "categories": [
+            "earbuds",
+            "sales"
+          ],
+          "price": 150,
+          "oldPrice": 170,
+          "inStock": 10,
+          "available": true,
+          "colors": [
+            "white"
+          ],
+          "currentImage": {
+            "id": 1,
+            "color": "white",
+            "imageName": "earbuds_2.webp"
+          },
+          "sold": 10,
+          "rating": 4,
+          "description": "These earbuds feature the most advanced true wireless technology. Use the app to adjust the noise-cancelling modes and get a mind-blowing listening experience. The  sound personalization tech uses real time adjustments to tailor to your hearing needs. The result is a listening experience that protects you hearing while delivering unparalleled sound quality. This is a demo store with dummy content and products. You cannot purchase products from this store.",
+          "additionalInfo": [
+            {
+              "tittle": "Long battery life",
+              "description": "Up to 8 hours of continuous playback time, with additional charging time available through the case. A long battery life is particularly important for those who are constantly on the go or need earbuds that can last throughout the day without requiring frequent charging. A long battery life can also provide peace of mind, knowing that the earbuds will be available when needed without worrying about running out of power."
+            },
+            {
+              "tittle": "Optimal design",
+              "description": "Functional and versatile design that fits well into a variety of different situations and environments. The earbuds have an understated, minimalist design that can be worn comfortably for long periods of time, with a lightweight construction and ergonomic fit that provides a secure, stable fit. The earbuds also have features such as sweat-resistant materials, water-resistant construction, and a compact carrying case that makes them easy to transport and use on the go."
+            }
+          ],
+          "reviews": [
+            {
+              "id": 1,
+              "name": "Daniel Jonson",
+              "description": "Good product",
+              "rating": "5"
+            },
+            {
+              "id": 2,
+              "name": "Peter Black",
+              "description": "Customer's support could be better, the product itself is great",
+              "rating": "4"
+            }
+          ],
+          "subcategories": {
+            "sale": true,
+            "customer-pick": false
+          },
+          "count": 1,
+          "productId": 2
+        }
+      ],
+      "delivery": {
+        "name": "greengrass111288@gmail.com",
+        "email": "greengrass111288@gmail.com",
+        "address": "Одесса",
+        "tel": "0937227306",
+        "note": ""
+      },
+      "totalAmount": 150
     }
   ]
 }

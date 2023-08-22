@@ -1,7 +1,10 @@
 import axios from "axios";
 
+const api = axios.create({
+    baseURL: "/api/",
+  });
+
 const urlParams = {
-    baseUrl: 'http://localhost:3001/',
     productsUrl: "products/",
     ordersUrl: "orders",
     categoriesUrl: 'categories_like',
@@ -41,33 +44,33 @@ export const getProducts = (category, subcategory, searchParams, pageNumber = ""
     const paginationParam = pageNumber ? `${pageUrl}=${pageNumber}&${limitUrl}${limitCount}` : "";
 
     if (category) {
-        requestUrl = `${baseUrl}${productsUrl}?${categoriesUrl}=${category}&${searchParams}&${paginationParam}`;
+        requestUrl = `${productsUrl}?${categoriesUrl}=${category}&${searchParams}&${paginationParam}`;
     } else if (subcategory) {
-        requestUrl = `${baseUrl}${productsUrl}?${subcategoriesUrl}.${subcategory}=true&${searchParams}&${paginationParam}`;
+        requestUrl = `${productsUrl}?${subcategoriesUrl}.${subcategory}=true&${searchParams}&${paginationParam}`;
     } else if (!category && !subcategory) {
-        requestUrl = `${baseUrl}${productsUrl}?${searchParams}${paginationParam}`;
+        requestUrl = `${productsUrl}?${searchParams}${paginationParam}`;
     }
 
-    return axios
+    return api
         .get(requestUrl)
         .then(response => response.data);
 }
 
 export const getProduct = (id) => {
-    return axios
-        .get(`${baseUrl}${productsUrl}${id}`)
+    return api
+        .get(`${productsUrl}${id}`)
         .then(response => response.data);
 }
 
 export const placeOrder= (order) => {
-      const requestUrl = `${baseUrl}${ordersUrl}`;
+      const requestUrl = `${ordersUrl}`;
       const options = {
         headers: {
           'Content-Type': 'application/json', 
         }
       };
 
-    return axios
+    return api
         .post(requestUrl, order, options)
         .then(response => response.data)
 }
