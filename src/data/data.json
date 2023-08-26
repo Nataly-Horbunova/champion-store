@@ -60,13 +60,6 @@
       ],
       "subcategories": [
         {
-          "name": "Gift card",
-          "id": 1,
-          "path": "products/gift-card",
-          "img": "gift_card.webp",
-          "value": "gift-card"
-        },
-        {
           "name": "Sale",
           "id": 2,
           "path": "collections/sale",
