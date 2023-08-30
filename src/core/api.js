@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://champion-store-server.onrender.com/1",
+    baseURL: "https://champion-store-server.onrender.com/",
   });
 
 const urlParams = {
