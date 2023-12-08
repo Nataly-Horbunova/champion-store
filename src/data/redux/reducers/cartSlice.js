@@ -29,7 +29,7 @@ export const cartSlice = createSlice({
 
     reducers: {
         addToCart: (state, action) => {
-            let {product, count} = action.payload;
+            const {product, count} = action.payload;
 
             const isProductPresent = state.cartProducts.find(item => {
                 return (item.productId === product.id) && (item.currentImage.id === product.currentImage.id);
@@ -49,7 +49,7 @@ export const cartSlice = createSlice({
         },
 
         changeCount: (state, action) => {
-            let {product, count} = action.payload;
+            const {product, count} = action.payload;
 
             state.cartProducts = state.cartProducts.map(item => {
                 return (item.id === product.id) ? {...item, count} : item;

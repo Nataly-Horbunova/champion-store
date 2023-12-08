@@ -60,15 +60,15 @@ export function Header() {
                                         handleScrollToTop();
                                     }}>
                                     <NavLink to={item.path}
-                                             className={`${style.header_nav_link} ${scrollDown ? style.scroll : ""}`}>
+                                            className={`${style.header_nav_link} ${scrollDown ? style.scroll : ""}`}>
                                         <span>{item.name}</span>
                                         {item.name === "Shop" ? <KeyboardArrowDownIcon fontSize="small"/> : ''}
                                     </NavLink>
                                     {/*// --------- DropDown----------*/}
                                     {isDropDownOpen && (
                                         <div className={style.dropDown}
-                                             onMouseLeave={handleHideDropDown}
-                                             onMouseEnter={handleShowDropDown}>
+                                            onMouseLeave={handleHideDropDown}
+                                            onMouseEnter={handleShowDropDown}>
                                             <div className={`${mainStyles.container} ${style.dropdown_container}`}>
                                                 <ul className={style.collections_list}> {
                                                     headerData.dropDown.categories.map(collection => {
