@@ -11,7 +11,12 @@ const initialState = {
 export const fetchAllProducts = createAsyncThunk('shop/fetchAllProducts',
     async ({category, subcategory, searchParamsStr}, {rejectWithValue}) => {
         try {
-            return await getProducts(category, subcategory, searchParamsStr);
+            const products = await getProducts(category, subcategory, searchParamsStr);
+            const favoritesFromStorage = JSON.parse(localStorage.getItem('favourites')) || [];
+            const markedProducts = products.map(product => ({...product, isFavourite: favoritesFromStorage.includes(product.id)}));
+            console.log('setFav');
+            return markedProducts;
+
         } catch (error) {
             if (error.response) {
                 return rejectWithValue({
@@ -26,7 +31,12 @@ export const fetchAllProducts = createAsyncThunk('shop/fetchAllProducts',
 export const fetchProductsPerPage = createAsyncThunk('shop/fetchProductsPerPage',
     async ({category, subcategory, searchParamsStr, pageNumber}, {rejectWithValue}) => {
         try {
-            return await getProducts(category, subcategory, searchParamsStr);
+            const products = await getProducts(category, subcategory, searchParamsStr);
+            const favoritesFromStorage = JSON.parse(localStorage.getItem('favourites')) || [];
+            const markedProducts = products.map(product => ({...product, isFavourite: favoritesFromStorage.includes(product.id)}));
+            console.log('setFav');
+
+            return markedProducts;
         } catch (error) {
             if (error.response) {
                 return rejectWithValue({
@@ -42,7 +52,12 @@ export const fetchProductsPerPage = createAsyncThunk('shop/fetchProductsPerPage'
 export const fetchProductById = createAsyncThunk('shop/fetchProductById',
     async (id, {rejectWithValue}) => {
         try {
-            return await getProduct(id);
+            const product = await getProduct(id);
+            const favoritesFromStorage = JSON.parse(localStorage.getItem('favourites')) || [];
+            const markedProduct = {...product, isFavourite: favoritesFromStorage.includes(product.id)};
+            console.log('setFav');
+
+            return markedProduct;
         } catch (error) {
             if (error.response) {
                 return rejectWithValue({

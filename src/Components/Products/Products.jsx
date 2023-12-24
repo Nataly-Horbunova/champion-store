@@ -50,6 +50,7 @@ export const Products = () => {
         updateProductsPerPage(category, subcategory, "", pageNumber);
         return updateAllProducts(category, subcategory, "")
             .then(resp => {
+                console.log(resp);
                 updateFilters(resp);
                 return resp;
             });

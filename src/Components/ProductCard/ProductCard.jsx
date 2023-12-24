@@ -4,7 +4,7 @@ import * as React from 'react';
 import Rating from '@mui/material/Rating';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-// import FavoriteIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import CircleIcon from '@mui/icons-material/Circle';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
@@ -12,11 +12,14 @@ import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {useState} from "react";
 import {addToCart} from "../../data/redux/reducers/cartSlice";
+import { addToFavourites } from "../../data/redux/reducers/favouritesSlice";
+import { removeFromFavourites } from "../../data/redux/reducers/favouritesSlice";
 import 'animate.css/animate.min.css';
 
 
 export function ProductCard({currentProduct}) {
     const [product, setProduct] = useState(currentProduct);
+    const [isFavourite, setIsFavourite] = useState(product.isFavourite);
     const productData = getProductCardData();
     const colorsToShow = 4;
     const navigate = useNavigate();
@@ -24,6 +27,16 @@ export function ProductCard({currentProduct}) {
 
     function showMoreHandler(id) {
         navigate(`/product/${id}`);
+    }
+
+    function toggleFavourite() {
+        if(isFavourite) {
+            dispatch(removeFromFavourites(product));
+        } else {
+            dispatch(addToFavourites(product));
+        }
+
+        setIsFavourite(!isFavourite);
     }
 
     return (
@@ -40,8 +53,20 @@ export function ProductCard({currentProduct}) {
                         <div className={style.customer_pick_label}>{productData.labels.customerPick}</div>}
                     {!product.inStock && <div className={style.sold_out_label}>{productData.labels.soldOut}</div>}
                 </div>
-                <FavoriteBorderIcon color="color_accent_3" fontSize="medium" className={style.favourite_icon}/>
-                {/*<FavoriteIcon color="color_accent_3" fontSize="medium" className={style.favourite_icon}/>*/}
+
+                {!isFavourite ? (
+                <FavoriteBorderIcon 
+                color="color_accent_3" 
+                fontSize="medium" 
+                className={style.favourite_icon} 
+                onClick = {toggleFavourite}/> ) : (
+                <FavoriteIcon 
+                color="color_accent_3" 
+                fontSize="medium" 
+                className={style.favourite_icon} 
+                onClick = {toggleFavourite}/>
+                )}
+
                 <AddBoxIcon
                     color="color_accent_1"
                     fontSize="large"

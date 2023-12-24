@@ -16,6 +16,7 @@ export function Header() {
     const logoBlack = require(`../../assets/${headerData.logo.black}`);
     const logoWhite = require(`../../assets/${headerData.logo.white}`);
     const cart = useSelector(state => state.cart.cartProducts);
+    const favourites = useSelector(state => state.favourites.favouritesProducts);
 
     let [scrollDown, setScrollDown] = useState(false);
     let [isDropDownOpen, setIsDropDownOpen] = useState(false);
@@ -126,8 +127,8 @@ export function Header() {
                 <div className={style.icons_wrapper}>
                     <ProductsSearch scrollDown={scrollDown}/>
                     <NavLink to='favourites' className={style.icon_wrapper}>
-                        <Badge badgeContent={0} color="color_accent_1" className={style.icon_badge}>
-                            <FavoriteBorderOutlinedIcon
+                        <Badge badgeContent={favourites.length} color="color_accent_1" className={style.icon_badge}>
+                            <FavoriteBorderOutlinedIcon 
                                 className={`${style.icon} ${scrollDown ? style.scroll : ""}`}></FavoriteBorderOutlinedIcon>
                         </Badge>
                     </NavLink>

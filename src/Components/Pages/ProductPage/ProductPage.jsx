@@ -15,15 +15,20 @@ import {v4 as uuidv4} from "uuid";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import CircleIcon from "@mui/icons-material/Circle";
-import {ProductCountForm} from "../../ProductCountForm/ProductCountForm";
 import {ProductPreloader} from "../../Common/Preloaders/ProductPreloader";
 import {fetchProductById} from "../../../data/redux/reducers/shopSlice";
 import {useDispatch} from "react-redux";
 import 'animate.css/animate.min.css';
+import { addToFavourites } from "../../../data/redux/reducers/favouritesSlice";
+import { removeFromFavourites } from "../../../data/redux/reducers/favouritesSlice";
+import {addToCart} from "../../../data/redux/reducers/cartSlice";
+import {Counter} from "../../Common/Counter/Counter";
+
 export function ProductPage() {
     let {productId} = useParams();
     let [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [isFavourite, setIsFavourite] = useState(product?.isFavourite);
     const productData = getProductCardData();
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -40,6 +45,43 @@ export function ProductPage() {
                 setLoading(false);
             });
     }, [productId]);
+
+    let [count, setCount] = useState(1);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(addToCart({product, count: Number(count)}));
+        setCount(1);
+    }
+
+    const handleIncrementCount = () => {
+        setCount(count + 1);
+    };
+
+    const handleDecrementCount = () => {
+        if (count > 1) {
+            setCount(count - 1);
+        }
+    };
+
+    const handleChangeCount = (e) => {
+        const value = Number(e.target.value);
+        if (value < 1) {
+            e.target.setCustomValidity("The value must be 1 or more");
+        } else {
+            e.target.setCustomValidity("");
+        }
+        setCount((value));
+    };
+
+    function toggleFavourite() {
+        if(isFavourite) {
+            dispatch(removeFromFavourites(product));
+        } else {
+            dispatch(addToFavourites(product));
+        }
+
+        setIsFavourite(!isFavourite);
+    }
 
     return (
         <main className={style.Product}>
@@ -122,7 +164,20 @@ export function ProductPage() {
                                         </div>
                                     }
                                     {/*  ------------- Form ------------*/}
-                                    <ProductCountForm product={product} productData={productData}/>
+                                    <form onSubmit={handleSubmit} className={style.product_form}>
+                                        <Counter count={count} changeCount={handleChangeCount} decrementCount={handleDecrementCount} incrementCount={handleIncrementCount}/>
+                                        <div className={style.buttons_group}>
+                                        <button type="submit"
+                                            className={style.product_add_btn}>
+                                            {productData.buttons.add}
+                                        </button>
+                                        <button type="button" 
+                                            className={style.product_favourite_btn}
+                                            onClick={toggleFavourite}>
+                                             {isFavourite ? productData.buttons.favourite : productData.buttons.removeFromFavourites}                                            
+                                        </button>
+                                    </div>
+                                    </form>
 
                                     {/* --------------- Services --------------*/}
                                     <div className={style.services_wrapper}>

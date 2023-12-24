@@ -489,7 +489,8 @@
       ],
       "buttons": {
         "add": "Add to cart",
-        "favourite": "Add to favourites"
+        "favourite": "Add to favourites",
+        "removeFromFavourites": "Remove from favourites"
       },
       "labels": {
         "customerPick": "Customer pick",

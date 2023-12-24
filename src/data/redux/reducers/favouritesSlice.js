@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit';
-// import {v4 as uuidv4} from "uuid";
 
 const initialState = {
     favouritesProducts: JSON.parse(localStorage.getItem('favourites')) || []
@@ -11,17 +10,28 @@ export const favouritesSlice = createSlice( {
     
     reducers: {
         addToFavourites: (state, action) => {
-            const isPresent = state.favouritesProducts.find( item => action.payload.id === item.id);
-            
-            if(!isPresent ) {
-                state.favouritesProducts.push(action.payload);
-                localStorage.setItem('favourites', state.favouritesProducts);
+            const { id } = action.payload;
+
+            if (!state.favouritesProducts.includes(id)) {
+              state.favouritesProducts.push(id);
+              localStorage.setItem('favourites', JSON.stringify(state.favouritesProducts));
             }
+
+            // const isPresent = state.favouritesProducts.find( item => action.payload.id === item.id);
+            
+            // if(!isPresent ) {
+            //     state.favouritesProducts.push(action.payload);
+            //     localStorage.setItem('favourites', JSON.stringify(state.favouritesProducts));
+            // }
         },
 
         removeFromFavourites: (state, action) => {
-            state.favouritesProducts.filter(item => item.id !== action.payload);
-            localStorage.setItem('favourites', state.favouritesProducts);
+            const { id } = action.payload;
+            state.favouritesProducts = state.favouritesProducts.filter(itemId => itemId !== id);
+            localStorage.setItem('favourites', JSON.stringify(state.favouritesProducts));
+
+            // state.favouritesProducts.filter(item => item.id !== action.payload);
+            // localStorage.setItem('favourites', JSON.stringify(state.favouritesProducts));
         }
     }
 })
