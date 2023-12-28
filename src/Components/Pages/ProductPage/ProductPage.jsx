@@ -174,7 +174,7 @@ export function ProductPage() {
                                         <button type="button" 
                                             className={style.product_favourite_btn}
                                             onClick={toggleFavourite}>
-                                             {isFavourite ? productData.buttons.favourite : productData.buttons.removeFromFavourites}                                            
+                                             {isFavourite ? productData.buttons.removeFromFavourites : productData.buttons.favourite}                                            
                                         </button>
                                     </div>
                                     </form>
