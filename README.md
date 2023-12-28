@@ -4,6 +4,8 @@ _(This project is currently under development and is actively being worked on.)_
 
 Champion store project is created for educational purposes and offers a simulated e-commerce platform focusing on headphones, earbuds and speakers. The frontend is built using React and is hosted on [Vercel](https://champion-store.vercel.app/). For the backend, a JSON server is used, hosted on [Render](https://render.com/https://champion-store-server.onrender.com/).
 
+**Note: The backend server on Render has a spinning down feature. If the server doesn't receive any requests for 15 minutes, it temporarily slows down to save resources. This may cause a brief delay when the server restarts upon receiving new requests.**
+
 ## Features
 
 - Product Listing, Filtergiting, and Sorting
