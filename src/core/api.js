@@ -39,7 +39,7 @@ export const {
     limitCount
 } = urlParams;
 
-export const getProducts = (category, subcategory, searchParams, pageNumber = "") => {
+export const getProducts = (category="", subcategory="", searchParams="", pageNumber = "") => {
     let requestUrl;
     const paginationParam = pageNumber ? `${pageUrl}=${pageNumber}&${limitUrl}${limitCount}` : "";
 

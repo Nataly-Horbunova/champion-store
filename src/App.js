@@ -6,6 +6,7 @@ import {Footer} from "./Components/Footer/Footer";
 import {ProductsPage} from "./Components/Pages/ProductsPage/ProductsPage";
 import {ProductPage} from "./Components/Pages/ProductPage/ProductPage";
 import {CartPage} from "./Components/Pages/CartPage/CartPage";
+import {FavouritesPage} from "./Components/Pages/FavouritesPage/FavouritesPage"
 import {ErrorPage} from "./Components/Pages/ErrorPage/ErrorPage";
 import {ContactPage} from "./Components/Pages/ContactPage/ContactPage";
 import {AboutPage} from "./Components/Pages/AboutPage/AboutPage";
@@ -22,6 +23,7 @@ function App() {
                 <Route path='/collections/:collection' element={<ProductsPage/>}/>
                 <Route path='/product/:productId' element={<ProductPage/>}/>
                 <Route path='/cart' element={<CartPage/>}/>
+                <Route path='/favourites' element={<FavouritesPage/>}/>
                 <Route path='/about-us' element={<AboutPage/>}/>
                 <Route path='/blog' element={<BlogPage/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>

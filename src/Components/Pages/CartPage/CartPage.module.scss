@@ -7,7 +7,7 @@
 
   .cartPage_container {
     @include flex(space-between, flex-start, 30px, column);
-
+    
     .cart_tittle{
       font-size: $fz-xl;
       line-height: $lh-xl;

@@ -1,0 +1,11 @@
+@import '../../../styles/mixins_and_placeholders.module.scss';
+
+.FavouritesPage {
+    margin-top: 136px;
+    margin-bottom: 50px;
+    
+    .favourites_list{
+        @include flex(flex-start, flex-start, 40px 4px);
+        flex-wrap: wrap;
+    }
+}

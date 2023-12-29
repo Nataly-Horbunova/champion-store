@@ -37,7 +37,10 @@ export function ProductPage() {
         setLoading(true);
         dispatch(fetchProductById(productId))
             .unwrap()
-            .then(resp => setProduct(resp))
+            .then(resp => {
+                setProduct(resp);
+                setIsFavourite(resp.isFavourite);
+            })
             .catch(() => {
                 navigate('/error');
             })

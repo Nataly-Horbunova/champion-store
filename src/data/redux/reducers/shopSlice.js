@@ -14,7 +14,6 @@ export const fetchAllProducts = createAsyncThunk('shop/fetchAllProducts',
             const products = await getProducts(category, subcategory, searchParamsStr);
             const favoritesFromStorage = JSON.parse(localStorage.getItem('favourites')) || [];
             const markedProducts = products.map(product => ({...product, isFavourite: favoritesFromStorage.includes(product.id)}));
-            console.log('setFav');
             return markedProducts;
 
         } catch (error) {
@@ -34,7 +33,6 @@ export const fetchProductsPerPage = createAsyncThunk('shop/fetchProductsPerPage'
             const products = await getProducts(category, subcategory, searchParamsStr);
             const favoritesFromStorage = JSON.parse(localStorage.getItem('favourites')) || [];
             const markedProducts = products.map(product => ({...product, isFavourite: favoritesFromStorage.includes(product.id)}));
-            console.log('setFav');
 
             return markedProducts;
         } catch (error) {
@@ -55,7 +53,6 @@ export const fetchProductById = createAsyncThunk('shop/fetchProductById',
             const product = await getProduct(id);
             const favoritesFromStorage = JSON.parse(localStorage.getItem('favourites')) || [];
             const markedProduct = {...product, isFavourite: favoritesFromStorage.includes(product.id)};
-            console.log('setFav');
 
             return markedProduct;
         } catch (error) {

@@ -16,22 +16,12 @@ export const favouritesSlice = createSlice( {
               state.favouritesProducts.push(id);
               localStorage.setItem('favourites', JSON.stringify(state.favouritesProducts));
             }
-
-            // const isPresent = state.favouritesProducts.find( item => action.payload.id === item.id);
-            
-            // if(!isPresent ) {
-            //     state.favouritesProducts.push(action.payload);
-            //     localStorage.setItem('favourites', JSON.stringify(state.favouritesProducts));
-            // }
         },
 
         removeFromFavourites: (state, action) => {
             const { id } = action.payload;
             state.favouritesProducts = state.favouritesProducts.filter(itemId => itemId !== id);
             localStorage.setItem('favourites', JSON.stringify(state.favouritesProducts));
-
-            // state.favouritesProducts.filter(item => item.id !== action.payload);
-            // localStorage.setItem('favourites', JSON.stringify(state.favouritesProducts));
         }
     }
 })
