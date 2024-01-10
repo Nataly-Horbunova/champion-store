@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {changeCount, removeFromCart} from "../../data/redux/reducers/cartSlice";
 import {useState} from "react";
 import {getCartData} from "../../data/dataFunctions";
+import {NavLink} from "react-router-dom";
 
 export function ProductInCart({product}) {
     const dispatch = useDispatch();
@@ -51,7 +52,7 @@ export function ProductInCart({product}) {
 
     return (
         <li className={style.ProductInCart}>
-            <div className={style.image_and_info_wrapper}>
+            <NavLink to={`/product/${product.productId}`} className={style.image_and_info_wrapper}>
                 <div className={style.image_wrapper}>
                     <img src={require(`../../assets/products/${product.currentImage.imageName}`)} alt="ProductInCart"
                          className={style.product_img}/>
@@ -63,7 +64,7 @@ export function ProductInCart({product}) {
                         <div
                             className={style.product_color}>{`${cartData.colorText} ${product.currentImage.color}`}</div>}
                 </div>
-            </div>
+            </NavLink>
             <div className={style.counter}>
                 <Counter
                     count={count}
