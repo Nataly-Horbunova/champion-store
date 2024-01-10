@@ -1,18 +1,19 @@
 @import "../../styles/variables.module";
 
 .Carousel {
+  margin-top: 86px;
 
   .carousel_slide{
     position: relative;
 
     .carousel_img {
-      display: block;
+      display: flex;
       width: 100%;
       object-fit: cover;
     }
     .carousel_text{
       position: absolute;
-      top: calc(50% + 43px);
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: 'Rajdhani', sans-serif;

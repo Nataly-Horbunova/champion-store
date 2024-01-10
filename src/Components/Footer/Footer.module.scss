@@ -99,7 +99,7 @@ Footer {
         @include flex(space-between, center, 10px);
 
         &_item {
-          width: 40px;
+          max-width: 40px;
           height: auto;
 
           .payment_systems_img {
@@ -120,4 +120,14 @@ Footer {
 
   }
 
+}
+
+@media screen and (max-width: 768px) {
+  Footer {
+    .footer_container {
+      .footer_info_wrapper {
+        flex-direction: column;
+      }
+    }
+  }
 }

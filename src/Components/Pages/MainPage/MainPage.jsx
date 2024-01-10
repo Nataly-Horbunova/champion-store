@@ -51,7 +51,7 @@ export function MainPage() {
                         <h3 className={style.earbuds_heading}>{pageData.earbuds.heading}</h3>
                         <p className={style.earbuds_description}>{pageData.earbuds.description}</p>
                         <div className={style.earbuds_buttons_wrapper}>
-                            <NavLink to={pageData.earbuds.buttons.left.path}>
+                            <NavLink to='/'>
                                 <button
                                     className={style.earbuds_button_left}>{pageData.earbuds.buttons.left.text}</button>
                             </NavLink>
@@ -67,7 +67,7 @@ export function MainPage() {
                                     return (
                                         <div key={img.id} className={style.earbuds_img_wrapper}>
                                             <img src={require(`../../../assets/earbuds_section/${img.name}`)} alt={img.name}
-                                                 className={style.earbuds_img}/>
+                                                className={style.earbuds_img}/>
                                         </div>
                                     )
                                 }

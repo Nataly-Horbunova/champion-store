@@ -16,7 +16,6 @@
         flex-wrap: wrap;
 
         &_item {
-          flex-basis: calc(30% - 4px);
           flex-grow: 1;
           padding-bottom: 20px;
 
@@ -60,6 +59,7 @@
   .section_earbuds {
     background-color: $bg-accent-3;
     margin-bottom: 100px;
+    padding-top: 30px;
 
     .earbuds_container {
       @include flex(space-between, center, 30px);
@@ -109,11 +109,11 @@
 
       .earbuds_imgs {
         display: grid;
-        grid-template-columns: minmax(130px, 260px) minmax(70px, 140px) minmax(130px, 260px);
+        grid-template-columns: minmax(100px, 260px) minmax(50px, 140px) minmax(100px, 260px);
         grid-template-rows: minmax(70px, 140px) repeat(2, minmax(130px, 260px)) minmax(70px, 140px);
         flex-basis: calc(50% - 20px);
         grid-gap: 2px;
-        transform: translateY(100px);
+        transform: translateY(50px);
 
         .earbuds_img_wrapper {
 
@@ -151,7 +151,7 @@
 
   //-------- Brands section --------
   .section_brands {
-    padding: 140px 0;
+    padding: clamp(60px, calc(140 / 1400 * 100vw), 140px) 0;
 
     .brands_container {
       @include flex(center, center, 100px);
@@ -160,6 +160,17 @@
       .brand_img {
         height: 30px;
         opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .MainPage {
+    .section_earbuds { 
+      .earbuds_container {
+        flex-direction: column;
+        gap: 0;
       }
     }
   }
