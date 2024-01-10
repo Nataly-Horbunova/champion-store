@@ -17,7 +17,7 @@ export function Footer() {
                             {footerData.quickLinks.list.map(item => {
                                 return (
                                     <li className={style.quick_links_list_item} key={item.id}>
-                                        <NavLink to={item.path} className={style.quick_links_link}>{item.name}</NavLink>
+                                        <NavLink to='#' className={style.quick_links_link}>{item.name}</NavLink>
                                     </li>
                                 )
                             })
