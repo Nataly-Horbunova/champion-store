@@ -22,7 +22,7 @@ export function Sort({className}) {
     return (
         <div className={`${style.Sort} ${className}`}>
             <SortIcon fontSize="medium"/>
-            <FormControl fullWidth>
+            <FormControl fullWidth className={style.sort_input}>
                 <InputLabel variant="standard" htmlFor="sort" color="main_text_color">
                     {sort.tittle}
                 </InputLabel>

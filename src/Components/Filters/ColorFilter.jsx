@@ -36,7 +36,6 @@ export function ColorFilter({filter, colorsFilters, handleChangeSearchParams, up
     const handleFilterByColor = () => {
         updateProducts()
             .then(resp => {
-                console.log('color');
                 dispatch(setCategoriesCount(resp));
                 dispatch(setAvailabilityCount(resp));
                 !checked && colorsFilters.length === 0 && dispatch(setColorsCount(resp));

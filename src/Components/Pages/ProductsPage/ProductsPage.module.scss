@@ -5,6 +5,11 @@
   margin-top: 136px;
   margin-bottom: 50px;
 
+  .filters_drawer{
+    padding: 20px;
+    grid-area: filters;
+  }
+
   .productsPage_container {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -29,6 +34,32 @@
 
       .sort {
         flex-basis: calc(35% - 20px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ProductsPage {
+  
+    .productsPage_container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 10px;
+      justify-content: flex-start;
+
+      .sort_and_filters_wrapper {
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .currentFilters{
+          order: 3;
+          flex-basis: 100%;
+        }
+
+        .sort{
+          gap: 10px;
+        }
       }
     }
   }

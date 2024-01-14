@@ -16,7 +16,7 @@ import {
     ListItem,
     Hidden,
   } from "@mui/material";
-  import MenuIcon from "@mui/icons-material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import {ProductsSearch} from "./ProductsSearch";
 
 export function Header() {
@@ -72,7 +72,7 @@ export function Header() {
                 {/* ----------- Burger menu icon -------- */}
                 <Hidden mdUp>
                     <IconButton onClick={toggleDrawer(true)} >
-                        <MenuIcon className={`${style.burger_menu} ${scrollDown ? style.scroll : ""}`}></MenuIcon>
+                    <MenuIcon className={`${style.burger_menu} ${scrollDown ? style.scroll : ""}`}></MenuIcon>
                          
                     </IconButton>
                 </Hidden>

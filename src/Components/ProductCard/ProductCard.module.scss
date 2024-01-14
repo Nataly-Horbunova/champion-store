@@ -105,3 +105,21 @@
   }
 
 }
+
+@media screen and (max-width: 1024px) {
+  .ProductCard {
+    flex-basis: calc(100%/3 - 4px);
+  }  
+}
+
+@media screen and (max-width: 768px) {
+  .ProductCard {
+    flex-basis: calc(100%/2 - 4px);
+  }  
+}
+
+@media screen and (max-width: 425px) {
+  .ProductCard {
+    flex-basis: 100%;
+  }  
+}
