@@ -61,3 +61,25 @@
   }
 
 }
+
+@media screen and (max-width: 768px) {
+  .CartPage { 
+    .cartPage_container { 
+      .cart_wrapper{
+        flex-direction: column;
+
+        .products_list {
+          .products_list_tittles {
+            grid-template-columns: repeat(2, 1fr);
+
+            .products_list_tittle:nth-child(2) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

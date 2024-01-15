@@ -3,7 +3,7 @@ import {v4 as uuidv4} from "uuid";
 import { placeOrder } from '../../../core/api';
 
 const initialState ={
-    cartProducts: [],
+    cartProducts: [], // ls 
     orderPlaced: false,
     error: null
 }
@@ -36,16 +36,20 @@ export const cartSlice = createSlice({
             });
 
             if (!isProductPresent) {
-                state.cartProducts = [...state.cartProducts, {...product, count, productId: product.id, id: uuidv4()}]
+                state.cartProducts = [...state.cartProducts, {...product, count, productId: product.id, id: uuidv4()}];
+                console.log(state.cartProducts);
+                // ls 
             } else {
                 state.cartProducts = state.cartProducts.map(item => {
                     return (item.productId === product.id) ? {...item, count: item.count + count} : item;
-                })
+                });
+                // ls 
             }
         },
 
         removeFromCart: (state, action) => {
             state.cartProducts = state.cartProducts.filter(item => (item.id !== action.payload));
+            // ls 
         },
 
         changeCount: (state, action) => {
