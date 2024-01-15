@@ -1,4 +1,5 @@
 @import '../../../styles/mixins_and_placeholders.module.scss';
+@import '../../../styles/variables.module';
 
 .FavouritesPage {
     margin-top: 136px;
@@ -7,5 +8,16 @@
     .favourites_list{
         @include flex(flex-start, flex-start, 40px 4px);
         flex-wrap: wrap;
+    }
+
+    .favourites_title{
+        color: $color-accent-1;
+        font-size: $fz-l;
+        line-height: $lh-l;
+        font-weight: 600;
+        font-family: 'Rajdhani', sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
     }
 }

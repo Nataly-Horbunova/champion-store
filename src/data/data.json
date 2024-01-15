@@ -533,5 +533,8 @@
       "text": "Your cart is empty",
       "btn": "continue shopping"
     }
+  },
+  "favourites": {
+    "title": "Favourites"
   }
 }
