@@ -6,6 +6,7 @@ import {useEffect} from "react";
 import {useUpdateProducts} from "../../../core/hooks";
 import {ProductsPreloader} from "../../Common/Preloaders/ProductsPreloader";
 import {getFavouritesData} from "../../../data/dataFunctions";
+import { EmptyPage } from '../EmptyPage/EmptyPage';
 
 export function FavouritesPage () {
 const favouritesIds = useSelector(state => state.favourites.favouritesProducts);
@@ -19,9 +20,9 @@ useEffect(() => {
     updateAllProducts();
 }, []);
 
-
     return (
-        <main className={style.FavouritesPage}>
+        <>
+        {favouritesProducts.length>0 && <main className={style.FavouritesPage}>
             <div className={mainStyles.container}>
                 <h1 className={style.favourites_title}>{favouritesData.title}</h1>
                 {
@@ -36,6 +37,13 @@ useEffect(() => {
                     )
                 }
             </div>
-        </main>
+        </main>}
+        {
+            favouritesProducts.length === 0 && <EmptyPage 
+            tittle={favouritesData.emptyFavourites.tittle} 
+            text={favouritesData.emptyFavourites.text}
+             btn={favouritesData.emptyFavourites.btn}/>
+        }        
+        </>
     )
 }

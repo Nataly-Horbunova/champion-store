@@ -1,0 +1,30 @@
+@import '../../../styles/variables.module';
+@import '../../../styles/mixins_and_placeholders.module';
+
+.EmptyPage {
+    margin-top: 200px;
+    margin-bottom: 150px;
+  
+    .EmptyPage_container {
+      @include flex(space-between, center, 30px, column);
+  
+      .tittle {
+        font-size: $fz-xl;
+        line-height: $lh-xl;
+        font-weight: 700;
+      }
+  
+      .text {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: $fz-l;
+        line-height: $lh-l;
+        font-weight: 600;
+      }
+  
+      .btn {
+        @extend %button;
+        @extend %primary-button-black
+      }
+  
+    }
+  }

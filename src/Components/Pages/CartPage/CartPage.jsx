@@ -5,7 +5,7 @@ import {getCartData} from "../../../data/dataFunctions";
 import {v4 as uuidv4} from "uuid";
 import {ProductInCart} from "../../ProductInCart/ProductInCart";
 import {CartOrderForm} from "../../CartOrderForm/CartOrderForm";
-import {CartEmptyPage} from "./CartEmptyPage";
+import {EmptyPage} from "../EmptyPage/EmptyPage";
 import {setOrderPlaced} from '../../../data/redux/reducers/cartSlice';
 import { NavLink } from "react-router-dom";
 import Dialog from '@mui/material/Dialog';
@@ -34,7 +34,7 @@ export function CartPage() {
 
     return (
         <>
-            {cart.length > 0 && <div className={style.CartPage}>
+            {cart.length > 0 && <main className={style.CartPage}>
                 <div className={`${mainStyles.container} ${style.cartPage_container}`}>
                     <h1 className={style.cart_tittle}>{cartData.tittle}</h1>
                     <div className={style.cart_wrapper}>
@@ -51,10 +51,10 @@ export function CartPage() {
                         <CartOrderForm cart={cart} cartData={cartData} totalAmount={totalAmount} />
                     </div>
                 </div>
-            </div>
+            </main>
             }
 
-            {cart.length === 0 && <CartEmptyPage/> }
+            {cart.length === 0 && <EmptyPage tittle={cartData.emptyCart.tittle} text={cartData.emptyCart.text} btn={cartData.emptyCart.btn}/> }
 
 {/* ======================= Dialog ====================== */}
 

@@ -535,6 +535,11 @@
     }
   },
   "favourites": {
-    "title": "Favourites"
+    "title": "Favourites",
+    "emptyFavourites": {
+      "tittle": "Favourites",
+      "text": "Your favourites list is empty",
+      "btn": "continue shopping"
+    }
   }
 }
