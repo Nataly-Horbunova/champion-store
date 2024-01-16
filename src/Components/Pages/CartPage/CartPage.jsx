@@ -1,9 +1,11 @@
 import style from "./CartPage.module.scss";
 import {useSelector, useDispatch} from "react-redux";
+import {useEffect} from "react";
 import mainStyles from "../../../index.module.scss";
 import {getCartData} from "../../../data/dataFunctions";
 import {v4 as uuidv4} from "uuid";
 import {ProductInCart} from "../../ProductInCart/ProductInCart";
+import { ProductsPreloader } from "../../Common/Preloaders/ProductsPreloader";
 import {CartOrderForm} from "../../CartOrderForm/CartOrderForm";
 import {EmptyPage} from "../EmptyPage/EmptyPage";
 import {setOrderPlaced} from '../../../data/redux/reducers/cartSlice';
@@ -13,6 +15,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import {useUpdateProducts} from "../../../core/hooks";
 
 export function CartPage() {
     const cart = useSelector(state => state.cart.cartProducts);
@@ -20,6 +23,16 @@ export function CartPage() {
     const totalAmount = getTotalAmount(cart);
     const isOrderPlaced = useSelector(state => state.cart.orderPlaced);
     const dispatch = useDispatch();
+    const {products, loading} = useSelector(state => state.shop);
+    const {updateAllProducts} = useUpdateProducts();
+    const productsIds = products.map(item => item.id);
+    const filteredCart = cart.filter(item => productsIds.includes(item.productId));
+
+useEffect(() => {
+    updateAllProducts();
+}, []);
+
+
 
     function getTotalAmount(products) {
         return products.reduce((acc, product) => {
@@ -34,7 +47,18 @@ export function CartPage() {
 
     return (
         <>
-            {cart.length > 0 && <main className={style.CartPage}>
+
+        {loading ? (
+            <main className={style.CartPage}>
+                <div className={`${mainStyles.container} ${style.cartPage_container}`}>
+                    <h1 className={style.cart_tittle}>{cartData.tittle}</h1>
+                    <ProductsPreloader />
+                </div>
+            </main>
+        ) : (
+            <>
+            {
+            filteredCart.length > 0 && (<main className={style.CartPage}>
                 <div className={`${mainStyles.container} ${style.cartPage_container}`}>
                     <h1 className={style.cart_tittle}>{cartData.tittle}</h1>
                     <div className={style.cart_wrapper}>
@@ -46,15 +70,22 @@ export function CartPage() {
                                     )
                                 })}
                             </li>
-                            {cart.map(product => <ProductInCart product={product} key={product.id}/>)}
+                            {filteredCart.map(product => <ProductInCart product={product} key={product.id}/>)}
                         </ul>
-                        <CartOrderForm cart={cart} cartData={cartData} totalAmount={totalAmount} />
+                        <CartOrderForm cart={filteredCart} cartData={cartData} totalAmount={totalAmount} />
                     </div>
                 </div>
             </main>
-            }
-
-            {cart.length === 0 && <EmptyPage tittle={cartData.emptyCart.tittle} text={cartData.emptyCart.text} btn={cartData.emptyCart.btn}/> }
+            )}
+            </>
+        )}
+        {filteredCart.length === 0 && (
+            <EmptyPage 
+                tittle={cartData.emptyCart.tittle} 
+                text={cartData.emptyCart.text} 
+                btn={cartData.emptyCart.btn}
+            /> 
+        )}
 
 {/* ======================= Dialog ====================== */}
 
